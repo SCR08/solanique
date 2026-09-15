@@ -213,6 +213,12 @@ const handleVisibilityChange = () => {
 export const initParallax = (scope = document) => {
 	isDebugEnabled = shouldRunDebug();
 	document.documentElement.classList.toggle(CLASSES.debug, isDebugEnabled);
+	reducedMotionMedia = reducedMotionMedia || getMediaQuery(REDUCED_MOTION_QUERY);
+	mobileMedia = mobileMedia || getMediaQuery(MOBILE_QUERY);
+
+	if (shouldDisableParallax() && !isDebugEnabled) {
+		return;
+	}
 
 	const roots = Array.from(scope.querySelectorAll(SELECTORS.root));
 
@@ -250,9 +256,6 @@ export const initParallax = (scope = document) => {
 		parallaxItemMap.set(root, item);
 		observer.observe(root);
 	});
-
-	reducedMotionMedia = reducedMotionMedia || getMediaQuery(REDUCED_MOTION_QUERY);
-	mobileMedia = mobileMedia || getMediaQuery(MOBILE_QUERY);
 
 	if (!listenersBound) {
 		window.addEventListener('scroll', queueUpdate, { passive: true });

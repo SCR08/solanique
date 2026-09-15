@@ -289,7 +289,7 @@ Implemented immersive placements:
 - The Mandate: `mandate-origin`, using the complete History / Origin section as a two-panel glass editorial chapter immediately after Mission and Vision. The duplicate summarized History / Origin cutaway was removed.
 - Inquiry: `sg-inquiry-immersive-private`, using reception/service imagery for private access context.
 - Solanique Club: `sg-solanique-club-immersive-network`, using commercial skyscraper/network imagery for global private ecosystem context.
-- Privacy Policy: generated neutral globe/global image at `src/assets/images/backgrounds/privacy-global-globe-background.png`.
+- Privacy Policy: generated neutral globe/global image at `src/assets/images/backgrounds/privacy-global-globe-background.jpg`.
 
 Solid rhythm sections remain between unrelated image-backed scenes so the site avoids back-to-back visual cuts. Solid sections use lightweight generated abstract assets for depth:
 
@@ -337,11 +337,13 @@ The theme preserves the premium parallax direction while keeping loading priorit
 - Above-the-fold hero images use eager loading and high priority.
 - Below-the-fold theme images default to lazy loading, async decoding, and low fetch priority.
 - `sg_asset_img()` can infer intrinsic dimensions from local theme assets when a template omits width/height, reducing avoidable layout shift.
-- Responsive `-960w` and `-1440w` JPEG sidecars are used for hero and parallax background assets when present, so mobile/tablet browsers do not have to download the 2048px original.
+- Responsive `-640w`, `-768w`, `-960w`, and `-1440w` JPEG sidecars are used for hero and parallax background assets when present, so mobile/tablet browsers do not have to download the 2048px original.
 - The Privacy Policy globe keeps the original PNG source available, but the front-end uses the optimized JPEG derivative at `src/assets/images/backgrounds/privacy-global-globe-background.jpg`.
-- Parallax JavaScript is IntersectionObserver/requestAnimationFrame based, only runs for visible scenes, pauses when the tab is hidden, and disables transform work for reduced-motion users and small mobile viewports.
+- Parallax JavaScript is IntersectionObserver/requestAnimationFrame based, only runs for visible scenes, pauses when the tab is hidden, and skips its scroll runtime for reduced-motion users and small mobile viewports.
+- Mobile keeps the layered visual treatment but simplifies sticky parallax, long panel heights, image scale, ambient hero animation, animated parallax overlays, and glass blur to reduce paint/compositing cost.
 - Reveal animations avoid broad persistent `will-change` usage.
 - Large glass/header blur effects should stay limited; avoid adding full-viewport `backdrop-filter` layers.
+- Production builds exclude `_incoming`, `_review`, `.DS_Store`, and unsupported `.eps` assets from `assets/dist`; keep those folders for source review only.
 
 Lighthouse should be run against a live Local/WordPress URL after every visual sprint. If `http://solanique.local` or the Local app port is unavailable, record the audit as blocked rather than guessing a score.
 

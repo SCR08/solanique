@@ -932,22 +932,28 @@
 	}
 
 	.sg-parallax-scene {
-		min-block-size: clamp(70rem, 162svh, 96rem);
+		min-block-size: auto;
 		overflow: clip;
 	}
 
 	.sg-parallax-scene__media.sg-parallax__media {
-		block-size: 100svh;
-		min-block-size: 34rem;
+		position: absolute;
+		inset: 0;
+		block-size: 100%;
+		min-block-size: 0;
+	}
+
+	.sg-parallax-scene__panels {
+		margin-block-start: 0;
 	}
 
 	.sg-parallax-scene .sg-parallax-panel {
-		min-block-size: 86svh;
-		padding-block: clamp(var(--sg-space-4xl), 18vw, var(--sg-space-5xl));
+		min-block-size: auto;
+		padding-block: clamp(var(--sg-space-3xl), 15vw, var(--sg-space-5xl));
 	}
 
 	.sg-parallax-panel {
-		min-block-size: clamp(31rem, 84svh, 48rem);
+		min-block-size: auto;
 	}
 
 	.sg-parallax-panel--solid {
@@ -964,8 +970,31 @@
 	}
 
 	.sg-parallax__media {
-		inset-block: -14%;
-		inset-inline: -2%;
+		inset: 0;
+		transform: none;
+		will-change: auto;
+	}
+
+	.sg-parallax-scene__image,
+	.sg-parallax-scene__media :where(img, video),
+	.sg-immersive-section__image {
+		filter: saturate(0.98) contrast(1.04) brightness(0.94);
+		transform: scale(1.04);
+	}
+
+	.sg-parallax-scene__overlay::before {
+		opacity: 0.14;
+		animation: none;
+	}
+
+	.sg-parallax-panel--glass .sg-immersive-section__content,
+	.sg-parallax-panel--secondary .sg-immersive-section__content {
+		background:
+			linear-gradient(135deg, rgba(13, 15, 19, 0.76), rgba(20, 22, 28, 0.54)),
+			color-mix(in srgb, var(--sg-graphite) 30%, transparent);
+		box-shadow: var(--sg-shadow-sm);
+		backdrop-filter: none;
+		background-blend-mode: normal;
 	}
 
 	.sg-immersive-section__overlay {

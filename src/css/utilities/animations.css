@@ -196,6 +196,19 @@
 	}
 }
 
+@media (max-width: 47.98rem) and (prefers-reduced-motion: no-preference) {
+	.sg-home-hero__image,
+	.sg-product-hero__image,
+	.sg-contact-hero__image,
+	.sg-parallax-scene__overlay::before {
+		animation: none;
+	}
+
+	.sg-js :where([data-sg-reveal], [data-sg-home-reveal]) {
+		transition-duration: var(--sg-duration-default);
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.sg-js :where([data-sg-reveal], [data-sg-home-reveal]) {
 		opacity: 1;

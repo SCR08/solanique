@@ -548,7 +548,7 @@ function solanique_get_theme_asset_srcset( string $path ): string {
 	$dirname   = pathinfo( $asset, PATHINFO_DIRNAME );
 	$filename  = pathinfo( $asset, PATHINFO_FILENAME );
 	$prefix    = '.' === $dirname ? '' : trailingslashit( $dirname );
-	$widths    = array( 960, 1440, 1920 );
+	$widths    = array( 640, 768, 960, 1440, 1920 );
 	$sources   = array();
 
 	foreach ( $widths as $candidate_width ) {

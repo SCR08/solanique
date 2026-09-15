@@ -1,8 +1,55 @@
-import { dirname, resolve } from 'node:path';
+import { promises as fs } from 'node:fs';
+import { dirname, extname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 
 const themeRoot = dirname(fileURLToPath(import.meta.url));
+const sourceAssetRoot = resolve(themeRoot, 'src/assets');
+const distAssetRoot = resolve(themeRoot, 'assets/dist');
+const excludedAssetDirectories = new Set(['_incoming', '_review']);
+const excludedAssetFiles = new Set([
+	'.DS_Store',
+	'asset-manifest.csv',
+	'asset-manifest.json',
+	'privacy-global-globe-background.png',
+]);
+const excludedAssetExtensions = new Set(['.eps']);
+
+async function copyProductionAssets(sourceDirectory, destinationDirectory) {
+	const entries = await fs.readdir(sourceDirectory, { withFileTypes: true });
+
+	await fs.mkdir(destinationDirectory, { recursive: true });
+
+	await Promise.all(entries.map(async (entry) => {
+		if (excludedAssetFiles.has(entry.name) || excludedAssetDirectories.has(entry.name)) {
+			return;
+		}
+
+		const sourcePath = join(sourceDirectory, entry.name);
+		const destinationPath = join(destinationDirectory, entry.name);
+
+		if (entry.isDirectory()) {
+			await copyProductionAssets(sourcePath, destinationPath);
+			return;
+		}
+
+		if (!entry.isFile() || excludedAssetExtensions.has(extname(entry.name).toLowerCase())) {
+			return;
+		}
+
+		await fs.copyFile(sourcePath, destinationPath);
+	}));
+}
+
+function solaniqueProductionAssetCopy() {
+	return {
+		name: 'solanique-production-asset-copy',
+		apply: 'build',
+		closeBundle: async () => {
+			await copyProductionAssets(sourceAssetRoot, distAssetRoot);
+		},
+	};
+}
 
 /**
  * Vite configuration for the Solanique WordPress theme.
@@ -13,8 +60,10 @@ const themeRoot = dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
 	root: themeRoot,
 	base: './',
-	// Theme media is authored in src/assets and copied into assets/dist by Vite.
-	publicDir: resolve(themeRoot, 'src/assets'),
+	publicDir: false,
+	plugins: [
+		solaniqueProductionAssetCopy(),
+	],
 	server: {
 		host: 'localhost',
 		port: 5173,
