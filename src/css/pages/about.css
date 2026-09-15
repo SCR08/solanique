@@ -1,0 +1,423 @@
+/**
+ * Solanique About page visual details.
+ *
+ * Shared internal-page structure comes from product.css. This file keeps the
+ * parent-brand page distinct without duplicating the core layout system.
+ */
+
+.sg-about-hero {
+	background-image:
+		radial-gradient(
+			circle at 76% 22%,
+			color-mix(in srgb, var(--sg-color-accent) 16%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2.75)
+		),
+		radial-gradient(
+			circle at 14% 82%,
+			color-mix(in srgb, var(--sg-color-grey-300) 10%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2)
+		),
+		linear-gradient(138deg, var(--sg-color-grey-950), var(--sg-color-black));
+}
+
+.sg-about-hero::after {
+	transform: skewX(-9deg);
+}
+
+.sg-about-hero__title {
+	max-inline-size: 14ch;
+}
+
+.sg-about-hero__mark {
+	aspect-ratio: 16 / 10;
+}
+
+.sg-about-hero__image {
+	object-position: 50% 48%;
+}
+
+.sg-about-hero__ring,
+.sg-about-hero__axis,
+.sg-about-hero__plane,
+.sg-about-hero__point {
+	z-index: var(--sg-product-detail-layer);
+	position: absolute;
+	display: block;
+	pointer-events: none;
+}
+
+.sg-about-hero__ring {
+	inset: 17%;
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-accent) 34%, transparent);
+	border-radius: var(--sg-radius-circle);
+}
+
+.sg-about-hero__ring--inner {
+	inset: 32%;
+	border-color: color-mix(in srgb, var(--sg-color-white) 14%, transparent);
+}
+
+.sg-about-hero__axis {
+	background: linear-gradient(90deg, transparent, var(--sg-color-accent), transparent);
+	opacity: 0.68;
+	transform-origin: 50% 50%;
+}
+
+.sg-about-hero__axis--one {
+	inset-block-start: 44%;
+	inset-inline: 18%;
+	block-size: var(--sg-border-width-hairline);
+	transform: rotate(34deg);
+}
+
+.sg-about-hero__axis--two {
+	inset-block-start: 54%;
+	inset-inline: 18%;
+	block-size: var(--sg-border-width-hairline);
+	transform: rotate(-34deg);
+}
+
+.sg-about-hero__plane {
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-white) 14%, transparent);
+	background: color-mix(in srgb, var(--sg-color-accent) 5%, transparent);
+}
+
+.sg-about-hero__plane--one {
+	inset-block-start: 24%;
+	inset-inline-start: 24%;
+	inline-size: 28%;
+	aspect-ratio: 4 / 5;
+}
+
+.sg-about-hero__plane--two {
+	inset-block-end: 20%;
+	inset-inline-end: 20%;
+	inline-size: 34%;
+	aspect-ratio: 5 / 4;
+}
+
+.sg-about-hero__point {
+	inline-size: var(--sg-space-sm);
+	block-size: var(--sg-space-sm);
+	border: var(--sg-border-width-hairline) solid var(--sg-metal-titanium);
+	border-radius: var(--sg-radius-circle);
+	background: var(--sg-color-accent);
+	box-shadow: 0 0 var(--sg-space-lg) color-mix(in srgb, var(--sg-color-accent) 42%, transparent);
+}
+
+.sg-about-hero__point--one {
+	inset-block-start: 27%;
+	inset-inline-end: 31%;
+}
+
+.sg-about-hero__point--two {
+	inset-block-end: 30%;
+	inset-inline-start: 30%;
+}
+
+.sg-about-mission > .sg-container,
+.sg-about-principles > .sg-container,
+.sg-about-ecosystem > .sg-container,
+.sg-about-leadership > .sg-container {
+	--sg-container-size: var(--sg-container-2xl);
+}
+
+.sg-about-intro__aside {
+	display: none;
+}
+
+.sg-about-intro__rule {
+	display: block;
+	inline-size: 100%;
+	block-size: var(--sg-border-width-hairline);
+	background: linear-gradient(90deg, var(--sg-color-accent), transparent);
+}
+
+.sg-about-intro__title {
+	max-inline-size: 16ch;
+}
+
+.sg-about-mission {
+	background-image:
+		radial-gradient(
+			circle at 84% 16%,
+			color-mix(in srgb, var(--sg-color-accent) 8%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2)
+		),
+		linear-gradient(180deg, var(--sg-color-surface), var(--sg-color-ivory));
+}
+
+.sg-about-mission::before {
+	inset-block-start: 0;
+	inset-inline: var(--sg-container-gutter);
+	block-size: var(--sg-border-width-hairline);
+	background: linear-gradient(90deg, var(--sg-color-accent), transparent);
+}
+
+.sg-about-mission__grid {
+	display: grid;
+	gap: var(--sg-space-lg);
+	margin-block-start: var(--sg-space-2xl);
+}
+
+.sg-about-mission__item {
+	position: relative;
+	padding-block-start: var(--sg-space-xl);
+	border-block-start: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-black) 12%, transparent);
+}
+
+.sg-about-mission__line {
+	position: absolute;
+	inset-block-start: calc(var(--sg-border-width-hairline) * -1);
+	inset-inline-start: 0;
+	inline-size: min(44%, calc(var(--sg-space-5xl) * 1.5));
+	block-size: var(--sg-border-width-hairline);
+	background: var(--sg-color-accent);
+}
+
+.sg-about-mission__item-title {
+	font-size: var(--sg-font-size-2xl);
+}
+
+.sg-about-mission__text,
+.sg-about-leadership__text {
+	max-inline-size: var(--sg-measure);
+	color: var(--sg-color-text-muted);
+	font-size: var(--sg-font-size-lg);
+}
+
+.sg-about-principles {
+	background-image:
+		linear-gradient(
+			120deg,
+			var(--sg-color-ivory),
+			var(--sg-color-surface)
+		);
+}
+
+.sg-about-principles::before {
+	inset-block-start: var(--sg-space-4xl);
+	inset-inline-end: var(--sg-container-gutter);
+	inline-size: min(46vw, var(--sg-container-sm));
+	aspect-ratio: 1;
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-accent) 18%, transparent);
+	transform: rotate(16deg);
+}
+
+.sg-about-principles__list {
+	display: grid;
+	gap: var(--sg-space-md);
+	border-block-start: 0;
+}
+
+.sg-about-principles__item {
+	position: relative;
+	grid-template-columns: minmax(0, 1fr);
+	gap: var(--sg-space-lg);
+	padding: clamp(var(--sg-space-xl), 4vw, var(--sg-space-3xl));
+	overflow: clip;
+	border: 0;
+	border-radius: var(--sg-radius-xs);
+	background:
+		linear-gradient(
+			145deg,
+			color-mix(in srgb, var(--sg-color-accent) 8%, transparent),
+			transparent 48%
+		),
+		color-mix(in srgb, var(--sg-color-surface) 86%, transparent);
+	box-shadow: var(--sg-shadow-xs);
+}
+
+.sg-about-principles__item::before {
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline: 0;
+	block-size: var(--sg-border-width-hairline);
+	background: linear-gradient(90deg, var(--sg-color-accent), transparent);
+	content: "";
+}
+
+.sg-about-principles__item:nth-child(1) {
+	align-content: end;
+	min-block-size: clamp(18rem, 34vw, 28rem);
+	background:
+		radial-gradient(
+			circle at 76% 18%,
+			color-mix(in srgb, var(--sg-color-accent) 16%, transparent),
+			transparent 40%
+		),
+		linear-gradient(135deg, var(--sg-color-surface-strong), var(--sg-color-ivory));
+}
+
+.sg-about-ecosystem {
+	background-image:
+		radial-gradient(
+			circle at 82% 18%,
+			color-mix(in srgb, var(--sg-color-accent) 8%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2)
+		),
+		linear-gradient(180deg, var(--sg-color-surface), var(--sg-color-ivory));
+}
+
+.sg-about-ecosystem__panel:nth-child(1) .sg-about-ecosystem__image {
+	object-position: 50% 48%;
+}
+
+.sg-about-ecosystem__panel:nth-child(2) .sg-about-ecosystem__image {
+	object-position: 50% 44%;
+}
+
+.sg-about-ecosystem__panel:nth-child(3) .sg-about-ecosystem__image {
+	object-position: 54% 50%;
+}
+
+.sg-about-leadership {
+	background-image:
+		linear-gradient(
+			135deg,
+			var(--sg-color-ivory),
+			var(--sg-color-surface)
+		);
+}
+
+.sg-about-leadership::before {
+	inset-block-start: 0;
+	inset-inline: var(--sg-container-gutter);
+	block-size: var(--sg-border-width-hairline);
+	background: linear-gradient(90deg, transparent, var(--sg-color-accent), transparent);
+}
+
+.sg-about-leadership__layout {
+	display: grid;
+	gap: var(--sg-space-3xl);
+	align-items: center;
+}
+
+.sg-about-leadership__content {
+	max-inline-size: var(--sg-container-sm);
+}
+
+.sg-about-leadership__signature {
+	color: var(--sg-color-accent-hover);
+	font-size: var(--sg-font-size-sm);
+	font-weight: var(--sg-font-weight-regular);
+	line-height: var(--sg-line-height-ui);
+}
+
+.sg-about-leadership__frame {
+	position: relative;
+	display: none;
+	min-block-size: calc(var(--sg-space-5xl) * 2.75);
+	overflow: clip;
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-accent) 32%, transparent);
+	border-radius: var(--sg-radius-xs);
+	background:
+		radial-gradient(
+			circle at 50% 34%,
+			color-mix(in srgb, var(--sg-color-accent) 12%, transparent),
+			transparent 44%
+		),
+		linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--sg-color-white) 8%, transparent),
+			transparent 42%
+		),
+		var(--sg-color-surface);
+	box-shadow: var(--sg-shadow-md);
+	isolation: isolate;
+}
+
+.sg-about-leadership__image {
+	position: absolute;
+	z-index: var(--sg-z-index-base);
+	inset: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	opacity: 0.68;
+	object-fit: cover;
+	object-position: center;
+	filter: saturate(0.78) contrast(1.04) brightness(0.88);
+}
+
+.sg-about-leadership__frame::before {
+	position: absolute;
+	z-index: var(--sg-z-index-overlay);
+	inset: var(--sg-space-lg);
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-black) 10%, transparent);
+	content: "";
+}
+
+.sg-about-leadership__frame-line,
+.sg-about-leadership__frame-mark {
+	position: absolute;
+	display: block;
+	pointer-events: none;
+}
+
+.sg-about-leadership__frame-line {
+	z-index: var(--sg-z-index-overlay);
+	background: linear-gradient(90deg, transparent, var(--sg-color-accent), transparent);
+}
+
+.sg-about-leadership__frame-line--one {
+	inset-block-start: 36%;
+	inset-inline: var(--sg-space-xl);
+	block-size: var(--sg-border-width-hairline);
+	transform: rotate(-9deg);
+}
+
+.sg-about-leadership__frame-line--two {
+	inset-block: var(--sg-space-xl);
+	inset-inline-start: 56%;
+	inline-size: var(--sg-border-width-hairline);
+	transform: rotate(11deg);
+}
+
+.sg-about-leadership__frame-mark {
+	z-index: var(--sg-z-index-overlay);
+	inset-block-end: var(--sg-space-xl);
+	inset-inline-start: var(--sg-space-xl);
+	inline-size: var(--sg-space-4xl);
+	aspect-ratio: 1;
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-accent) 28%, transparent);
+	border-radius: var(--sg-radius-circle);
+}
+
+@media (min-width: 48rem) {
+	.sg-about-mission__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.sg-about-principles__list {
+		grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+	}
+
+	.sg-about-principles__item:nth-child(1) {
+		grid-row: span 2;
+	}
+}
+
+@media (min-width: 80rem) {
+	.sg-about-intro__layout {
+		grid-template-columns: minmax(var(--sg-space-5xl), 0.32fr) minmax(0, 1fr);
+	}
+
+	.sg-about-intro__aside,
+	.sg-about-leadership__frame {
+		display: block;
+	}
+
+	.sg-about-intro__aside {
+		padding-block-start: var(--sg-space-lg);
+	}
+
+	.sg-about-leadership__layout {
+		grid-template-columns: minmax(0, 0.92fr) minmax(calc(var(--sg-space-5xl) * 2.5), 0.78fr);
+	}
+}
+
+@media (min-width: 120rem) {
+	.sg-about-leadership__frame {
+		min-block-size: clamp(34rem, 30vw, 46rem);
+	}
+}

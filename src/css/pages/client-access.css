@@ -1,0 +1,9 @@
+/**
+ * Client Access page visual details.
+ */
+
+.sg-client-access-gateway,
+.sg-client-access-pathways {
+	background:
+		linear-gradient(180deg, var(--sg-color-background), var(--sg-color-surface));
+}

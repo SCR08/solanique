@@ -1,0 +1,385 @@
+/**
+ * Solanique Capital page visual details.
+ */
+
+.sg-capital-hero {
+	background-image:
+		radial-gradient(
+			circle at 78% 20%,
+			color-mix(in srgb, var(--sg-metal-silver) 14%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2.5)
+		),
+		linear-gradient(135deg, var(--sg-graphite), var(--sg-ink));
+}
+
+.sg-capital-hero::after {
+	transform: skewX(-10deg);
+}
+
+.sg-capital-hero__image {
+	object-position: 50% 48%;
+}
+
+.sg-capital-hero__axis,
+.sg-capital-hero__plane {
+	z-index: var(--sg-product-detail-layer);
+	position: absolute;
+	display: block;
+	pointer-events: none;
+}
+
+.sg-capital-hero__axis {
+	background: linear-gradient(180deg, transparent, var(--sg-color-accent), transparent);
+	opacity: 0.64;
+}
+
+.sg-capital-hero__axis--vertical {
+	inset-block: var(--sg-space-xl);
+	inset-inline-start: 54%;
+	inline-size: var(--sg-border-width-hairline);
+	transform: rotate(12deg);
+}
+
+.sg-capital-hero__axis--horizontal {
+	inset-block-start: 58%;
+	inset-inline: var(--sg-space-xl);
+	block-size: var(--sg-border-width-hairline);
+	transform: rotate(-8deg);
+}
+
+.sg-capital-hero__plane {
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-accent) 36%, transparent);
+	background: color-mix(in srgb, var(--sg-color-accent) 6%, transparent);
+}
+
+.sg-capital-hero__plane--one {
+	inset-block-start: 18%;
+	inset-inline-start: 18%;
+	inline-size: 34%;
+	aspect-ratio: 1;
+}
+
+.sg-capital-hero__plane--two {
+	inset-block-start: 42%;
+	inset-inline-end: 16%;
+	inline-size: 42%;
+	aspect-ratio: 5 / 3;
+}
+
+.sg-capital-hero__plane--three {
+	inset-block-end: 14%;
+	inset-inline-start: 22%;
+	inline-size: 48%;
+	aspect-ratio: 16 / 9;
+}
+
+.sg-capital-intro__aside {
+	display: none;
+}
+
+.sg-capital-intro__rule {
+	display: block;
+	inline-size: 100%;
+	block-size: var(--sg-border-width-hairline);
+	background: linear-gradient(90deg, var(--sg-color-accent), transparent);
+}
+
+.sg-capital-intro__title {
+	max-inline-size: 14ch;
+}
+
+@media (min-width: 80rem) {
+	.sg-capital-intro__layout {
+		grid-template-columns: minmax(var(--sg-space-5xl), 0.32fr) minmax(0, 1fr);
+	}
+
+	.sg-capital-intro__aside {
+		display: block;
+		padding-block-start: var(--sg-space-lg);
+	}
+}
+
+.sg-capital-framework {
+	background-image:
+		url("../../assets/images/backgrounds/generated/graphite-silver-field.svg"),
+		url("../../assets/images/backgrounds/generated/capital-connection-map.svg"),
+		radial-gradient(
+			circle at 86% 18%,
+			color-mix(in srgb, var(--sg-metal-silver) 11%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2)
+		),
+		linear-gradient(180deg, var(--sg-color-ivory), var(--sg-color-surface));
+	background-position: 50% 18%, 88% 12%, center, center;
+	background-repeat: no-repeat;
+	background-size: max(100vw, 88rem) auto, max(68vw, 66rem) auto, auto, auto;
+	background-blend-mode: screen, screen, normal, normal;
+}
+
+.sg-capital-framework::before {
+	inset-block-start: var(--sg-space-4xl);
+	inset-inline-end: var(--sg-container-gutter);
+	inline-size: min(46vw, var(--sg-container-sm));
+	aspect-ratio: 1;
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-accent) 20%, transparent);
+	transform: rotate(14deg);
+}
+
+.sg-capital-framework__grid {
+	position: relative;
+	isolation: isolate;
+}
+
+.sg-capital-framework__item {
+	overflow: hidden;
+}
+
+.sg-capital-framework__item:nth-child(1) {
+	align-content: end;
+	min-block-size: clamp(18rem, 34vw, 30rem);
+	background:
+		linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--sg-color-black) 10%, transparent),
+			transparent 48%
+		),
+		radial-gradient(
+			circle at 74% 20%,
+			color-mix(in srgb, var(--sg-color-accent) 16%, transparent),
+			transparent 40%
+		),
+		var(--sg-color-surface);
+}
+
+.sg-capital-framework__item:nth-child(1)::after {
+	position: absolute;
+	inset-block: var(--sg-space-xl);
+	inset-inline-end: var(--sg-space-xl);
+	inline-size: var(--sg-border-width-hairline);
+	background: linear-gradient(180deg, transparent, var(--sg-color-accent), transparent);
+	content: "";
+	transform: rotate(12deg);
+}
+
+.sg-capital-framework__item:nth-child(4) {
+	background:
+		linear-gradient(
+			145deg,
+			color-mix(in srgb, var(--sg-color-accent) 10%, transparent),
+			transparent 54%
+		),
+		var(--sg-color-surface-strong);
+}
+
+.sg-capital-services {
+	background-image:
+		url("../../assets/images/backgrounds/generated/luxury-grid-depth.svg"),
+		url("../../assets/images/backgrounds/generated/architectural-grid-depth.svg"),
+		linear-gradient(
+			120deg,
+			var(--sg-color-surface),
+			var(--sg-color-ivory)
+		);
+	background-position: 50% 24%, 88% 8%, center;
+	background-repeat: no-repeat;
+	background-size: max(100vw, 88rem) auto, max(62vw, 54rem) auto, auto;
+	background-blend-mode: screen, screen, normal;
+}
+
+.sg-capital-services__panel:nth-child(1) .sg-capital-services__image,
+.sg-capital-services__panel:nth-child(5) .sg-capital-services__image {
+	object-position: 50% 48%;
+}
+
+.sg-capital-services__panel:nth-child(3) .sg-capital-services__image,
+.sg-capital-services__panel:nth-child(4) .sg-capital-services__image,
+.sg-capital-services__panel:nth-child(6) .sg-capital-services__image {
+	object-position: 50% 42%;
+}
+
+.sg-capital-partners {
+	background:
+		url("../../assets/images/backgrounds/generated/capital-connection-map.svg") 50% 8% / max(100vw, 70rem) auto no-repeat,
+		url("../../assets/images/backgrounds/generated/graphite-silver-field.svg") 50% 12% / max(100vw, 88rem) auto no-repeat,
+		radial-gradient(circle at 88% 10%, color-mix(in srgb, var(--sg-metal-silver) 10%, transparent), transparent 28rem),
+		linear-gradient(180deg, var(--sg-color-surface), var(--sg-ink));
+	background-blend-mode: screen, screen, normal, normal;
+}
+
+.sg-capital-partners .sg-product-section__header {
+	max-inline-size: var(--sg-container-sm);
+	margin-inline: auto;
+	text-align: center;
+}
+
+.sg-capital-credentials,
+.sg-capital-affiliations {
+	display: grid;
+	gap: var(--sg-component-gap);
+}
+
+.sg-capital-affiliations {
+	margin-block-start: clamp(var(--sg-space-3xl), 7vw, var(--sg-space-5xl));
+}
+
+.sg-capital-credentials__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(14rem, 24rem));
+	justify-content: center;
+	gap: clamp(var(--sg-space-lg), 3.4vw, var(--sg-space-3xl));
+}
+
+.sg-capital-affiliations__grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: clamp(var(--sg-space-lg), 3vw, var(--sg-space-3xl));
+}
+
+.sg-capital-credential-card,
+.sg-capital-affiliation-card {
+	position: relative;
+	display: grid;
+	gap: clamp(var(--sg-space-md), 2.4vw, var(--sg-space-xl));
+	align-content: center;
+	justify-items: center;
+	min-block-size: clamp(16rem, 22vw, 22rem);
+	padding: clamp(var(--sg-space-xl), 4vw, var(--sg-space-4xl));
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-silver) 16%, transparent);
+	background:
+		linear-gradient(140deg, color-mix(in srgb, var(--sg-metal-silver) 9%, transparent), transparent 48%),
+		radial-gradient(circle at 82% 16%, color-mix(in srgb, var(--sg-metal-champagne) 5%, transparent), transparent 20rem),
+		color-mix(in srgb, var(--sg-color-surface-strong) 92%, transparent);
+	box-shadow: var(--sg-shadow-md);
+	overflow: hidden;
+	transition:
+		border-color var(--sg-duration-default) var(--sg-ease-standard),
+		box-shadow var(--sg-duration-default) var(--sg-ease-standard),
+		transform var(--sg-duration-default) var(--sg-ease-emphasized);
+}
+
+.sg-capital-affiliation-card {
+	min-block-size: clamp(11rem, 16vw, 15rem);
+	inline-size: min(100%, 18rem);
+	padding: clamp(var(--sg-space-lg), 3vw, var(--sg-space-2xl));
+}
+
+.sg-capital-credential-card:hover,
+.sg-capital-credential-card:focus-within,
+.sg-capital-affiliation-card:hover,
+.sg-capital-affiliation-card:focus-within {
+	border-color: color-mix(in srgb, var(--sg-metal-silver) 32%, transparent);
+	box-shadow: var(--sg-shadow-lg);
+	transform: translateY(-0.2rem);
+}
+
+.sg-capital-credential-card::before,
+.sg-capital-credential-card::after,
+.sg-capital-affiliation-card::before,
+.sg-capital-affiliation-card::after {
+	position: absolute;
+	content: "";
+	pointer-events: none;
+}
+
+.sg-capital-credential-card::before,
+.sg-capital-affiliation-card::before {
+	inset-block-start: 0;
+	inset-inline: 0;
+	block-size: var(--sg-border-width-hairline);
+	background: var(--sg-gradient-gold-accent);
+	opacity: 0.82;
+}
+
+.sg-capital-credential-card::after,
+.sg-capital-affiliation-card::after {
+	inset-block-end: var(--sg-space-xl);
+	inset-inline-end: var(--sg-space-xl);
+	inline-size: min(9rem, 28vw);
+	block-size: var(--sg-border-width-hairline);
+	background: var(--sg-metal-rule-gradient);
+	opacity: 0.62;
+}
+
+.sg-capital-credential-card__logo-wrap {
+	display: grid;
+	place-items: center;
+	inline-size: 100%;
+	min-block-size: clamp(8.5rem, 16vw, 12rem);
+	padding: clamp(var(--sg-space-lg), 3vw, var(--sg-space-2xl));
+	background:
+		linear-gradient(135deg, rgba(8, 9, 11, 0.66), color-mix(in srgb, var(--sg-metal-silver) 8%, transparent)),
+		color-mix(in srgb, var(--sg-graphite) 54%, transparent);
+}
+
+.sg-capital-credential-card__logo,
+.sg-capital-affiliation-card__logo {
+	display: block;
+	inline-size: min(100%, 26rem);
+	max-block-size: 7.25rem;
+	object-fit: contain;
+	object-position: center;
+}
+
+.sg-capital-affiliation-card__logo {
+	max-block-size: 5.5rem;
+}
+
+.sg-capital-credential-card__label {
+	margin: 0;
+	color: var(--sg-metal-platinum);
+	font-size: var(--sg-font-size-xs);
+	line-height: var(--sg-line-height-ui);
+	text-transform: uppercase;
+}
+
+@media (min-width: 80rem) {
+	.sg-capital-framework__grid {
+		grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+	}
+
+	.sg-capital-framework__item:nth-child(1) {
+		grid-row: span 2;
+	}
+}
+
+@media (max-width: 63.98rem) {
+	.sg-capital-credentials__grid {
+		grid-template-columns: repeat(2, minmax(13rem, 22rem));
+	}
+}
+
+@media (max-width: 47.98rem) {
+	.sg-capital-partners .sg-product-section__header {
+		text-align: left;
+	}
+
+	.sg-capital-credentials__grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.sg-capital-credential-card {
+		min-block-size: clamp(17rem, 58vw, 23rem);
+	}
+
+	.sg-capital-credential-card__logo-wrap {
+		min-block-size: clamp(6.5rem, 32vw, 9rem);
+	}
+
+	.sg-capital-credential-card__logo {
+		max-block-size: 5.75rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sg-capital-credential-card,
+	.sg-capital-affiliation-card {
+		transition: none;
+	}
+
+	.sg-capital-credential-card:hover,
+	.sg-capital-credential-card:focus-within,
+	.sg-capital-affiliation-card:hover,
+	.sg-capital-affiliation-card:focus-within {
+		transform: none;
+	}
+}

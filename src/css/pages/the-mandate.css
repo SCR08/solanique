@@ -1,0 +1,210 @@
+/**
+ * The Mandate page visual details.
+ */
+
+.sg-mandate-duo,
+.sg-mandate-words__layout {
+	display: grid;
+	gap: clamp(var(--sg-space-xl), 4vw, var(--sg-space-3xl));
+	margin-block-start: var(--sg-space-2xl);
+}
+
+.sg-mandate-duo__item {
+	position: relative;
+	padding-block-start: var(--sg-space-lg);
+	border-block-start: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-accent) 36%, transparent);
+}
+
+.sg-mandate-duo__title {
+	color: var(--sg-color-accent-hover);
+	font-size: var(--sg-font-size-xl);
+}
+
+.sg-mandate-duo__text {
+	color: var(--sg-color-text-muted);
+	font-size: clamp(var(--sg-font-size-md), 1.4vw, var(--sg-font-size-lg));
+	line-height: var(--sg-line-height-body);
+}
+
+.sg-mandate-section,
+.sg-mandate-dna,
+.sg-mandate-words {
+	background-image:
+		url("../../assets/images/backgrounds/generated/graphite-silver-field.svg"),
+		url("../../assets/images/backgrounds/generated/metallic-orbit-field.svg"),
+		linear-gradient(180deg, var(--sg-color-ivory), var(--sg-color-surface));
+	background-position: 50% 18%, 84% 10%, center;
+	background-repeat: no-repeat;
+	background-size: max(100vw, 88rem) auto, max(100vw, 68rem) auto, auto;
+	background-blend-mode: screen, screen, normal;
+}
+
+.sg-mandate-dna {
+	background-image:
+		url("../../assets/images/backgrounds/generated/luxury-grid-depth.svg"),
+		url("../../assets/images/backgrounds/generated/silver-reflection-field.svg"),
+		linear-gradient(180deg, var(--sg-color-surface), var(--sg-color-ivory));
+	background-position: 50% 22%, 84% 10%, center;
+	background-size: max(100vw, 88rem) auto, max(100vw, 68rem) auto, auto;
+}
+
+.sg-mandate-origin .sg-product-intro__content {
+	position: relative;
+	z-index: var(--sg-z-index-overlay);
+	max-inline-size: min(100%, 52rem);
+	padding: clamp(var(--sg-space-xl), 4vw, var(--sg-space-3xl));
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-silver) 14%, transparent);
+	background:
+		url("../../assets/images/backgrounds/generated/silver-reflection-field.svg") 50% 50% / cover no-repeat,
+		linear-gradient(135deg, rgba(13, 15, 19, 0.6), rgba(20, 22, 28, 0.34)),
+		color-mix(in srgb, var(--sg-graphite) 28%, transparent);
+	backdrop-filter: blur(12px);
+	background-blend-mode: screen, normal, normal;
+}
+
+.sg-mandate-origin .sg-product-intro__text {
+	max-inline-size: var(--sg-measure);
+	color: color-mix(in srgb, var(--sg-metal-platinum) 88%, transparent);
+	font-size: clamp(var(--sg-font-size-md), 1.2vw, var(--sg-font-size-lg));
+	line-height: var(--sg-line-height-body);
+}
+
+.sg-mandate-origin {
+	background:
+		radial-gradient(circle at 76% 12%, color-mix(in srgb, var(--sg-metal-silver) 12%, transparent), transparent 30rem),
+		linear-gradient(180deg, var(--sg-graphite), var(--sg-ink));
+	color: var(--sg-metal-silver);
+}
+
+.sg-mandate-origin > .sg-container {
+	position: relative;
+	z-index: var(--sg-z-index-overlay);
+}
+
+.sg-mandate-origin__backdrop-image {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+	object-position: 54% 42%;
+	filter: saturate(0.92) contrast(1.06) brightness(0.72);
+}
+
+.sg-mandate-origin__overlay {
+	position: absolute;
+	z-index: var(--sg-z-index-raised);
+	inset: 0;
+	background:
+		url("../../assets/images/backgrounds/generated/metallic-orbit-field.svg") 72% 38% / max(100vw, 82rem) auto no-repeat,
+		linear-gradient(90deg, rgba(4, 4, 4, 0.68), rgba(4, 4, 4, 0.34) 54%, rgba(4, 4, 4, 0.52)),
+		linear-gradient(180deg, rgba(4, 4, 4, 0.62), rgba(4, 4, 4, 0.18) 38%, rgba(4, 4, 4, 0.68)),
+		radial-gradient(circle at 78% 26%, color-mix(in srgb, var(--sg-metal-silver) 12%, transparent), transparent 32rem);
+	background-blend-mode: screen, normal, normal, normal;
+	pointer-events: none;
+}
+
+.sg-mandate-origin .sg-product-intro__title,
+.sg-mandate-origin .sg-product-section__eyebrow {
+	color: var(--sg-metal-silver);
+}
+
+.sg-mandate-origin .sg-product-intro__frame {
+	position: relative;
+	z-index: var(--sg-z-index-overlay);
+}
+
+.sg-mandate-signature {
+	display: grid;
+	gap: var(--sg-space-sm);
+	max-inline-size: min(100%, 28rem);
+	margin-block-start: clamp(var(--sg-space-xl), 4vw, var(--sg-space-3xl));
+	padding-block-start: var(--sg-space-lg);
+}
+
+.sg-mandate-signature__rule {
+	display: block;
+	inline-size: min(14rem, 48vw);
+	block-size: var(--sg-border-width-hairline);
+	background: var(--sg-gradient-gold-accent);
+}
+
+.sg-mandate-signature__name {
+	margin: 0;
+	color: var(--sg-metal-silver);
+	font-family: var(--sg-font-family-heading);
+	font-size: clamp(var(--sg-font-size-xl), 2.8vw, var(--sg-font-size-2xl));
+	line-height: var(--sg-line-height-heading);
+}
+
+.sg-mandate-signature__title {
+	margin: 0;
+	color: color-mix(in srgb, var(--sg-metal-platinum) 86%, transparent);
+	font-size: var(--sg-font-size-sm);
+	line-height: var(--sg-line-height-ui);
+}
+
+.sg-mandate-personality {
+	margin-block-start: var(--sg-space-2xl);
+	padding: clamp(var(--sg-space-lg), 3vw, var(--sg-space-2xl));
+	border-inline-start: var(--sg-border-width-hairline) solid var(--sg-color-accent);
+	background: color-mix(in srgb, var(--sg-color-surface) 88%, transparent);
+}
+
+.sg-mandate-personality__title {
+	color: var(--sg-color-accent-hover);
+	font-size: var(--sg-font-size-lg);
+}
+
+.sg-mandate-personality__text {
+	color: var(--sg-color-text-muted);
+	font-size: clamp(var(--sg-font-size-lg), 2vw, var(--sg-font-size-xl));
+	line-height: var(--sg-line-height-heading);
+}
+
+.sg-mandate-words {
+	background:
+		url("../../assets/images/backgrounds/generated/club-global-network.svg") 50% 8% / max(100vw, 72rem) auto no-repeat,
+		url("../../assets/images/backgrounds/generated/graphite-silver-field.svg") 50% 24% / max(100vw, 88rem) auto no-repeat,
+		linear-gradient(135deg, color-mix(in srgb, var(--sg-color-surface) 88%, transparent), var(--sg-color-background));
+	background-blend-mode: screen, screen, normal;
+}
+
+.sg-mandate-words__list {
+	display: grid;
+	gap: var(--sg-space-md);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sg-mandate-words__item {
+	padding: clamp(var(--sg-space-lg), 3vw, var(--sg-space-2xl));
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-accent) 22%, transparent);
+	font-size: var(--sg-font-size-md);
+	line-height: var(--sg-line-height-body);
+}
+
+.sg-mandate-words__item strong {
+	display: block;
+	color: var(--sg-color-accent-hover);
+	font-family: var(--sg-font-family-heading);
+	font-size: clamp(var(--sg-font-size-xl), 3vw, var(--sg-font-size-3xl));
+	font-weight: var(--sg-font-weight-regular);
+	line-height: var(--sg-line-height-tight);
+}
+
+.sg-mandate-words__item span {
+	color: var(--sg-color-text-muted);
+}
+
+@media (min-width: 48rem) {
+	.sg-mandate-duo {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 80rem) {
+	.sg-mandate-words__layout {
+		grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+		align-items: start;
+	}
+}

@@ -1,0 +1,229 @@
+/**
+ * Solanique Estates page visual details.
+ */
+
+.sg-estates-hero {
+	background-image:
+		radial-gradient(
+			circle at 76% 24%,
+			color-mix(in srgb, var(--sg-metal-silver) 13%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2.5)
+		),
+		radial-gradient(
+			circle at 12% 86%,
+			color-mix(in srgb, var(--sg-color-grey-300) 10%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2)
+		),
+		linear-gradient(140deg, var(--sg-graphite), var(--sg-ink));
+}
+
+.sg-estates-hero::after {
+	transform: skewX(-8deg);
+}
+
+.sg-estates-hero__wall,
+.sg-estates-hero__room {
+	z-index: var(--sg-product-detail-layer);
+	position: absolute;
+	display: block;
+	pointer-events: none;
+}
+
+.sg-estates-hero__wall {
+	background: var(--sg-color-accent);
+	opacity: 0.7;
+}
+
+.sg-estates-hero__wall--one {
+	inset-block-start: 24%;
+	inset-inline-start: 18%;
+	inline-size: 58%;
+	block-size: var(--sg-border-width-hairline);
+}
+
+.sg-estates-hero__wall--two {
+	inset-block-start: 24%;
+	inset-inline-start: 18%;
+	inline-size: var(--sg-border-width-hairline);
+	block-size: 46%;
+}
+
+.sg-estates-hero__wall--three {
+	inset-block-start: 46%;
+	inset-inline-start: 36%;
+	inline-size: 44%;
+	block-size: var(--sg-border-width-hairline);
+}
+
+.sg-estates-hero__wall--four {
+	inset-block-start: 24%;
+	inset-inline-start: 58%;
+	inline-size: var(--sg-border-width-hairline);
+	block-size: 42%;
+}
+
+.sg-estates-hero__room {
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-white) 16%, transparent);
+	background: color-mix(in srgb, var(--sg-color-accent) 5%, transparent);
+}
+
+.sg-estates-hero__room--primary {
+	inset-block-start: 30%;
+	inset-inline-start: 24%;
+	inline-size: 28%;
+	aspect-ratio: 1;
+}
+
+.sg-estates-hero__room--secondary {
+	inset-block-start: 52%;
+	inset-inline-start: 42%;
+	inline-size: 34%;
+	aspect-ratio: 4 / 3;
+}
+
+.sg-estates-hero__room--tertiary {
+	inset-block-end: 14%;
+	inset-inline-start: 20%;
+	inline-size: 26%;
+	aspect-ratio: 3 / 4;
+}
+
+.sg-estates-intro__frame {
+	min-block-size: calc(var(--sg-space-5xl) * 2.5);
+	border-color: color-mix(in srgb, var(--sg-color-accent) 30%, transparent);
+	background:
+		linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--sg-color-white) 8%, transparent),
+			transparent 42%
+		),
+		var(--sg-color-grey-950);
+}
+
+.sg-estates-intro__frame-line {
+	position: absolute;
+	display: block;
+	background: linear-gradient(90deg, transparent, var(--sg-color-accent), transparent);
+	pointer-events: none;
+}
+
+.sg-estates-intro__frame-line--one {
+	inset-block-start: 32%;
+	inset-inline: var(--sg-space-xl);
+	block-size: var(--sg-border-width-hairline);
+	transform: rotate(-10deg);
+}
+
+.sg-estates-intro__frame-line--two {
+	inset-block: var(--sg-space-xl);
+	inset-inline-start: 58%;
+	inline-size: var(--sg-border-width-hairline);
+	transform: rotate(12deg);
+}
+
+.sg-estates-advisory {
+	background-image:
+		url("../../assets/images/backgrounds/generated/graphite-silver-field.svg"),
+		url("../../assets/images/backgrounds/generated/estate-architectural-silhouette.svg"),
+		radial-gradient(
+			circle at 84% 20%,
+			color-mix(in srgb, var(--sg-metal-silver) 11%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2)
+		),
+		linear-gradient(180deg, var(--sg-color-surface), var(--sg-color-ivory));
+	background-position: 50% 18%, 50% 100%, center, center;
+	background-repeat: no-repeat;
+	background-size: max(100vw, 88rem) auto, max(100vw, 76rem) auto, auto, auto;
+	background-blend-mode: screen, screen, normal, normal;
+}
+
+.sg-estates-advisory__panel:nth-child(1) .sg-estates-advisory__image,
+.sg-estates-advisory__panel:nth-child(2) .sg-estates-advisory__image,
+.sg-estates-advisory__panel:nth-child(3) .sg-estates-advisory__image {
+	object-position: 50% 44%;
+}
+
+.sg-estates-advisory__panel:nth-child(4) .sg-estates-advisory__image,
+.sg-estates-advisory__panel:nth-child(5) .sg-estates-advisory__image {
+	object-position: 50% 58%;
+}
+
+.sg-estates-intelligence {
+	background-image:
+		url("../../assets/images/backgrounds/generated/luxury-grid-depth.svg"),
+		url("../../assets/images/backgrounds/generated/architectural-grid-depth.svg"),
+		linear-gradient(
+			120deg,
+			var(--sg-color-ivory),
+			var(--sg-color-surface)
+		);
+	background-position: 50% 18%, 90% 12%, center;
+	background-repeat: no-repeat;
+	background-size: max(100vw, 88rem) auto, max(100vw, 58rem) auto, auto;
+	background-blend-mode: screen, screen, normal;
+}
+
+.sg-estates-intelligence::before {
+	inset-block-start: var(--sg-space-4xl);
+	inset-inline-end: var(--sg-container-gutter);
+	inline-size: min(48vw, var(--sg-container-sm));
+	aspect-ratio: 16 / 10;
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-accent) 20%, transparent);
+	transform: rotate(-8deg);
+}
+
+.sg-estates-intelligence__list {
+	display: grid;
+	gap: var(--sg-space-md);
+	border-block-start: 0;
+}
+
+.sg-estates-intelligence__item {
+	position: relative;
+	grid-template-columns: minmax(0, 1fr);
+	padding: clamp(var(--sg-space-xl), 4vw, var(--sg-space-2xl));
+	overflow: hidden;
+	border: 0;
+	border-radius: var(--sg-radius-xs);
+	background:
+		linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--sg-color-accent) 7%, transparent),
+			transparent 44%
+		),
+		var(--sg-color-surface);
+	box-shadow: var(--sg-shadow-xs);
+}
+
+.sg-estates-intelligence__item::before {
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline: 0;
+	block-size: var(--sg-border-width-hairline);
+	background: linear-gradient(90deg, var(--sg-color-accent), transparent);
+	content: "";
+}
+
+.sg-estates-intelligence__item:nth-child(2) {
+	margin-inline-start: clamp(var(--sg-space-0), 5vw, var(--sg-space-3xl));
+}
+
+.sg-estates-intelligence__item:nth-child(3) {
+	margin-inline-end: clamp(var(--sg-space-0), 5vw, var(--sg-space-3xl));
+}
+
+.sg-estates-intelligence__item:nth-child(4) {
+	background:
+		radial-gradient(
+			circle at 80% 20%,
+			color-mix(in srgb, var(--sg-color-accent) 15%, transparent),
+			transparent 40%
+		),
+		var(--sg-color-surface-strong);
+}
+
+@media (min-width: 80rem) {
+	.sg-estates-intelligence__layout {
+		grid-template-columns: minmax(0, 0.76fr) minmax(0, 1.24fr);
+	}
+}

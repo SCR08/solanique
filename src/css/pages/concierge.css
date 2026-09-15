@@ -1,0 +1,259 @@
+/**
+ * Solanique Concierge page visual details.
+ */
+
+.sg-concierge-hero {
+	background-image:
+		radial-gradient(
+			circle at 74% 24%,
+			color-mix(in srgb, var(--sg-metal-silver) 13%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2.5)
+		),
+		radial-gradient(
+			circle at 12% 82%,
+			color-mix(in srgb, var(--sg-color-grey-300) 10%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2)
+		),
+		linear-gradient(135deg, var(--sg-graphite), var(--sg-ink));
+}
+
+.sg-concierge-hero::after {
+	transform: skewX(-6deg);
+}
+
+.sg-concierge-hero__image {
+	object-position: 50% 58%;
+}
+
+.sg-concierge-hero__ring,
+.sg-concierge-hero__path,
+.sg-concierge-hero__point {
+	z-index: var(--sg-product-detail-layer);
+	position: absolute;
+	display: block;
+	pointer-events: none;
+}
+
+.sg-concierge-hero__ring {
+	inset: 18%;
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-accent) 40%, transparent);
+	border-radius: var(--sg-radius-circle);
+}
+
+.sg-concierge-hero__ring--inner {
+	inset: 34%;
+	border-color: color-mix(in srgb, var(--sg-color-white) 14%, transparent);
+}
+
+.sg-concierge-hero__path {
+	inline-size: 58%;
+	block-size: var(--sg-border-width-hairline);
+	background: linear-gradient(90deg, transparent, var(--sg-color-accent), transparent);
+	opacity: 0.72;
+	transform-origin: 50% 50%;
+}
+
+.sg-concierge-hero__path--one {
+	inset-block-start: 42%;
+	inset-inline-start: 21%;
+	transform: rotate(22deg);
+}
+
+.sg-concierge-hero__path--two {
+	inset-block-start: 58%;
+	inset-inline-start: 21%;
+	transform: rotate(-28deg);
+}
+
+.sg-concierge-hero__point {
+	inline-size: var(--sg-space-sm);
+	block-size: var(--sg-space-sm);
+	border: var(--sg-border-width-hairline) solid var(--sg-metal-titanium);
+	border-radius: var(--sg-radius-circle);
+	background: var(--sg-color-accent);
+	box-shadow: 0 0 var(--sg-space-lg) color-mix(in srgb, var(--sg-color-accent) 42%, transparent);
+}
+
+.sg-concierge-hero__point--one {
+	inset-block-start: 24%;
+	inset-inline-start: 46%;
+}
+
+.sg-concierge-hero__point--two {
+	inset-block-start: 54%;
+	inset-inline-end: 24%;
+}
+
+.sg-concierge-hero__point--three {
+	inset-block-end: 22%;
+	inset-inline-start: 28%;
+}
+
+.sg-concierge-intro__frame {
+	min-block-size: calc(var(--sg-space-5xl) * 2.5);
+	border-color: color-mix(in srgb, var(--sg-metal-silver) 22%, transparent);
+	background:
+		radial-gradient(
+			circle at 50% 42%,
+			color-mix(in srgb, var(--sg-color-accent) 12%, transparent),
+			transparent 44%
+		),
+		linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--sg-color-white) 8%, transparent),
+			transparent 42%
+		),
+		var(--sg-color-surface);
+}
+
+.sg-concierge-intro__frame-line {
+	position: absolute;
+	display: block;
+	background: linear-gradient(90deg, transparent, var(--sg-color-accent), transparent);
+	pointer-events: none;
+}
+
+.sg-concierge-intro__frame-line--one {
+	inset-block-start: 42%;
+	inset-inline: var(--sg-space-xl);
+	block-size: var(--sg-border-width-hairline);
+	transform: rotate(8deg);
+}
+
+.sg-concierge-intro__frame-line--two {
+	inset-block: var(--sg-space-xl);
+	inset-inline-start: 46%;
+	inline-size: var(--sg-border-width-hairline);
+	transform: rotate(-10deg);
+}
+
+.sg-concierge-services {
+	background-image:
+		url("../../assets/images/backgrounds/generated/graphite-silver-field.svg"),
+		url("../../assets/images/backgrounds/generated/concierge-private-lines.svg"),
+		radial-gradient(
+			circle at 84% 22%,
+			color-mix(in srgb, var(--sg-metal-silver) 11%, transparent),
+			transparent calc(var(--sg-space-5xl) * 2)
+		),
+		linear-gradient(180deg, var(--sg-color-surface), var(--sg-color-ivory));
+	background-position: 50% 16%, 50% 18%, center, center;
+	background-repeat: no-repeat;
+	background-size: max(100vw, 88rem) auto, max(100vw, 72rem) auto, auto, auto;
+	background-blend-mode: screen, screen, normal, normal;
+}
+
+.sg-concierge-services__item {
+	border-color: color-mix(in srgb, var(--sg-color-accent) 24%, var(--sg-color-border));
+	background:
+		linear-gradient(
+			180deg,
+			var(--sg-color-surface),
+			color-mix(in srgb, var(--sg-color-ivory) 84%, var(--sg-color-surface))
+		),
+		var(--sg-color-surface);
+}
+
+.sg-concierge-services__panel:nth-child(1) .sg-concierge-services__image,
+.sg-concierge-services__panel:nth-child(2) .sg-concierge-services__image,
+.sg-concierge-services__panel:nth-child(3) .sg-concierge-services__image {
+	object-position: 50% 58%;
+}
+
+.sg-concierge-services__panel:nth-child(4) .sg-concierge-services__image {
+	object-position: 54% 50%;
+}
+
+.sg-concierge-services__panel:nth-child(5) .sg-concierge-services__image {
+	object-position: 50% 52%;
+}
+
+.sg-concierge-services__panel:nth-child(6) .sg-concierge-services__image {
+	object-position: 50% 44%;
+}
+
+.sg-concierge-approach {
+	background-image:
+		url("../../assets/images/backgrounds/generated/luxury-grid-depth.svg"),
+		url("../../assets/images/backgrounds/generated/concierge-private-lines.svg"),
+		linear-gradient(
+			120deg,
+			var(--sg-color-ivory),
+			var(--sg-color-surface)
+		);
+	background-position: 50% 20%, 88% 12%, center;
+	background-repeat: no-repeat;
+	background-size: max(100vw, 88rem) auto, max(100vw, 62rem) auto, auto;
+	background-blend-mode: screen, screen, normal;
+}
+
+.sg-concierge-approach::before {
+	inset-block-start: var(--sg-space-4xl);
+	inset-inline-end: var(--sg-container-gutter);
+	inline-size: min(42vw, var(--sg-container-sm));
+	aspect-ratio: 1;
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-accent) 18%, transparent);
+	border-radius: var(--sg-radius-circle);
+}
+
+.sg-concierge-approach__list {
+	display: grid;
+	gap: var(--sg-space-md);
+	border-block-start: 0;
+}
+
+.sg-concierge-approach__item {
+	position: relative;
+	grid-template-columns: minmax(0, 1fr);
+	padding: clamp(var(--sg-space-xl), 4vw, var(--sg-space-2xl));
+	overflow: hidden;
+	border: 0;
+	border-radius: var(--sg-radius-xs);
+	background:
+		radial-gradient(
+			circle at 84% 18%,
+			color-mix(in srgb, var(--sg-color-accent) 10%, transparent),
+			transparent 38%
+		),
+		color-mix(in srgb, var(--sg-color-surface) 88%, transparent);
+	box-shadow: var(--sg-shadow-xs);
+}
+
+.sg-concierge-approach__item::before {
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: min(42%, 9rem);
+	block-size: var(--sg-border-width-hairline);
+	background: var(--sg-color-accent);
+	content: "";
+}
+
+.sg-concierge-approach__item:nth-child(even) {
+	background:
+		linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--sg-color-accent) 8%, transparent),
+			transparent 46%
+		),
+		var(--sg-color-surface-strong);
+}
+
+@media (min-width: 48rem) {
+	.sg-concierge-approach__list {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		align-items: start;
+	}
+
+	.sg-concierge-approach__item:nth-child(2),
+	.sg-concierge-approach__item:nth-child(4) {
+		transform: translateY(var(--sg-space-xl));
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sg-concierge-approach__item:nth-child(2),
+	.sg-concierge-approach__item:nth-child(4) {
+		transform: none;
+	}
+}

@@ -1,0 +1,330 @@
+/**
+ * Premium legal page layouts.
+ */
+
+.sg-legal-page {
+	background:
+		url("../../assets/images/backgrounds/generated/graphite-silver-field.svg") 50% 0 / max(100vw, 92rem) auto no-repeat,
+		radial-gradient(circle at 12% 4%, color-mix(in srgb, var(--sg-metal-silver) 12%, transparent), transparent 24rem),
+		linear-gradient(180deg, var(--sg-ink), var(--sg-color-surface));
+	background-blend-mode: screen, normal, normal;
+	color: var(--sg-color-text);
+}
+
+.sg-legal-hero {
+	position: relative;
+	overflow: clip;
+	padding-block-start: calc(var(--sg-space-5xl) + var(--sg-space-4xl));
+	padding-block-end: var(--sg-section-space-sm);
+	background: var(--sg-ink);
+	isolation: isolate;
+}
+
+.sg-legal-hero::before {
+	position: absolute;
+	z-index: var(--sg-z-index-raised);
+	inset-block-start: 14%;
+	inset-inline-end: max(var(--sg-container-gutter), 8vw);
+	inline-size: min(34rem, 48vw);
+	aspect-ratio: 1;
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-silver) 16%, transparent);
+	border-radius: var(--sg-radius-circle);
+	background:
+		linear-gradient(90deg, transparent 49.85%, color-mix(in srgb, var(--sg-metal-silver) 10%, transparent) 50%, transparent 50.15%),
+		linear-gradient(0deg, transparent 49.85%, color-mix(in srgb, var(--sg-metal-silver) 10%, transparent) 50%, transparent 50.15%),
+		radial-gradient(circle, transparent 52%, color-mix(in srgb, var(--sg-metal-silver) 10%, transparent) 52.2%, transparent 52.6%),
+		radial-gradient(circle, color-mix(in srgb, var(--sg-metal-silver) 8%, transparent), transparent 66%);
+	content: "";
+	opacity: 0.54;
+	pointer-events: none;
+	transform: rotate(-12deg);
+}
+
+.sg-legal-hero::after {
+	position: absolute;
+	z-index: var(--sg-z-index-overlay);
+	inset-block-end: 0;
+	inset-inline: var(--sg-container-gutter);
+	block-size: var(--sg-border-width-hairline);
+	background: var(--sg-metal-rule-gradient);
+	content: "";
+	pointer-events: none;
+}
+
+.sg-legal-hero__media {
+	position: absolute;
+	z-index: var(--sg-z-index-base);
+	inset-block: -24%;
+	inset-inline: -2%;
+	overflow: clip;
+	pointer-events: none;
+}
+
+.sg-legal-hero.is-parallax-active .sg-legal-hero__media {
+	will-change: transform;
+}
+
+.sg-legal-hero__image {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+	object-position: 64% 50%;
+	filter: saturate(0.94) contrast(1.06) brightness(0.78);
+}
+
+.sg-legal-hero__shade {
+	position: absolute;
+	z-index: var(--sg-z-index-raised);
+	inset: 0;
+	background:
+		url("../../assets/images/backgrounds/generated/metallic-orbit-field.svg") 72% 42% / max(100vw, 88rem) auto no-repeat,
+		linear-gradient(90deg, rgba(4, 4, 4, 0.72), rgba(4, 4, 4, 0.34) 58%, rgba(4, 4, 4, 0.18)),
+		linear-gradient(180deg, rgba(4, 4, 4, 0.44), rgba(4, 4, 4, 0.1) 38%, rgba(4, 4, 4, 0.64)),
+		radial-gradient(circle at 76% 30%, color-mix(in srgb, var(--sg-metal-silver) 14%, transparent), transparent 32rem);
+	background-blend-mode: screen, normal, normal, normal;
+	pointer-events: none;
+}
+
+.sg-legal-hero__content {
+	position: relative;
+	z-index: var(--sg-z-index-overlay);
+	max-inline-size: var(--sg-container-md);
+}
+
+.sg-legal-page__eyebrow {
+	color: var(--sg-metal-platinum);
+	font-family: var(--sg-font-family-ui);
+	font-size: var(--sg-font-size-xs);
+	letter-spacing: var(--sg-letter-spacing-normal);
+	line-height: var(--sg-line-height-ui);
+	text-transform: uppercase;
+}
+
+.sg-legal-page__title {
+	max-inline-size: 14ch;
+	color: var(--sg-metal-silver);
+	font-size: clamp(2.25rem, 5vw, 4.25rem);
+	line-height: var(--sg-line-height-tight);
+	text-wrap: balance;
+}
+
+.sg-legal-page__updated {
+	display: inline-flex;
+	inline-size: fit-content;
+	padding-block: var(--sg-space-xs);
+	padding-inline: var(--sg-space-sm);
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-silver) 24%, transparent);
+	color: var(--sg-metal-platinum);
+	font-size: var(--sg-font-size-xs);
+	line-height: var(--sg-line-height-ui);
+	text-transform: uppercase;
+}
+
+.sg-legal-page__intro {
+	max-inline-size: var(--sg-container-sm);
+	color: color-mix(in srgb, var(--sg-metal-platinum) 84%, transparent);
+	font-size: clamp(var(--sg-font-size-md), 1.05vw, var(--sg-font-size-lg));
+}
+
+.sg-legal-page__body {
+	background:
+		url("../../assets/images/backgrounds/generated/luxury-grid-depth.svg") 50% 12% / max(100vw, 92rem) auto no-repeat,
+		linear-gradient(180deg, var(--sg-color-surface), var(--sg-ink));
+	background-blend-mode: screen, normal;
+}
+
+.sg-legal-page__layout {
+	display: grid;
+	gap: var(--sg-component-gap);
+	align-items: start;
+}
+
+.sg-legal-page__nav {
+	position: sticky;
+	inset-block-start: clamp(var(--sg-space-5xl), 12vw, calc(var(--sg-space-5xl) * 1.35));
+	padding: clamp(var(--sg-space-lg), 3vw, var(--sg-space-2xl));
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-silver) 18%, transparent);
+	background: color-mix(in srgb, var(--sg-graphite) 80%, transparent);
+	backdrop-filter: blur(8px);
+}
+
+.sg-legal-page__nav-list {
+	display: grid;
+	gap: var(--sg-space-sm);
+	margin: 0;
+	padding-inline-start: var(--sg-space-lg);
+	color: color-mix(in srgb, var(--sg-metal-platinum) 78%, transparent);
+	font-size: var(--sg-font-size-sm);
+	line-height: var(--sg-line-height-ui);
+}
+
+.sg-legal-page__nav a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.sg-legal-page__nav a:hover,
+.sg-legal-page__nav a:focus-visible {
+	color: var(--sg-metal-silver);
+	text-decoration: underline;
+	text-decoration-color: var(--sg-metal-titanium);
+	text-underline-offset: 0.28em;
+}
+
+.sg-legal-page__sections {
+	display: grid;
+	gap: clamp(var(--sg-space-xl), 4vw, var(--sg-space-3xl));
+}
+
+.sg-legal-page__editor-shell {
+	max-inline-size: var(--sg-container-md);
+	margin-inline: auto;
+}
+
+.sg-legal-section,
+.sg-legal-page__notice {
+	position: relative;
+	padding: var(--sg-card-padding);
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-silver) 16%, transparent);
+	background:
+		url("../../assets/images/backgrounds/generated/graphite-silver-field.svg") 50% 0 / cover no-repeat,
+		linear-gradient(135deg, color-mix(in srgb, var(--sg-metal-silver) 7%, transparent), transparent 42%),
+		color-mix(in srgb, var(--sg-color-surface-strong) 88%, transparent);
+	background-blend-mode: screen, normal, normal;
+}
+
+.sg-legal-section__number {
+	margin: 0 0 var(--sg-space-sm);
+	color: var(--sg-metal-platinum);
+	font-size: var(--sg-font-size-xs);
+	line-height: var(--sg-line-height-ui);
+}
+
+.sg-legal-section__title {
+	max-inline-size: var(--sg-container-sm);
+	margin: 0;
+	color: var(--sg-metal-silver);
+	font-size: clamp(var(--sg-font-size-lg), 2vw, var(--sg-font-size-xl));
+	line-height: var(--sg-line-height-heading);
+}
+
+.sg-legal-section__pending {
+	max-inline-size: var(--sg-container-sm);
+	margin-block-start: var(--sg-space-md);
+	color: var(--sg-color-text-muted);
+	font-size: var(--sg-font-size-md);
+}
+
+.sg-legal-section__content {
+	display: grid;
+	gap: var(--sg-space-md);
+	max-inline-size: var(--sg-container-md);
+	margin-block-start: var(--sg-space-md);
+	color: var(--sg-color-text-muted);
+	font-size: var(--sg-font-size-md);
+	line-height: var(--sg-line-height-body);
+}
+
+.sg-legal-section__content p,
+.sg-legal-section__content ul {
+	margin: 0;
+}
+
+.sg-legal-page__editor-content {
+	color: var(--sg-color-text-muted);
+	font-size: var(--sg-font-size-md);
+	line-height: var(--sg-line-height-body);
+}
+
+.sg-legal-page__editor-content > * {
+	max-inline-size: var(--sg-container-sm);
+	margin-block-start: 0;
+	margin-block-end: var(--sg-space-md);
+}
+
+.sg-legal-page__editor-content > :last-child {
+	margin-block-end: 0;
+}
+
+.sg-legal-page__editor-content :where(h2, h3, h4) {
+	margin-block-start: clamp(var(--sg-space-xl), 4vw, var(--sg-space-3xl));
+	color: var(--sg-metal-silver);
+	line-height: var(--sg-line-height-heading);
+}
+
+.sg-legal-page__editor-content h2 {
+	font-size: clamp(var(--sg-font-size-lg), 2vw, var(--sg-font-size-xl));
+}
+
+.sg-legal-page__editor-content h3 {
+	font-size: var(--sg-font-size-lg);
+}
+
+.sg-legal-page__editor-content :where(ul, ol) {
+	display: grid;
+	gap: var(--sg-space-sm);
+	padding-inline-start: var(--sg-space-lg);
+}
+
+.sg-legal-page__editor-content a {
+	color: var(--sg-metal-silver);
+	text-decoration-color: color-mix(in srgb, var(--sg-metal-silver) 42%, transparent);
+	text-underline-offset: 0.25em;
+}
+
+.sg-legal-page__editor-content a:hover,
+.sg-legal-page__editor-content a:focus-visible {
+	color: var(--sg-metal-white);
+	text-decoration-color: currentColor;
+}
+
+.sg-legal-section__list {
+	display: grid;
+	gap: var(--sg-space-sm);
+	padding-inline-start: var(--sg-space-lg);
+}
+
+.sg-legal-page__notice {
+	border-color: color-mix(in srgb, var(--sg-metal-silver) 26%, transparent);
+}
+
+.sg-legal-page__notice p {
+	max-inline-size: var(--sg-container-sm);
+	margin: 0;
+	color: var(--sg-metal-platinum);
+}
+
+@media (min-width: 64rem) {
+	.sg-legal-page__layout {
+		grid-template-columns: minmax(16rem, 0.34fr) minmax(0, 0.66fr);
+	}
+}
+
+@media (max-width: 63.98rem) {
+	.sg-legal-page__nav {
+		position: relative;
+		inset-block-start: auto;
+	}
+}
+
+@media (max-width: 47.98rem) {
+	.sg-legal-hero {
+		padding-block-start: calc(var(--sg-space-5xl) + var(--sg-space-xl));
+	}
+
+	.sg-legal-hero__media {
+		inset-block: -14%;
+		inset-inline: -2%;
+	}
+
+	.sg-legal-hero::before {
+		inset-block-start: 10%;
+		inset-inline-end: calc(var(--sg-container-gutter) * -1);
+		inline-size: 70vw;
+		opacity: 0.3;
+	}
+
+	.sg-legal-page__nav-list {
+		padding-inline-start: var(--sg-space-md);
+	}
+}

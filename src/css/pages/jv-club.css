@@ -1,0 +1,9 @@
+/**
+ * JV Club page visual details.
+ */
+
+.sg-jv-club-overview {
+	background:
+		radial-gradient(circle at 16% 12%, color-mix(in srgb, var(--sg-color-accent) 10%, transparent), transparent 28rem),
+		var(--sg-color-background);
+}

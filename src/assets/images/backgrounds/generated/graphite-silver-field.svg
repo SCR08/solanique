@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <radialGradient id="glow-a" cx="28%" cy="20%" r="54%">
+      <stop offset="0" stop-color="#d9d9d6" stop-opacity=".22"/>
+      <stop offset=".42" stop-color="#8f949b" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#08090b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-b" cx="84%" cy="72%" r="48%">
+      <stop offset="0" stop-color="#cbbd86" stop-opacity=".12"/>
+      <stop offset=".38" stop-color="#a6abb2" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#08090b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f2f2ef" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#f2f2ef" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#f2f2ef" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#08090b"/>
+  <rect width="1600" height="1000" fill="url(#glow-a)"/>
+  <rect width="1600" height="1000" fill="url(#glow-b)"/>
+  <g fill="none" stroke="url(#line)" stroke-width="1">
+    <path d="M-80 760C240 560 412 548 646 386 855 241 1014 164 1680 108"/>
+    <path d="M-72 874C218 701 472 644 732 458 945 306 1164 230 1680 204"/>
+    <path d="M60 1040C330 824 508 790 818 566c234-170 420-245 856-286"/>
+    <path d="M-60 214C246 286 484 252 716 174 958 94 1158 76 1660 86"/>
+  </g>
+  <g filter="url(#soft)" opacity=".32">
+    <ellipse cx="1234" cy="234" rx="236" ry="58" fill="#d9d9d6"/>
+    <ellipse cx="378" cy="782" rx="320" ry="72" fill="#7f858d"/>
+  </g>
+</svg>

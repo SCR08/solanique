@@ -1,0 +1,146 @@
+/**
+ * Solanique Club page visual details.
+ */
+
+.sg-solanique-club-hero .sg-product-hero__image {
+	object-position: 54% 50%;
+	filter: saturate(0.92) contrast(1.06) brightness(0.9);
+}
+
+.sg-solanique-club-overview,
+.sg-solanique-club-areas {
+	background:
+		url("../../assets/images/backgrounds/generated/graphite-silver-field.svg") 50% 18% / max(100vw, 92rem) auto no-repeat,
+		url("../../assets/images/backgrounds/generated/club-global-network.svg") 50% 8% / max(100vw, 78rem) auto no-repeat,
+		linear-gradient(135deg, color-mix(in srgb, var(--sg-metal-graphite) 48%, transparent), transparent 58%),
+		linear-gradient(180deg, var(--sg-color-background), var(--sg-color-surface));
+	background-blend-mode: screen, screen, normal, normal;
+}
+
+.sg-solanique-club-overview__layout {
+	display: grid;
+	gap: clamp(var(--sg-space-xl), 5vw, var(--sg-space-4xl));
+	align-items: center;
+}
+
+.sg-solanique-club-overview__media {
+	position: relative;
+	overflow: clip;
+	min-block-size: clamp(18rem, 42vw, 36rem);
+	margin: 0;
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-champagne) 30%, transparent);
+	background: var(--sg-color-surface-strong);
+	isolation: isolate;
+}
+
+.sg-solanique-club-overview__media::after {
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(90deg, rgba(4, 4, 4, 0.36), transparent 62%),
+		linear-gradient(180deg, transparent, rgba(4, 4, 4, 0.32));
+	content: "";
+	pointer-events: none;
+}
+
+.sg-solanique-club-overview__image {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+	filter: saturate(0.94) contrast(1.05) brightness(0.96);
+}
+
+.sg-solanique-club-overview__content {
+	max-inline-size: var(--sg-container-sm);
+}
+
+.sg-solanique-club-areas__grid {
+	display: grid;
+	gap: clamp(var(--sg-space-xl), 4vw, var(--sg-space-4xl));
+	margin-block-start: var(--sg-component-gap);
+}
+
+.sg-solanique-club-card {
+	position: relative;
+	display: grid;
+	min-block-size: clamp(24rem, 42vw, 34rem);
+	overflow: clip;
+	border-radius: var(--sg-radius-xs);
+	background: var(--sg-color-surface-strong);
+	box-shadow: var(--sg-shadow-lg);
+	isolation: isolate;
+}
+
+.sg-solanique-club-card::after {
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(180deg, transparent 24%, rgba(4, 4, 4, 0.54)),
+		linear-gradient(90deg, rgba(4, 4, 4, 0.24), transparent 68%);
+	content: "";
+	pointer-events: none;
+}
+
+.sg-solanique-club-card__image {
+	position: absolute;
+	inset: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+	filter: saturate(0.96) contrast(1.05) brightness(0.94);
+	transition: transform var(--sg-duration-slow) var(--sg-ease-emphasized);
+}
+
+.sg-solanique-club-card__body {
+	position: relative;
+	z-index: var(--sg-z-index-raised);
+	align-self: end;
+	max-inline-size: 38rem;
+	padding: clamp(var(--sg-space-lg), 4vw, var(--sg-space-3xl));
+	color: var(--sg-metal-platinum);
+}
+
+.sg-solanique-club-card__number {
+	color: var(--sg-metal-champagne);
+	font-size: var(--sg-font-size-xs);
+	line-height: var(--sg-line-height-ui);
+}
+
+.sg-solanique-club-card__title {
+	color: var(--sg-metal-silver);
+	font-size: clamp(var(--sg-font-size-xl), 3vw, var(--sg-font-size-3xl));
+}
+
+.sg-solanique-club-card__text {
+	color: color-mix(in srgb, var(--sg-metal-silver) 78%, transparent);
+}
+
+.sg-solanique-club-card:hover .sg-solanique-club-card__image,
+.sg-solanique-club-card:focus-within .sg-solanique-club-card__image {
+	transform: scale(1.035);
+}
+
+.sg-solanique-club-pathway {
+	background:
+		url("../../assets/images/backgrounds/generated/luxury-grid-depth.svg") 50% 20% / max(100vw, 88rem) auto no-repeat,
+		url("../../assets/images/backgrounds/generated/silver-reflection-field.svg") 50% 48% / max(100vw, 70rem) auto no-repeat,
+		linear-gradient(135deg, color-mix(in srgb, var(--sg-metal-silver) 12%, transparent), transparent 42%),
+		var(--sg-ink);
+	background-blend-mode: screen, screen, normal, normal;
+}
+
+@media (min-width: 80rem) {
+	.sg-solanique-club-overview__layout {
+		grid-template-columns: minmax(0, 1.08fr) minmax(22rem, 0.92fr);
+	}
+
+	.sg-solanique-club-areas__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 47.98rem) {
+	.sg-solanique-club-card {
+		min-block-size: 28rem;
+	}
+}

@@ -1,0 +1,9 @@
+/**
+ * Investor Club page visual details.
+ */
+
+.sg-investor-club-overview {
+	background:
+		radial-gradient(circle at 86% 14%, color-mix(in srgb, var(--sg-color-accent) 10%, transparent), transparent 28rem),
+		var(--sg-color-background);
+}

@@ -1,0 +1,148 @@
+/**
+ * Form control and form layout styles.
+ */
+
+.sg-form {
+	display: grid;
+	gap: var(--sg-space-lg);
+}
+
+.sg-form--dark {
+	color: var(--sg-color-white);
+}
+
+.sg-form__grid {
+	display: grid;
+	gap: var(--sg-space-lg);
+}
+
+.sg-form__group {
+	display: grid;
+	gap: var(--sg-space-xs);
+}
+
+.sg-form__label {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sg-space-xs);
+	align-items: baseline;
+	color: var(--sg-color-heading);
+	font-size: var(--sg-font-size-sm);
+	font-weight: var(--sg-font-weight-regular);
+	line-height: var(--sg-line-height-ui);
+}
+
+.sg-form--dark .sg-form__label {
+	color: var(--sg-color-white);
+}
+
+.sg-form__control {
+	inline-size: 100%;
+	min-block-size: 3rem;
+	padding-block: var(--sg-space-sm);
+	padding-inline: var(--sg-space-md);
+	border: var(--sg-border-width-hairline) solid var(--sg-color-border);
+	border-radius: var(--sg-radius-xs);
+	background: var(--sg-color-surface);
+	color: var(--sg-color-text);
+	line-height: var(--sg-line-height-ui);
+	transition: var(--sg-transition-color), var(--sg-transition-shadow);
+}
+
+.sg-form--dark .sg-form__control {
+	border-color: color-mix(in srgb, var(--sg-color-white) 16%, transparent);
+	background: color-mix(in srgb, var(--sg-color-black) 64%, transparent);
+	color: var(--sg-color-white);
+	color-scheme: dark;
+}
+
+.sg-form__control::placeholder {
+	color: var(--sg-color-grey-500);
+	opacity: 1;
+}
+
+.sg-form__control:hover {
+	border-color: var(--sg-color-border-strong);
+}
+
+.sg-form--dark .sg-form__control:hover {
+	border-color: color-mix(in srgb, var(--sg-color-accent) 42%, transparent);
+}
+
+.sg-form__control:focus {
+	border-color: var(--sg-color-accent);
+	outline: none;
+	box-shadow: var(--sg-shadow-focus);
+}
+
+.sg-form__select {
+	appearance: auto;
+}
+
+.sg-form__textarea,
+.sg-form__control--textarea {
+	min-block-size: 8rem;
+	resize: vertical;
+}
+
+.sg-form__help,
+.sg-form__note,
+.sg-form__error {
+	font-size: var(--sg-font-size-xs);
+	line-height: var(--sg-line-height-ui);
+}
+
+.sg-form__help,
+.sg-form__note {
+	color: var(--sg-color-text-muted);
+}
+
+.sg-form--dark .sg-form__help,
+.sg-form--dark .sg-form__note {
+	color: var(--sg-color-grey-300);
+}
+
+.sg-form__error {
+	color: var(--sg-metal-titanium);
+	font-weight: var(--sg-font-weight-medium);
+}
+
+.sg-form__required,
+.sg-form__optional {
+	font-size: var(--sg-font-size-xs);
+	font-weight: var(--sg-font-weight-regular);
+}
+
+.sg-form__required {
+	color: var(--sg-color-accent-hover);
+}
+
+.sg-form__optional {
+	color: var(--sg-color-text-muted);
+}
+
+.sg-form--dark .sg-form__optional {
+	color: var(--sg-color-grey-400);
+}
+
+.sg-form__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sg-space-sm);
+	align-items: center;
+}
+
+@media (min-width: 48rem) {
+	.sg-form__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.sg-form--inline {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		align-items: end;
+	}
+
+	.sg-form--inline .sg-form__actions {
+		grid-column: 1 / -1;
+	}
+}

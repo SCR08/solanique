@@ -1,0 +1,176 @@
+/**
+ * SG Layout System.
+ *
+ * These primitives provide content width, section spacing, and responsive
+ * grid behavior without adding semantic meaning to the markup.
+ */
+
+.sg-container {
+	--sg-container-size: var(--sg-container-default);
+
+	inline-size: min(100%, calc(var(--sg-container-size) + var(--sg-container-gutter) + var(--sg-container-gutter)));
+	margin-inline: auto;
+	padding-inline: var(--sg-container-gutter);
+}
+
+.sg-container--sm {
+	--sg-container-size: var(--sg-container-sm);
+}
+
+.sg-container--md {
+	--sg-container-size: var(--sg-container-md);
+}
+
+.sg-container--lg {
+	--sg-container-size: var(--sg-container-lg);
+}
+
+.sg-container--xl {
+	--sg-container-size: var(--sg-container-xl);
+}
+
+.sg-container--2xl {
+	--sg-container-size: var(--sg-container-2xl);
+}
+
+.sg-container--max {
+	--sg-container-size: var(--sg-container-max);
+}
+
+.sg-container--full {
+	--sg-container-size: 100%;
+}
+
+.sg-container--readable {
+	--sg-container-size: var(--sg-container-readable);
+}
+
+.sg-container--narrow {
+	--sg-container-size: var(--sg-container-md);
+}
+
+.sg-container--wide {
+	--sg-container-size: var(--sg-container-wide);
+}
+
+.sg-full-bleed {
+	inline-size: 100vw;
+	margin-inline-start: calc(50% - 50vw);
+	margin-inline-end: calc(50% - 50vw);
+}
+
+@supports (inline-size: 100dvw) {
+	.sg-full-bleed {
+		inline-size: 100dvw;
+		margin-inline-start: calc(50% - 50dvw);
+		margin-inline-end: calc(50% - 50dvw);
+	}
+}
+
+.sg-section {
+	--sg-section-space: var(--sg-section-space-md);
+
+	padding-block: var(--sg-section-space);
+}
+
+.sg-section--sm,
+.sg-section--compact {
+	--sg-section-space: var(--sg-section-space-sm);
+}
+
+.sg-section--lg {
+	--sg-section-space: var(--sg-section-space-lg);
+}
+
+.sg-section--dark {
+	background:
+		radial-gradient(circle at 82% 10%, color-mix(in srgb, var(--sg-metal-silver) 8%, transparent), transparent 28rem),
+		linear-gradient(180deg, var(--sg-graphite), var(--sg-ink));
+	color: var(--sg-color-white);
+}
+
+.sg-section--dark :where(h1, h2, h3, h4, h5, h6, a) {
+	color: inherit;
+}
+
+.sg-section--light {
+	background-color: var(--sg-color-surface);
+	color: var(--sg-color-text);
+}
+
+.sg-section--flush {
+	--sg-section-space: var(--sg-space-0);
+}
+
+.sg-grid {
+	--sg-grid-columns: 1;
+	--sg-grid-gap: var(--sg-space-lg);
+	--sg-grid-min: var(--sg-grid-auto-min);
+
+	display: grid;
+	grid-template-columns: repeat(var(--sg-grid-columns), minmax(0, 1fr));
+	gap: var(--sg-grid-gap);
+	align-items: start;
+}
+
+.sg-grid--auto,
+.sg-grid--auto-fit {
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--sg-grid-min)), 1fr));
+}
+
+.sg-grid--center {
+	align-items: center;
+	justify-items: center;
+}
+
+.sg-grid--gap-sm {
+	--sg-grid-gap: var(--sg-space-sm);
+}
+
+.sg-grid--gap-md {
+	--sg-grid-gap: var(--sg-space-md);
+}
+
+.sg-grid--gap-lg {
+	--sg-grid-gap: var(--sg-space-lg);
+}
+
+.sg-grid--gap-xl {
+	--sg-grid-gap: var(--sg-space-xl);
+}
+
+.sg-grid__item {
+	min-inline-size: 0;
+}
+
+.sg-grid__item--span-full {
+	grid-column: 1 / -1;
+}
+
+@media (min-width: 48rem) {
+	.sg-grid--2,
+	.sg-grid--3,
+	.sg-grid--4 {
+		--sg-grid-columns: 2;
+	}
+
+	.sg-grid__item--span-2 {
+		grid-column: span 2;
+	}
+}
+
+@media (min-width: 64rem) {
+	.sg-grid--3 {
+		--sg-grid-columns: 3;
+	}
+
+	.sg-grid__item--span-3 {
+		grid-column: span 3;
+	}
+}
+
+@media (min-width: 80rem) {
+	.sg-grid--4 {
+		--sg-grid-columns: 4;
+	}
+}

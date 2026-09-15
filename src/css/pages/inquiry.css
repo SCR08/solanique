@@ -1,0 +1,67 @@
+/**
+ * Inquiry page visual details.
+ */
+
+.sg-inquiry-gateway,
+.sg-inquiry-pathways,
+.sg-inquiry-integration {
+	background:
+		url("../../assets/images/backgrounds/generated/graphite-silver-field.svg") 50% 16% / max(100vw, 88rem) auto no-repeat,
+		url("../../assets/images/backgrounds/generated/inquiry-access-field.svg") 50% 12% / max(100vw, 72rem) auto no-repeat,
+		linear-gradient(180deg, var(--sg-color-background), var(--sg-color-surface));
+	background-blend-mode: screen, screen, normal;
+}
+
+.sg-inquiry-integration__panel {
+	position: relative;
+	overflow: clip;
+	padding: clamp(var(--sg-space-xl), 5vw, var(--sg-space-4xl));
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-champagne) 24%, transparent);
+	background:
+		url("../../assets/images/backgrounds/generated/luxury-grid-depth.svg") 50% 35% / cover no-repeat,
+		linear-gradient(135deg, color-mix(in srgb, var(--sg-metal-silver) 8%, transparent), transparent 48%),
+		var(--sg-color-surface);
+	background-blend-mode: screen, normal, normal;
+	box-shadow: var(--sg-shadow-md);
+}
+
+.sg-future-integration {
+	display: grid;
+	gap: var(--sg-space-sm);
+	max-inline-size: var(--sg-container-sm);
+	margin-block-start: clamp(var(--sg-space-xl), 4vw, var(--sg-space-2xl));
+	padding: clamp(var(--sg-space-lg), 3vw, var(--sg-space-2xl));
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-silver) 18%, transparent);
+	background:
+		linear-gradient(135deg, color-mix(in srgb, var(--sg-metal-silver) 7%, transparent), transparent 44%),
+		color-mix(in srgb, var(--sg-graphite) 38%, transparent);
+}
+
+.sg-future-integration--compact {
+	max-inline-size: min(100%, 34rem);
+	padding: clamp(var(--sg-space-md), 2.4vw, var(--sg-space-xl));
+	background: color-mix(in srgb, var(--sg-graphite) 44%, transparent);
+}
+
+.sg-future-integration__rule {
+	display: block;
+	inline-size: min(12rem, 42vw);
+	block-size: var(--sg-border-width-hairline);
+	background: var(--sg-gradient-gold-accent);
+}
+
+.sg-future-integration__label {
+	margin: 0;
+	color: var(--sg-metal-silver);
+	font-family: var(--sg-font-family-heading);
+	font-size: clamp(var(--sg-font-size-lg), 2vw, var(--sg-font-size-xl));
+	line-height: var(--sg-line-height-heading);
+}
+
+.sg-future-integration__note {
+	max-inline-size: var(--sg-measure);
+	margin: 0;
+	color: color-mix(in srgb, var(--sg-metal-platinum) 84%, transparent);
+	font-size: var(--sg-font-size-sm);
+	line-height: var(--sg-line-height-body);
+}

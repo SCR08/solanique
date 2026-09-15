@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <pattern id="grid" width="88" height="88" patternUnits="userSpaceOnUse">
+      <path d="M88 0H0v88" fill="none" stroke="#e8e6df" stroke-opacity=".08" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="edge" x1="0" x2="1">
+      <stop offset="0" stop-color="#e8e6df" stop-opacity="0"/>
+      <stop offset=".48" stop-color="#e8e6df" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#e8e6df" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="focus" cx="70%" cy="30%" r="60%">
+      <stop offset="0" stop-color="#d7d3c8" stop-opacity=".2"/>
+      <stop offset=".4" stop-color="#a8a8a8" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#08090b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1400" height="900" fill="transparent"/>
+  <rect width="1400" height="900" fill="url(#grid)" opacity=".8"/>
+  <rect width="1400" height="900" fill="url(#focus)"/>
+  <g fill="none" stroke="url(#edge)" stroke-width="1">
+    <path d="M108 828 536 120 920 792 1292 178"/>
+    <path d="M-40 612 344 284 684 558 1440 74"/>
+    <path d="M226 912 612 420 968 524 1320 310"/>
+  </g>
+</svg>

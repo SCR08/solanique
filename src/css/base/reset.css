@@ -1,0 +1,86 @@
+/**
+ * Browser normalization and low-level element resets.
+ */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	min-block-size: 100%;
+	scrollbar-gutter: stable;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body {
+	min-block-size: 100%;
+	margin: 0;
+	background: var(--sg-color-background);
+	color: var(--sg-color-text);
+	font-family: var(--sg-font-family-base);
+	font-size: var(--sg-font-size-md);
+	font-weight: var(--sg-font-weight-regular);
+	line-height: var(--sg-line-height-body);
+	text-rendering: optimizeLegibility;
+}
+
+body.sg-is-menu-open {
+	overflow: hidden;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, blockquote, figure) {
+	margin-block: 0;
+}
+
+:where(ul, ol) {
+	margin-block: 0;
+	padding-inline-start: var(--sg-space-lg);
+}
+
+:where(img, picture, video, canvas, svg) {
+	display: block;
+	max-inline-size: 100%;
+}
+
+:where(img, video) {
+	block-size: auto;
+}
+
+:where(button, input, textarea, select) {
+	font: inherit;
+}
+
+:where(button) {
+	cursor: pointer;
+}
+
+:where(a) {
+	color: inherit;
+	text-decoration-thickness: 0.08em;
+	text-underline-offset: 0.18em;
+}
+
+:where(a, button, input, textarea, select, summary):focus-visible {
+	outline: 2px solid var(--sg-color-focus);
+	outline-offset: 3px;
+	box-shadow: var(--sg-shadow-focus);
+}
+
+:where(table) {
+	border-collapse: collapse;
+	inline-size: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}

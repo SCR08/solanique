@@ -1,0 +1,138 @@
+/**
+ * Button component styles.
+ */
+
+.sg-button {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--sg-space-xs);
+	min-block-size: 2.625rem;
+	padding-block: var(--sg-space-xs);
+	padding-inline: var(--sg-space-lg);
+	border: var(--sg-border-width-hairline) solid var(--sg-color-accent);
+	border-radius: var(--sg-radius-xs);
+	background: transparent;
+	color: var(--sg-color-heading);
+	font-family: var(--sg-font-family-ui);
+	font-size: var(--sg-font-size-sm);
+	font-weight: var(--sg-font-weight-regular);
+	line-height: var(--sg-line-height-ui);
+	text-align: center;
+	text-decoration: none;
+	overflow-wrap: anywhere;
+	white-space: normal;
+	transition: var(--sg-transition-color), var(--sg-transition-shadow), var(--sg-transition-transform);
+	overflow: clip;
+}
+
+.sg-button::after {
+	position: absolute;
+	inset-block-end: var(--sg-space-2xs);
+	inset-inline: var(--sg-space-lg);
+	block-size: var(--sg-border-width-hairline);
+	background: var(--sg-color-accent);
+	content: "";
+	opacity: 0;
+	transform: scaleX(0);
+	transform-origin: 50% 50%;
+	transition: var(--sg-transition-transform), var(--sg-transition-opacity);
+}
+
+.sg-button:hover,
+.sg-button:focus-visible {
+	border-color: var(--sg-color-accent-hover);
+	background:
+		linear-gradient(135deg, color-mix(in srgb, var(--sg-metal-silver) 14%, transparent), color-mix(in srgb, var(--sg-metal-champagne) 4%, transparent));
+	color: var(--sg-color-heading);
+	box-shadow: none;
+}
+
+.sg-button:hover::after,
+.sg-button:focus-visible::after {
+	opacity: 1;
+	transform: scaleX(1);
+}
+
+.sg-button:active {
+	box-shadow: none;
+	transform: translateY(0);
+}
+
+.sg-button:active::after {
+	transform: scaleX(0.72);
+}
+
+.sg-button__icon {
+	inline-size: 1em;
+	block-size: 1em;
+	flex: 0 0 auto;
+}
+
+.sg-button--secondary {
+	border-color: var(--sg-color-heading);
+	background: var(--sg-color-heading);
+	color: var(--sg-color-background);
+}
+
+.sg-button--secondary:hover,
+.sg-button--secondary:focus-visible {
+	border-color: var(--sg-color-accent);
+	background: var(--sg-color-heading);
+	color: var(--sg-color-background);
+}
+
+.sg-button--ghost {
+	border-color: transparent;
+	background: transparent;
+	color: var(--sg-color-heading);
+}
+
+.sg-button--ghost:hover,
+.sg-button--ghost:focus-visible {
+	border-color: var(--sg-color-accent);
+	background: transparent;
+	color: var(--sg-color-heading);
+}
+
+.sg-button--sm {
+	min-block-size: 2.25rem;
+	padding-block: var(--sg-space-xs);
+	padding-inline: var(--sg-space-md);
+	font-size: var(--sg-font-size-xs);
+}
+
+.sg-button--lg {
+	min-block-size: 3rem;
+	padding-inline: var(--sg-space-xl);
+	font-size: var(--sg-font-size-sm);
+}
+
+.sg-button--full {
+	inline-size: 100%;
+}
+
+.sg-button[disabled],
+.sg-button[aria-disabled="true"] {
+	cursor: not-allowed;
+	opacity: 0.55;
+	transform: none;
+}
+
+.sg-button[disabled]::after,
+.sg-button[aria-disabled="true"]::after {
+	transform: scaleX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sg-button,
+	.sg-button::after {
+		transition: none;
+	}
+
+	.sg-button:hover,
+	.sg-button:focus-visible {
+		transform: none;
+	}
+}

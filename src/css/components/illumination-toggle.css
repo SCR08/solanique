@@ -1,0 +1,72 @@
+/**
+ * Optional brighter dark-mode illumination toggle.
+ */
+
+.sg-illumination-toggle {
+	display: inline-grid;
+	place-items: center;
+	inline-size: 2.35rem;
+	block-size: 2.35rem;
+	padding: 0;
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-header-text-color, var(--sg-metal-silver)) 18%, transparent);
+	border-radius: var(--sg-radius-circle);
+	background: color-mix(in srgb, var(--sg-color-surface) 42%, transparent);
+	color: var(--sg-header-text-color, var(--sg-metal-silver));
+	transition:
+		var(--sg-transition-color),
+		background-color var(--sg-duration-fast) var(--sg-ease-standard),
+		border-color var(--sg-duration-fast) var(--sg-ease-standard),
+		transform var(--sg-duration-fast) var(--sg-ease-standard);
+}
+
+.sg-illumination-toggle:hover,
+.sg-illumination-toggle:focus-visible,
+.sg-illumination-toggle[aria-pressed="true"] {
+	border-color: color-mix(in srgb, var(--sg-metal-silver) 42%, transparent);
+	background: color-mix(in srgb, var(--sg-metal-silver) 12%, transparent);
+	color: var(--sg-metal-white);
+}
+
+.sg-illumination-toggle:active {
+	transform: translateY(1px);
+}
+
+.sg-illumination-toggle__icon {
+	inline-size: 1rem;
+	block-size: 1rem;
+	fill: none;
+	stroke: currentColor;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 1.55;
+}
+
+.sg-mobile-nav__footer .sg-illumination-toggle {
+	align-self: flex-start;
+	color: var(--sg-color-heading);
+}
+
+html[data-sg-illumination="enhanced"] {
+	--sg-overlay-soft: rgba(4, 4, 4, 0.46);
+	--sg-overlay-medium: rgba(4, 4, 4, 0.56);
+	--sg-overlay-strong: rgba(4, 4, 4, 0.68);
+	--sg-surface-dark: #11151a;
+	--sg-surface-elevated: #181c23;
+	--sg-graphite: #0f1217;
+	--sg-graphite-soft: #171a20;
+	--sg-color-surface: #101319;
+	--sg-color-surface-strong: #191d24;
+	--sg-color-text-muted: #d0c9ba;
+}
+
+html[data-sg-illumination="enhanced"] .sg-parallax-scene__image,
+html[data-sg-illumination="enhanced"] .sg-immersive-section__image,
+html[data-sg-illumination="enhanced"] .sg-legal-hero__image {
+	filter: saturate(1.02) contrast(1.04) brightness(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sg-illumination-toggle {
+		transition: none;
+	}
+}

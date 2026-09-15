@@ -1,0 +1,246 @@
+/**
+ * Global design tokens and CSS custom properties.
+ */
+
+:root {
+	/**
+	 * Color tokens.
+	 * The palette is intentionally compact: metallic silver, black, white, and greys.
+	 */
+	--sg-color-gold-50: #fbf6e6;
+	--sg-color-gold-100: #f2e6bc;
+	--sg-color-gold-200: #e8d28a;
+	--sg-color-gold-300: #d4af37;
+	--sg-color-gold-400: #bc982c;
+	--sg-color-gold-500: #9d7d23;
+	--sg-color-gold-600: #7d6219;
+	--sg-color-gold-700: #5d4913;
+	--sg-color-gold-800: #3e300d;
+	--sg-color-gold-900: #241c08;
+
+	--sg-color-black: #040404;
+	--sg-ink: #08090b;
+	--sg-graphite: #0b0d10;
+	--sg-graphite-soft: #111318;
+	--sg-charcoal: #15171c;
+	--sg-surface-dark: #0d0f13;
+	--sg-surface-elevated: #14161c;
+	--sg-overlay-soft: rgba(4, 4, 4, 0.58);
+	--sg-overlay-medium: rgba(4, 4, 4, 0.68);
+	--sg-overlay-strong: rgba(4, 4, 4, 0.78);
+	--sg-color-white: #f5f5f5;
+	--sg-color-ivory: #fbfaf6;
+	--sg-color-ivory-deep: #efede6;
+	--sg-color-titanium: #7c7c7c;
+	--sg-metal-champagne: #d8c58e;
+	--sg-metal-antique: #b0924f;
+	--sg-metal-bronze: #7d6338;
+	--sg-metal-platinum: #d7d3c8;
+	--sg-metal-silver: #ebe7dc;
+	--sg-metal-titanium: #a8a8a8;
+	--sg-metal-white: #f8f7f2;
+	--sg-metal-graphite: #171512;
+	--sg-gradient-metallic-silver: linear-gradient(112deg, var(--sg-metal-titanium) 0%, var(--sg-metal-white) 34%, var(--sg-metal-platinum) 62%, var(--sg-metal-silver) 100%);
+	--sg-gradient-gold-accent: linear-gradient(112deg, var(--sg-metal-bronze) 0%, var(--sg-metal-antique) 44%, var(--sg-metal-champagne) 100%);
+	--sg-metal-text-gradient: var(--sg-gradient-metallic-silver);
+	--sg-metal-rule-gradient: linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--sg-metal-titanium) 70%, transparent) 18%, var(--sg-metal-silver) 50%, color-mix(in srgb, var(--sg-metal-titanium) 70%, transparent) 82%, transparent 100%);
+
+	--sg-color-grey-50: #fbfaf6;
+	--sg-color-grey-100: #f5f5f5;
+	--sg-color-grey-200: #e8e6df;
+	--sg-color-grey-300: #d4d0c7;
+	--sg-color-grey-400: #aaa59a;
+	--sg-color-grey-500: #7c7c7c;
+	--sg-color-grey-600: #5f5f5f;
+	--sg-color-grey-700: #45423d;
+	--sg-color-grey-800: #2b2925;
+	--sg-color-grey-900: #171512;
+	--sg-color-grey-950: #0b0a09;
+
+	--sg-color-text: #191816;
+	--sg-color-text-muted: var(--sg-color-grey-600);
+	--sg-color-heading: var(--sg-color-black);
+	--sg-color-background: var(--sg-color-ivory);
+	--sg-color-surface: var(--sg-color-white);
+	--sg-color-surface-strong: var(--sg-color-ivory-deep);
+	--sg-color-border: var(--sg-color-grey-200);
+	--sg-color-border-strong: var(--sg-color-grey-400);
+	--sg-color-accent: var(--sg-metal-titanium);
+	--sg-color-accent-hover: var(--sg-metal-platinum);
+	--sg-color-accent-contrast: var(--sg-color-black);
+	--sg-color-focus: var(--sg-metal-silver);
+
+	/**
+	 * Spacing scale.
+	 */
+	--sg-space-0: 0;
+	--sg-space-3xs: 0.125rem;
+	--sg-space-2xs: 0.25rem;
+	--sg-space-xs: 0.5rem;
+	--sg-space-sm: 0.75rem;
+	--sg-space-md: 1rem;
+	--sg-space-lg: 1.5rem;
+	--sg-space-xl: 2rem;
+	--sg-space-2xl: 3rem;
+	--sg-space-3xl: 4rem;
+	--sg-space-4xl: 6rem;
+	--sg-space-5xl: 8rem;
+	--sg-section-space-sm: clamp(var(--sg-space-2xl), 5.5vw, var(--sg-space-4xl));
+	--sg-section-space-md: clamp(var(--sg-space-3xl), 8vw, calc(var(--sg-space-5xl) * 1.15));
+	--sg-section-space-lg: clamp(var(--sg-space-4xl), 10vw, calc(var(--sg-space-5xl) * 1.45));
+	--sg-component-gap: clamp(var(--sg-space-xl), 4vw, var(--sg-space-4xl));
+	--sg-card-padding: clamp(var(--sg-space-lg), 3vw, var(--sg-space-3xl));
+
+	/**
+	 * Typography scale.
+	 */
+	--sg-font-family-base: "Helvetica Neue", helvetica, arial, ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", sans-serif;
+	--sg-font-family-heading: cinzel, "Cinzel", "Times New Roman", times, serif;
+	--sg-font-family-ui: "Helvetica Neue", helvetica, arial, ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", sans-serif;
+	--sg-font-family-mono: ui-monospace, "SFMono-Regular", consolas, "Liberation Mono", monospace;
+
+	--sg-font-size-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+	--sg-font-size-sm: clamp(0.875rem, 0.84rem + 0.18vw, 0.9375rem);
+	--sg-font-size-md: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+	--sg-font-size-lg: clamp(1.125rem, 1.06rem + 0.32vw, 1.25rem);
+	--sg-font-size-xl: clamp(1.25rem, 1.18rem + 0.34vw, 1.5rem);
+	--sg-font-size-2xl: clamp(1.5rem, 1.36rem + 0.62vw, 1.95rem);
+	--sg-font-size-3xl: clamp(1.85rem, 1.62rem + 0.94vw, 2.5rem);
+	--sg-font-size-4xl: clamp(2.25rem, 1.88rem + 1.55vw, 3.45rem);
+
+	--sg-font-weight-light: 300;
+	--sg-font-weight-regular: 400;
+	--sg-font-weight-medium: 500;
+	--sg-font-weight-semibold: 600;
+	--sg-font-weight-bold: 700;
+
+	--sg-line-height-tight: 1.12;
+	--sg-line-height-heading: 1.2;
+	--sg-line-height-body: 1.72;
+	--sg-line-height-ui: 1.35;
+	--sg-letter-spacing-normal: 0;
+	--sg-measure: 68ch;
+
+	/**
+	 * Container sizes and gutters.
+	 */
+	--sg-container-xs: 40rem;
+	--sg-container-sm: 48rem;
+	--sg-container-md: 64rem;
+	--sg-container-lg: 80rem;
+	--sg-container-xl: 96rem;
+	--sg-container-2xl: 112rem;
+	--sg-container-max: 124rem;
+	--sg-container-readable: var(--sg-container-sm);
+	--sg-container-default: var(--sg-container-lg);
+	--sg-container-wide: var(--sg-container-2xl);
+	--sg-container-gutter: clamp(var(--sg-space-md), 4vw, var(--sg-space-2xl));
+	--sg-grid-auto-min: 18rem;
+
+	/**
+	 * Border width tokens.
+	 */
+	--sg-border-width-hairline: 1px;
+
+	/**
+	 * Border radius tokens.
+	 */
+	--sg-radius-none: 0;
+	--sg-radius-2xs: 0.125rem;
+	--sg-radius-xs: 0.25rem;
+	--sg-radius-sm: 0.375rem;
+	--sg-radius-md: 0.5rem;
+	--sg-radius-lg: 0.75rem;
+	--sg-radius-xl: 1rem;
+	--sg-radius-pill: 999rem;
+	--sg-radius-circle: 50%;
+
+	/**
+	 * Transition tokens.
+	 */
+	--sg-duration-fast: 150ms;
+	--sg-duration-default: 220ms;
+	--sg-duration-slow: 360ms;
+	--sg-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+	--sg-ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+	--sg-transition-color: color var(--sg-duration-fast) var(--sg-ease-standard), background-color var(--sg-duration-fast) var(--sg-ease-standard), border-color var(--sg-duration-fast) var(--sg-ease-standard);
+	--sg-transition-opacity: opacity var(--sg-duration-default) var(--sg-ease-standard);
+	--sg-transition-shadow: box-shadow var(--sg-duration-default) var(--sg-ease-standard);
+	--sg-transition-transform: transform var(--sg-duration-default) var(--sg-ease-emphasized);
+
+	/**
+	 * Z-index tokens.
+	 */
+	--sg-z-index-below: -1;
+	--sg-z-index-base: 0;
+	--sg-z-index-raised: 10;
+	--sg-z-index-dropdown: 100;
+	--sg-z-index-sticky: 200;
+	--sg-z-index-fixed: 300;
+	--sg-z-index-overlay: 400;
+	--sg-z-index-modal: 500;
+	--sg-z-index-popover: 600;
+	--sg-z-index-toast: 700;
+	--sg-z-index-tooltip: 800;
+
+	/**
+	 * Shadow tokens.
+	 */
+	--sg-shadow-xs: 0 1px 2px rgba(4, 4, 4, 0.04);
+	--sg-shadow-sm: 0 6px 18px rgba(4, 4, 4, 0.06);
+	--sg-shadow-md: 0 16px 42px rgba(4, 4, 4, 0.08);
+	--sg-shadow-lg: 0 28px 64px rgba(4, 4, 4, 0.1);
+	--sg-shadow-xl: 0 40px 90px rgba(4, 4, 4, 0.14);
+	--sg-shadow-focus: 0 0 0 3px rgba(235, 231, 220, 0.28);
+
+	/**
+	 * Breakpoint tokens.
+	 * CSS custom properties cannot be used in media query conditions yet, so
+	 * responsive rules repeat these values directly.
+	 */
+	--sg-breakpoint-xs: 30rem;
+	--sg-breakpoint-sm: 40rem;
+	--sg-breakpoint-md: 48rem;
+	--sg-breakpoint-lg: 64rem;
+	--sg-breakpoint-xl: 80rem;
+	--sg-breakpoint-2xl: 96rem;
+
+	color-scheme: light;
+}
+
+html[data-sg-theme="dark"] {
+	--sg-color-ivory: var(--sg-ink);
+	--sg-color-ivory-deep: var(--sg-graphite-soft);
+
+	--sg-color-grey-50: #0b0a09;
+	--sg-color-grey-100: #171512;
+	--sg-color-grey-200: #2b2925;
+	--sg-color-grey-300: #45423d;
+	--sg-color-grey-400: #5f5f5f;
+	--sg-color-grey-500: #7c7c7c;
+	--sg-color-grey-600: #d4d0c7;
+	--sg-color-grey-700: #e8e6df;
+	--sg-color-grey-800: #efede6;
+	--sg-color-grey-900: #f5f5f5;
+	--sg-color-grey-950: #fbfaf6;
+
+	--sg-color-text: var(--sg-metal-platinum);
+	--sg-color-text-muted: #bdb5a3;
+	--sg-color-heading: var(--sg-metal-silver);
+	--sg-color-background: var(--sg-ink);
+	--sg-color-surface: var(--sg-graphite);
+	--sg-color-surface-strong: var(--sg-surface-elevated);
+	--sg-color-border: rgba(245, 245, 245, 0.16);
+	--sg-color-border-strong: rgba(235, 231, 220, 0.34);
+	--sg-color-accent-hover: var(--sg-metal-white);
+	--sg-color-focus: var(--sg-metal-silver);
+	--sg-color-accent: var(--sg-metal-titanium);
+
+	--sg-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.22);
+	--sg-shadow-sm: 0 8px 22px rgba(0, 0, 0, 0.24);
+	--sg-shadow-md: 0 18px 46px rgba(0, 0, 0, 0.3);
+	--sg-shadow-lg: 0 28px 70px rgba(0, 0, 0, 0.34);
+	--sg-shadow-xl: 0 42px 100px rgba(0, 0, 0, 0.42);
+
+	color-scheme: dark;
+}
