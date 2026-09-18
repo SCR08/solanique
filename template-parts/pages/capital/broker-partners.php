@@ -26,6 +26,16 @@ if ( empty( $credentials ) && empty( $affiliations ) ) {
 
 				<div class="sg-capital-credentials__grid" aria-label="<?php esc_attr_e( 'Professional credential logos', 'solanique' ); ?>">
 					<?php foreach ( $credentials as $credential ) : ?>
+						<?php
+						$credential_lines = ! empty( $credential['credential_lines'] ) && is_array( $credential['credential_lines'] )
+							? array_filter( array_map( 'strval', $credential['credential_lines'] ) )
+							: array_filter(
+								array(
+									(string) ( $credential['visible_title'] ?? '' ),
+									(string) ( $credential['secondary_title'] ?? '' ),
+								)
+							);
+						?>
 						<article class="sg-capital-credential-card" data-sg-reveal="fade-up" aria-label="<?php echo esc_attr( (string) $credential['logo_alt'] ); ?>">
 							<div class="sg-capital-credential-card__logo-wrap">
 								<?php
@@ -42,9 +52,13 @@ if ( empty( $credentials ) && empty( $affiliations ) ) {
 								?>
 							</div>
 
-							<p class="sg-capital-credential-card__label">
-								<?php echo esc_html( (string) $credential['visible_title'] ); ?>
-							</p>
+							<?php if ( ! empty( $credential_lines ) ) : ?>
+								<p class="sg-capital-credential-card__label">
+									<?php foreach ( $credential_lines as $line ) : ?>
+										<span><?php echo esc_html( $line ); ?></span>
+									<?php endforeach; ?>
+								</p>
+							<?php endif; ?>
 						</article>
 					<?php endforeach; ?>
 				</div>

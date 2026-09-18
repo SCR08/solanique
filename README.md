@@ -415,14 +415,19 @@ Current known credential inputs:
 
 - Century 21 / C21HG:
   Logo source file present at `src/assets/images/partners/brokers/century-21-c21hg-logo.png`.
-  Public display: logo and `Realtor`.
+  Public display:
+  - `SANDRA LORENA MEDINA SOLANO`
+  - `REALTOR`
+  - `C21 Heritage Group Ltd.`
   License number pending, if required.
 
 - CSI Mortgages:
   Website: `https://www.csimortgages.com`.
   Logo source file present at `src/assets/images/partners/brokers/csi-mortgages-logo.png`.
-  Public display: logo and `Mortgage Agent Level 1 and 2`.
-  License number pending, if required.
+  Public display:
+  - `SANDRA LORENA MEDINA SOLANO`
+  - `MORTGAGE AGENT-LEVEL 1`
+  - `BROKERAGE: #12052`
 
 Separate Professional Affiliations are prepared as a future logo wall but currently render no public items because no separate approved affiliation logo files, such as Scotiabank, were found in production assets.
 

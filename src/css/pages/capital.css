@@ -325,11 +325,18 @@
 }
 
 .sg-capital-credential-card__label {
+	display: grid;
+	gap: var(--sg-space-2xs);
 	margin: 0;
 	color: var(--sg-metal-platinum);
 	font-size: var(--sg-font-size-xs);
 	line-height: var(--sg-line-height-ui);
+	text-align: center;
 	text-transform: uppercase;
+}
+
+.sg-capital-credential-card__label span {
+	display: block;
 }
 
 @media (min-width: 80rem) {
