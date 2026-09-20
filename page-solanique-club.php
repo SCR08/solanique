@@ -11,6 +11,11 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
+$solanique_club_copy     = solanique_get_final_page_copy( 'solanique_club' );
+$solanique_club_pathways = (array) ( $solanique_club_copy['pathways'] ?? array() );
+$solanique_club_first    = $solanique_club_pathways[0] ?? array();
+$solanique_club_second   = $solanique_club_pathways[1] ?? array();
+
 get_template_part( 'template-parts/pages/solanique-club/hero' );
 get_template_part( 'template-parts/pages/solanique-club/overview' );
 
@@ -38,12 +43,12 @@ solanique_render_immersive_section(
 	array(
 		'id'       => 'sg-solanique-club-immersive-network',
 		'modifier' => 'club-global',
-		'eyebrow'  => __( 'Private ecosystem', 'solanique' ),
-		'title'    => __( 'Two private areas. One standard of alignment.', 'solanique' ),
-		'text'     => __( 'Solanique Club organizes network, service provider, and private capital conversations without promising access, outcomes, returns, or unapproved structures.', 'solanique' ),
-		'secondary_eyebrow' => __( 'Private ecosystem', 'solanique' ),
-		'secondary_title'   => __( 'JV Network and Investor Club conversations remain separated by intent.', 'solanique' ),
-		'secondary_text'    => __( 'Service-provider interest can identify expertise, while investor interest remains responsible and does not imply guaranteed access or outcomes.', 'solanique' ),
+		'eyebrow'  => $solanique_club_copy['service'] ?? '',
+		'title'    => $solanique_club_first['title'] ?? '',
+		'text'     => $solanique_club_first['focus'] ?? '',
+		'secondary_eyebrow' => $solanique_club_copy['service'] ?? '',
+		'secondary_title'   => $solanique_club_second['title'] ?? '',
+		'secondary_text'    => $solanique_club_second['focus'] ?? '',
 		'image'    => 'images/estates/commercial-real-estate-skyscrapers-financial-district.jpg',
 		'width'    => 2048,
 		'height'   => 1365,
@@ -52,36 +57,6 @@ solanique_render_immersive_section(
 );
 
 get_template_part( 'template-parts/pages/solanique-club/areas' );
-
-solanique_render_pending_content_panel(
-	array(
-		'id'       => 'sg-solanique-club-agent-levels',
-		'modifier' => 'club',
-		'title'    => __( 'Agent levels pending approved client content.', 'solanique' ),
-		'text'     => __( 'This structure is reserved for the approved agent-level names, descriptions, requirements, and distinctions.', 'solanique' ),
-		'items'    => array(
-			__( 'Agent level names', 'solanique' ),
-			__( 'Approved descriptions', 'solanique' ),
-			__( 'Requirements or distinctions', 'solanique' ),
-			__( 'Associated broker or license disclosures if required', 'solanique' ),
-		),
-	)
-);
-
-solanique_render_pending_content_panel(
-	array(
-		'id'       => 'sg-solanique-club-partners',
-		'modifier' => 'club',
-		'title'    => __( 'Partner logos and descriptions pending authorization.', 'solanique' ),
-		'text'     => __( 'Only client-approved logos and approved service descriptions should be published. The business-loan partner logo is intentionally withheld until authorization is confirmed.', 'solanique' ),
-		'items'    => array(
-			__( 'Approved partner logo files', 'solanique' ),
-			__( 'Approved company names', 'solanique' ),
-			__( 'Approved service descriptions', 'solanique' ),
-			__( 'Business-loan partner logo authorization', 'solanique' ),
-		),
-	)
-);
 
 get_template_part( 'template-parts/pages/solanique-club/pathway' );
 

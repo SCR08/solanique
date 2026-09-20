@@ -62,11 +62,14 @@
 
 .sg-solanique-club-card {
 	position: relative;
-	display: grid;
-	min-block-size: clamp(24rem, 42vw, 34rem);
+	display: flex;
+	flex-direction: column;
 	overflow: clip;
 	border-radius: var(--sg-radius-xs);
-	background: var(--sg-color-surface-strong);
+	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-silver) 12%, transparent);
+	background:
+		linear-gradient(135deg, color-mix(in srgb, var(--sg-metal-silver) 9%, transparent), transparent 42%),
+		linear-gradient(180deg, var(--sg-color-surface-elevated), var(--sg-color-surface-strong));
 	box-shadow: var(--sg-shadow-lg);
 	isolation: isolate;
 }
@@ -81,26 +84,24 @@
 	pointer-events: none;
 }
 
-.sg-solanique-club-card__image {
-	position: absolute;
-	inset: 0;
-	inline-size: 100%;
-	block-size: 100%;
-	object-fit: cover;
-	filter: saturate(0.96) contrast(1.05) brightness(0.94);
-	transition: transform var(--sg-duration-slow) var(--sg-ease-emphasized);
-}
-
 .sg-solanique-club-card__body {
 	position: relative;
 	z-index: var(--sg-z-index-raised);
-	align-self: end;
-	max-inline-size: 38rem;
+	max-inline-size: 44rem;
 	padding: clamp(var(--sg-space-lg), 4vw, var(--sg-space-3xl));
 	color: var(--sg-metal-platinum);
 }
 
+.sg-solanique-club-card__body .sg-button {
+	align-self: flex-start;
+}
+
 .sg-solanique-club-card__number {
+	position: relative;
+	z-index: var(--sg-z-index-raised);
+	display: inline-flex;
+	inline-size: fit-content;
+	margin: clamp(var(--sg-space-lg), 4vw, var(--sg-space-3xl)) clamp(var(--sg-space-lg), 4vw, var(--sg-space-3xl)) 0;
 	color: var(--sg-metal-champagne);
 	font-size: var(--sg-font-size-xs);
 	line-height: var(--sg-line-height-ui);
@@ -115,9 +116,62 @@
 	color: color-mix(in srgb, var(--sg-metal-silver) 78%, transparent);
 }
 
-.sg-solanique-club-card:hover .sg-solanique-club-card__image,
-.sg-solanique-club-card:focus-within .sg-solanique-club-card__image {
-	transform: scale(1.035);
+.sg-solanique-club-card__text strong,
+.sg-solanique-club-card__note strong,
+.sg-solanique-club-card__list strong {
+	margin-inline-end: 0.25rem;
+	color: var(--sg-metal-silver);
+}
+
+.sg-solanique-club-card__kicker {
+	color: var(--sg-metal-platinum);
+	font-size: var(--sg-font-size-lg);
+	line-height: var(--sg-line-height-heading);
+}
+
+.sg-solanique-club-card__group {
+	margin-block-start: var(--sg-space-lg);
+}
+
+.sg-solanique-club-card__label {
+	color: var(--sg-metal-champagne);
+	font-size: var(--sg-font-size-sm);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.sg-solanique-club-card__list {
+	display: grid;
+	gap: var(--sg-space-sm);
+	margin: 0;
+	padding-inline-start: 1.1rem;
+	color: color-mix(in srgb, var(--sg-metal-silver) 78%, transparent);
+}
+
+.sg-solanique-club-card__list--areas {
+	padding-inline-start: 0;
+	list-style: none;
+}
+
+.sg-solanique-club-card__list--areas li {
+	display: grid;
+	gap: var(--sg-space-2xs);
+	padding-block: var(--sg-space-sm);
+	border-block-end: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-silver) 10%, transparent);
+}
+
+.sg-solanique-club-card__note {
+	padding-block-start: var(--sg-space-md);
+	border-block-start: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-metal-champagne) 20%, transparent);
+	color: color-mix(in srgb, var(--sg-metal-silver) 74%, transparent);
+}
+
+.sg-solanique-club-card__link {
+	inline-size: fit-content;
+	color: var(--sg-metal-champagne);
+	font-size: var(--sg-font-size-sm);
+	text-decoration-thickness: var(--sg-border-width-hairline);
+	text-underline-offset: 0.28em;
 }
 
 .sg-solanique-club-pathway {
@@ -140,7 +194,7 @@
 }
 
 @media (max-width: 47.98rem) {
-	.sg-solanique-club-card {
-		min-block-size: 28rem;
+	.sg-solanique-club-card__body {
+		padding-block-start: var(--sg-space-lg);
 	}
 }

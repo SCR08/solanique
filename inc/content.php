@@ -2,8 +2,8 @@
 /**
  * Final client-provided bilingual page copy.
  *
- * The copy in this file is sourced from the final page PDFs in
- * _references/final-copy/. Keep wording, terminology, punctuation, and CTA
+ * The copy in this file is sourced from the final page PDFs supplied for the
+ * Solanique Group website. Keep wording, terminology, punctuation, and CTA
  * labels aligned with those documents.
  *
  * @package Solanique
@@ -24,7 +24,7 @@ function solanique_get_final_copy(): array {
 	}
 
 	$copy = array(
-		'home'        => array(
+		'home'           => array(
 			'es' => array(
 				'brand'       => 'SOLANIQUE GROUP',
 				'tagline'     => '“Una Marca Visionaria Global”',
@@ -71,11 +71,11 @@ function solanique_get_final_copy(): array {
 					'items'   => array(
 						array(
 							'title' => 'Ecosistema Único:',
-							'text'  => 'Fusionamos la estrategia financiera con la gestión física de su propiedad.',
+							'text'  => 'Fusionamos la estrategia financiera con la gestión física de tu propiedad.',
 						),
 						array(
 							'title' => 'Fricción Cero:',
-							'text'  => 'Su único punto de contacto para todo lo relacionado con su riqueza, su hogar y su tiempo.',
+							'text'  => 'Tu único punto de contacto para todo lo relacionado con tu riqueza, su hogar y tu tiempo.',
 						),
 						array(
 							'title' => 'Gobernanza Bilingüe:',
@@ -83,13 +83,13 @@ function solanique_get_final_copy(): array {
 						),
 						array(
 							'title' => 'Legado sobre Transacción:',
-							'text'  => 'No buscamos el siguiente cierre; trabajamos para blindar la integridad de su visión.',
+							'text'  => 'No buscamos el siguiente cierre; trabajamos para blindar la integridad de tu visión.',
 						),
 					),
 				),
 				'experience'  => array(
 					'heading' => 'La Experiencia Solanique',
-					'intro'   => 'Ofrecemos una alianza de Mando Integrado. Usted gana más que servicios; gana la capacidad de avanzar sin distracciones.',
+					'intro'   => 'Ofrecemos una alianza de Mando Integrado. Tu ganas más que servicios; ganas la capacidad de avanzar sin distracciones.',
 					'items'   => array(
 						array(
 							'title' => 'El Regalo del Tiempo:',
@@ -105,7 +105,7 @@ function solanique_get_final_copy(): array {
 						),
 						array(
 							'title' => 'Protección Absoluta:',
-							'text'  => 'Un socio dedicado a defender su legado para las generaciones venideras.',
+							'text'  => 'Un socio dedicado a defender tu legado para las generaciones venideras.',
 						),
 					),
 				),
@@ -115,7 +115,7 @@ function solanique_get_final_copy(): array {
 					'label'   => 'ACCESO SOLANIQUE',
 					'email'   => 'inquiry@solaniquegroup.com',
 				),
-				'final_line'  => 'Su visión, construida. Sus activos, custodiados. Su estilo de vida, dominado: transformamos su visión en un legado que perdure por generaciones.',
+				'final_line'  => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
 			),
 			'en' => array(
 				'brand'       => 'SOLANIQUE GROUP',
@@ -207,63 +207,63 @@ function solanique_get_final_copy(): array {
 					'label'   => 'SOLANIQUE ACCESS',
 					'email'   => 'inquiry@solaniquegroup.com',
 				),
-				'final_line'  => 'Your vision, built. Your assets, guarded. Your lifestyle, mastered: we transform your vision into a legacy that lasts for generations.',
+				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
 			),
 		),
-		'capital'     => array(
+		'capital'        => array(
 			'es' => array(
 				'brand'       => 'SOLANIQUE GROUP',
 				'tagline'     => '“Una Marca Visionaria Global”',
 				'service'     => 'SOLANIQUE CAPITAL',
 				'headline'    => 'Arquitectura Estratégica y Soberanía Financiera',
-				'intro'       => 'El capital es la roca sólida sobre la cual se construyen los imperios. En Solanique, no tratamos sus activos como transacciones aisladas, sino como vehículos de alto rendimiento que exigen precisión matemática y visión de futuro. Actuamos como sus Estrategas Principales, alineando su liquidez con activos de crecimiento para blindar, optimizar y multiplicar su patrimonio.',
+				'intro'       => 'El capital es la roca sólida sobre la cual se construyen los imperios. En Solanique, no tratamos tus activos como transacciones aisladas; los tratamos como vehículos de alto rendimiento que exigen precisión matemática y visión de futuro. Actuamos como tus Estrategas Principales, alineando tu liquidez con activos de alto crecimiento y marcos corporativos modernos para blindar, optimizar y multiplicar tu patrimonio.',
 				'services'    => array(
 					'heading' => 'Nuestro Ecosistema de Servicios',
 					'items'   => array(
 						array(
 							'title' => 'Adquisición Inmobiliaria de Alta Precisión:',
-							'text'  => 'Compras quirúrgicas basadas en métricas profundas y proyecciones macroeconómicas. Transformamos terrenos y propiedades de lujo en máquinas de patrimonio.',
+							'text'  => 'Ejecución quirúrgica para la compra, venta, arrendamiento, inversión y adquisición de terrenos, fundamentada en métricas profundas de mercado y proyecciones macroeconómicas. Transformamos cada terreno, propiedad y activo en una máquina de precisión destinada a fortificar la riqueza y construir un patrimonio inquebrantable.',
 						),
 						array(
-							'title' => 'Planificación de Capital y Soluciones Hipotecarias:',
-							'text'  => 'Estructuración personalizada para perfiles de alto patrimonio neto. Optimizamos flujos transfronterizos entre Canadá, EE. UU. y Latinoamérica.',
+							'title' => 'Planificación de Capital a Medida y Soluciones Hipotecarias:',
+							'text'  => 'Estructuración financiera integral diseñada para cada etapa de tu evolución patrimonial—desde soluciones hipotecarias residenciales y estrategias de inversión para compradores primerizos, hasta la consolidación de portafolios y la gestión para clientes de alto patrimonio que desean invertir a nivel local o internacional. Optimizamos los flujos de capital transfronterizos entre Canadá, EE. UU. y Latinoamérica, garantizando una liquidez fluida y un apalancamiento',
 						),
 						array(
-							'title' => 'The Sovereign Investment Club:',
-							'text'  => 'Acceso exclusivo, por invitación, a Joint Ventures institucionales y oportunidades privadas fuera del mercado.',
+							'title' => 'El Club Solanique de Inversion:',
+							'text'  => 'Acceso exclusivo por invitación a portafolios inmobiliarios privados, oportunidades institucionales de Joint Venture y proyectos de desarrollo locales e internacionales en Canadá, EE. UU. y Latinoamérica. Nuestros miembros van más allá del ruido del mercado para desplegar capital directamente en proyectos auditados de desarrollo prémium, bienes raíces fuera del mercado e iniciativas de incubación corporativa y estrategia patrimonial.',
 						),
 						array(
-							'title' => 'Incubación Corporativa y Lanzamiento:',
-							'text'  => 'Arquitectura legal y estratégica para nuevas firmas, diseñadas desde el origen con capacidad internacional.',
+							'title' => 'Incubación Corporativa y Asesoría de Lanzamiento:',
+							'text'  => 'Consultoría estructural integral para nuevas firmas. Guiamos a los fundadores desde el concepto inicial hasta la implementación en el mercado, diseñando arquitectura legal y estrategias de recaudación de capital para garantizar que las empresas nazcan con solidez institucional.',
 						),
 						array(
-							'title' => 'Transformación de Empresas Consolidadas:',
-							'text'  => 'Modernización corporativa mediante auditorías de eficiencia, optimización operativa y rutas de crecimiento agresivo.',
+							'title' => 'Transformación de Negocios Consolidados:',
+							'text'  => 'Un marco de consultoría de alto nivel diseñado para modernizar corporaciones existentes. Auditamos los modelos actuales, optimizamos los flujos operativos, introducimos eficiencias digitales avanzadas y trazamos rutas de crecimiento agresivas para revitalizar el posicionamiento en el mercado.',
 						),
 						array(
-							'title' => 'Alineación Patrimonial y de Portafolio:',
-							'text'  => 'Asesoría en holdings, diversificación y planificación de transición generacional para proteger su legado.',
+							'title' => 'Alineación de Portafolio y Estates de Alto Nivel:',
+							'text'  => 'Consultoría estratégica corporativa creada para alinear sin problemas sus empresas y estructuras comerciales con sus activos inmobiliarios. Brindamos asesoramiento sobre holding companies, diversificación de portafolio y planificación de transición generacional.',
 						),
 					),
 				),
 				'manifesto'   => array(
 					'heading' => 'Manifiesto Capital: Nuestra Filosofía',
-					'text'    => 'No somos una consultoría tradicional; somos un compromiso con la arquitectura de su libertad.',
+					'text'    => 'No somos una consultoría tradicional; somos un compromiso con la arquitectura estratégica de tu libertad.',
 				),
 				'principles'  => array(
 					'heading' => 'I. Principios Inmutables',
 					'items'   => array(
 						array(
 							'title' => 'Crecimiento Estructurado:',
-							'text'  => 'Anticipamos los ciclos del mercado para transitar de la especulación a la construcción de valor a largo plazo.',
+							'text'  => 'Anticipamos los ciclos del mercado antes de que se manifiesten, pasando de la inversión especulativa a la creación de valor a largo plazo.',
 						),
 						array(
 							'title' => 'Integridad Estratégica:',
-							'text'  => 'Cada decisión es validada bajo protocolos de transparencia y eficiencia. Representamos su visión con lealtad absoluta.',
+							'text'  => 'Cada decisión corporativa, legal o de inversión es validada bajo estrictos protocolos de eficiencia y transparencia. Representamos tu visión con una lealtad inquebrantable.',
 						),
 						array(
 							'title' => 'Sincronización Total:',
-							'text'  => 'Sus estrategias fiscales, corporativas y patrimoniales evolucionan en perfecta armonía.',
+							'text'  => 'Cada flujo de capital está vinculado al ecosistema Solanique, asegurando que el crecimiento corporativo, las estrategias fiscales y los legados patrimoniales evolucionen en perfecta armonía.',
 						),
 					),
 				),
@@ -272,25 +272,25 @@ function solanique_get_final_copy(): array {
 					'items'   => array(
 						array(
 							'title' => 'La Auditoría de Valor:',
-							'text'  => 'Inspección técnica de eficiencia con acceso constante a su Informe de Salud de Capital digital.',
+							'text'  => 'Cada estructura corporativa y portafolio se somete a una inspección de eficiencia técnica, lo que resulta en un Informe de Salud del Capital accesible a través de tu panel digital privado.',
 						),
 						array(
 							'title' => 'El Protocolo del Estratega:',
-							'text'  => 'Nuestra red de élite (abogados, analistas, expertos) opera bajo estándares inflexibles. El rendimiento es nuestra única métrica de permanencia.',
+							'text'  => 'No aceptamos asesores genéricos. nuestra red de élite —arquitectos legales, analistas financieros y expertos en estructuras corporativas— está sujeta a estándares de desempeño inflexibles; el incumplimiento resulta en la expulsión inmediata de nuestro ecosistema.',
 						),
 						array(
 							'title' => 'Gobernanza Bilingüe:',
-							'text'  => 'Transparencia total en inglés y español para todas sus estructuras legales y financieras.',
+							'text'  => 'Reconociendo la naturaleza global de nuestros clientes, todas las estructuras legales, proyecciones financieras y comunicaciones diarias se proporcionan tanto en inglés como en español, garantizando una claridad y supervisión absolutas.',
 						),
 					),
 				),
 				'cta'         => array(
 					'heading' => '¿Está listo para la soberanía financiera?',
-					'text'    => 'Su capital es la manifestación económica de su ambición. Permítanos defenderla.',
+					'text'    => 'Tu capital es la manifestación económica de tu ambición. Permítanos defenderla.',
 					'label'   => 'ACCESO CAPITAL',
 					'email'   => 'capital@solaniquegroup.com',
 				),
-				'final_line'  => 'Su visión, construida. Sus activos, custodiados. Su estilo de vida, dominado: transformamos su visión en un legado que perdure por generaciones.',
+				'final_line'  => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
 			),
 			'en' => array(
 				'brand'       => 'SOLANIQUE GROUP',
@@ -302,16 +302,16 @@ function solanique_get_final_copy(): array {
 					'heading' => 'Our Ecosystem of Services',
 					'items'   => array(
 						array(
-							'title' => 'High-Precision Real Estate Acquisition:',
-							'text'  => 'Surgical execution of property purchases based on deep market metrics and macroeconomic projections. We transform land and luxury assets into unwavering wealth-generating machines.',
+							'title' => 'High-Precision Real Estate Acquisition and Asset Strategy:',
+							'text'  => 'Surgical execution for purchasing, selling, leasing, investing, and acquiring land, grounded in deep market metrics and macroeconomic projections. We transform every plot of land, property, and asset into a precision engine designed to fortify wealth and build an unyielding legacy.',
 						),
 						array(
 							'title' => 'Tailored Capital Planning and Mortgage Solutions:',
-							'text'  => 'Custom financial structuring designed for high-net-worth individuals, independent strategists, and international investors. We optimize cross-border capital flows between Canada, the U.S., and Latin America, ensuring fluid liquidity and protected leverage.',
+							'text'  => 'Comprehensive financial structuring designed for every stage of your wealth evolution—from residential mortgage solutions and investment strategies for first-time buyers, to portfolio consolidation and management for high-net-worth clients looking to invest locally or internationally. We optimize cross-border capital flows between Canada, the U.S., and Latin America, ensuring fluid liquidity and protected leverage.',
 						),
 						array(
-							'title' => 'The Sovereign Investment Club:',
-							'text'  => 'Exclusive, invitation-only access to institutional-level Joint Ventures and off-market private real estate placements. Our members move past market noise to deploy capital directly into audited, premium development projects.',
+							'title' => 'The Solanique Investment Club:',
+							'text'  => 'Exclusive, invitation-only access to private real estate portfolios, institutional Joint Venture opportunities, and local and international development projects in Canada, the U.S., and Latin America. Our members move past market noise to deploy capital directly into audited premium development projects, off-market real estate, and corporate incubation and wealth strategy initiatives.',
 						),
 						array(
 							'title' => 'Corporate Incubation and Launch Advisory:',
@@ -357,7 +357,7 @@ function solanique_get_final_copy(): array {
 						),
 						array(
 							'title' => 'The Strategist Protocol:',
-							'text'  => 'We do not accept generic advisors. Our elite network—legal architects, financial analysts, and corporate structure experts—is held to inflexible performance standards. Non-compliance results in immediate removal from our ecosystem.',
+							'text'  => 'We do not accept generic advisors. Our elite network—legal architects, financial analysts, and corporate structure experts—is held to inflexible performance standards; non-compliance results in immediate removal from our ecosystem.',
 						),
 						array(
 							'title' => 'Bilingual Governance:',
@@ -371,60 +371,64 @@ function solanique_get_final_copy(): array {
 					'label'   => 'CAPITAL ACCESS',
 					'email'   => 'capital@solaniquegroup.com',
 				),
-				'final_line'  => 'Your vision, built. Your assets, guarded. Your lifestyle, mastered: we transform your vision into a legacy that lasts for generations.',
+				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
 			),
 		),
-		'estate'      => array(
+		'estate'         => array(
 			'es' => array(
 				'brand'       => 'SOLANIQUE GROUP',
 				'tagline'     => '“Una Marca Visionaria Global”',
 				'service'     => 'SOLANIQUE ESTATE',
 				'headline'    => 'Custodia Absoluta y Preservación de Activos',
-				'intro'       => 'Su portafolio inmobiliario es la manifestación física de su éxito, un santuario privado y una fortaleza para su legado. Las propiedades de élite exigen una custodia especializada para defender su integridad estructural y fluidez operativa. En Solanique Estates, eliminamos la fragmentación que implica la gestión de propiedades y el mantenimiento estructural, fusionando la visión arquitectónica de alto nivel con una ejecución operativa impecable.',
+				'intro'       => 'Tu portafolio inmobiliario es la manifestación física de tu éxito—un santuario privado y una fortaleza para tu familia. Las propiedades de élite exigen una custodia especializada e implacable para defender tu integridad estructural y fluidez operativa. En Solanique Estates, eliminamos la fragmentación mental causada por la gestión de propiedades y el desarrollo técnico, fusionando una visión arquitectónica de alto nivel con una ejecución física impecable.',
 				'hero_cta'    => 'ACCESO ESTATE',
 				'services'    => array(
 					'heading' => 'Nuestro Ecosistema de Custodia',
 					'items'   => array(
 						array(
-							'title' => 'Dirección de Obras y Renovaciones:',
-							'text'  => 'Supervisión integral de transformaciones estructurales. Defendemos la integridad de su diseño, presupuesto y plazos, coordinando a los mejores especialistas de la industria.',
+							'title' => 'Dirección de Obras de Lujo y Renovaciones:',
+							'text'  => 'Supervisión integral de principio a fin de construcciones de lujo y transformaciones estructurales. Defendemos la integridad de tu diseño, presupuesto y plazos de entrega coordinando a los mejores contratistas de la industria.',
 						),
 						array(
 							'title' => 'Infraestructura y Preservación Técnica:',
-							'text'  => 'Mantenimiento quirúrgico de sistemas centrales (plomería, electricidad, climatización). Resolvemos desafíos técnicos antes de que se conviertan en riesgos.',
+							'text'  => 'Mantenimiento quirúrgico de respuesta rápida para defender los sistemas vitales de tu propiedad. Coordinamos una red selecta de electricistas certificados, plomeros, maestros y especialistas en acabados para resolver desafíos técnicos complejos antes de que se conviertan en riesgos.',
 						),
 						array(
 							'title' => 'Gestión Integral y Portal del Propietario:',
-							'text'  => 'Administración fluida de residencias premium y rentas de corto plazo (estilo luxury Airbnb). Transparencia total, cumplimiento legal y soporte administrativo, sin fricción para usted.',
+							'text'  => 'Un ecosistema de administración habilitado por tecnología para residencias prémium, propiedades de inversión y casas vacacionales. A través de nuestro Portal del Propietario, supervisamos la selección exclusiva de inquilinos, acuerdos de arrendamiento de alta gama y soporte optimizado para alquileres vacacionales de lujo, brindando total transparencia sin la carga administrativa.',
 						),
 						array(
 							'title' => 'Mantenimiento de Élite y Custodia Estacional:',
-							'text'  => 'Protocolos proactivos para mantener la salud estructural y estética. Paisajismo arquitectónico, limpieza profunda y logística pesada (nieve, protección de riberas) en los corredores más exclusivos.',
+							'text'  => 'Protocolos de mantenimiento proactivos y predictivos diseñados para preservar la salud estructural y la estética impecable de tus activos. Coordinamos firmas especializadas para ejecutar limpiezas profundas, paisajismo arquitectónico y logística estacional pesada (Remover la nieve en caminos privados, protección de riberas y protección en contra del efecto invernal) en los corredores más exclusivos.',
 						),
 						array(
 							'title' => 'Protección Física de Activos:',
-							'text'  => 'Inspecciones continuas de propiedades vacías y auditorías de seguridad avanzada para propietarios internacionales que requieren que su santuario esté siempre en estado de perfección inmediata.',
+							'text'  => 'Inspecciones rigurosas y continuas de propiedades vacías y auditorías de seguridad avanzadas, brindando a los propietarios internacionales la tranquilidad de que sus santuarios se mantienen en un estado constante de perfección inmediata.',
+						),
+						array(
+							'title' => 'Sincronización de Portafolio Integrado:',
+							'text'  => 'Alineación perfecta que garantiza que tus activos inmobiliarios físicos se coordinen directamente con los marcos de Solanique Capital y Concierge para una optimización uniforme de los activos.',
 						),
 					),
 				),
 				'manifesto'   => array(
 					'heading' => 'Manifiesto de Custodia: Nuestra Filosofía',
-					'text'    => 'No vemos la propiedad como un activo comercial, sino como un legado para fortificar.',
+					'text'    => 'No vemos la propiedad como un producto básico para comercializar, sino como un legado para fortificar.',
 				),
 				'principles'  => array(
 					'heading' => 'I. Principios Inmutables',
 					'items'   => array(
 						array(
 							'title' => 'Preservación Proactiva:',
-							'text'  => 'Anticipamos el deterioro para transitar del mantenimiento reactivo a la longevidad arquitectónica.',
+							'text'  => 'Anticipamos el deterioro y las fluctuaciones del mercado antes de que se manifiesten, pasando de las reparaciones reactivas a la longevidad arquitectónica.',
 						),
 						array(
 							'title' => 'Integridad Absoluta:',
-							'text'  => 'Cada artesano y gestor es validado bajo nuestros protocolos de élite. Representamos el interés del propietario con lealtad inquebrantable.',
+							'text'  => 'Cada socio, contratista y gerente de proyectos es rigurosamente validado bajo nuestros estrictos protocolos. Representamos el interés del propietario con total transparencia y lealtad inquebrantable.',
 						),
 						array(
 							'title' => 'Valor Integrado:',
-							'text'  => 'Vinculamos las mejoras físicas de su propiedad con la plusvalía de su capital, asegurando una sinergia perfecta con Solanique Capital.',
+							'text'  => 'Cada propiedad está vinculada al ecosistema Solanique, asegurando que las mejoras físicas, las estrategias fiscales y la apreciación del capital se muevan en perfecta sincronización.',
 						),
 					),
 				),
@@ -433,32 +437,33 @@ function solanique_get_final_copy(): array {
 					'items'   => array(
 						array(
 							'title' => 'La Auditoría Trimestral:',
-							'text'  => 'Inspección técnica rigurosa de salud estructural, con resultados detallados en su "Informe de Salud del Activo" accesible en su panel digital privado.',
+							'text'  => 'Cada propiedad se somete a una rigurosa inspección física y de salud estructural, lo que da como resultado un Informe de Salud del Activo accesible a través de tu panel digital privado.',
 						),
 						array(
 							'title' => 'El Protocolo del Artesano:',
-							'text'  => 'Prohibimos el uso de contratistas generales genéricos. Solo utilizamos nuestra red curada de especialistas, sujetos a estándares de desempeño inflexibles.',
+							'text'  => 'No aceptamos contratistas "generales". Curamos una red de élite de especialistas, cada uno sujeto a estándares de desempeño que, de no cumplirse, resultan en la expulsión inmediata de nuestro ecosistema.',
 						),
 						array(
 							'title' => 'Gobernanza Bilingüe:',
-							'text'  => 'Transparencia total y supervisión absoluta en inglés y español para todas sus gestiones globales.',
+							'text'  => 'Reconociendo la naturaleza global de nuestros clientes, toda la documentación, registros legales y comunicaciones diarias se proporcionan tanto en inglés como en español para garantizar una claridad y supervisión absolutas.',
 						),
 					),
 				),
 				'cta'         => array(
-					'heading' => '¿Está listo para la excelencia en la custodia de su patrimonio?',
-					'text'    => 'Sus activos son la manifestación física de su ambición. Permítanos protegerla.',
+					'heading' => '¿Está listo para la excelencia en la custodia patrimonial?',
+					'text'    => 'Tus activos son la manifestación física de tu ambición. Permítenos defenderlos.',
 					'label'   => 'ACCESO ESTATE',
-					'email'   => 'estates@solaniquegroup.com',
+					'email'   => 'estate@solaniquegroup.com',
 				),
-				'final_line'  => 'Su visión, construida. Sus activos, custodiados. Su estilo de vida, dominado: transformamos su visión en un legado que perdure por generaciones.',
+				'final_line'  => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
 			),
 			'en' => array(
 				'brand'       => 'SOLANIQUE GROUP',
-				'tagline'     => '“A Global Visionary Brand”',
+				'tagline'     => '"A Global Visionary Brand"',
 				'service'     => 'SOLANIQUE ESTATE',
 				'headline'    => 'Absolute Custody and Asset Preservation',
 				'intro'       => 'Your real estate portfolio is the physical manifestation of your success—a private sanctuary and a fortress for your family. Elite properties require relentless, highly specialized custody to defend their structural integrity and operational fluidity. At Solanique Estates, we eliminate the mental fragmentation caused by property management and technical development, fusing high-level architectural vision with impeccable physical execution.',
+				'hero_cta'    => 'ESTATE ACCESS',
 				'services'    => array(
 					'heading' => 'Our Ecosystem of Custody',
 					'items'   => array(
@@ -468,11 +473,11 @@ function solanique_get_final_copy(): array {
 						),
 						array(
 							'title' => 'Infrastructure and Technical Preservation:',
-							'text'  => 'Surgical, rapid-response maintenance to defend your property’s vital systems. We coordinate a select network of certified electricians, master plumbers, and finishing specialists to resolve complex technical challenges before they become risks.',
+							'text'  => 'Surgical, rapid-response maintenance to defend your property\'s vital systems. We coordinate a select network of certified electricians, master plumbers, and finishing specialists to resolve complex technical challenges before they become risks.',
 						),
 						array(
-							'title' => 'Integral Management and Owner’s Portal:',
-							'text'  => 'A tech-enabled administration ecosystem for premium residences, investment properties, and vacation homes. Through our Owner’s Portal, we oversee exclusive tenant vetting, high-end lease agreements, and optimized support for luxury short-term rentals, providing total transparency without the administrative burden.',
+							'title' => 'Integral Management and Owner\'s Portal:',
+							'text'  => 'A tech-enabled administration ecosystem for premium residences, investment properties, and vacation homes. Through our Owner\'s Portal, we oversee exclusive tenant vetting, high-end lease agreements, and optimized support for luxury short-term rentals, providing total transparency without the administrative burden.',
 						),
 						array(
 							'title' => 'Elite Maintenance and Seasonal Custody:',
@@ -481,6 +486,10 @@ function solanique_get_final_copy(): array {
 						array(
 							'title' => 'Physical Asset Protection:',
 							'text'  => 'Rigorous, continuous inspections of vacant properties and advanced security audits, providing international owners the peace of mind that their sanctuaries are kept in a constant state of immediate perfection.',
+						),
+						array(
+							'title' => 'Integrated Portfolio Synchronization:',
+							'text'  => 'Seamless alignment ensuring your physical real estate assets coordinate directly with Solanique Capital and Concierge frameworks for uniform asset optimization.',
 						),
 					),
 				),
@@ -514,7 +523,7 @@ function solanique_get_final_copy(): array {
 						),
 						array(
 							'title' => 'The Artisan Protocol:',
-							'text'  => 'We do not accept "general" contractors. We curate an elite network of specialists. Each is held to performance standards that, if unmet, result in immediate removal from our ecosystem.',
+							'text'  => 'We do not accept "general" contractors. We curate an elite network of specialists, each held to performance standards that, if unmet, result in immediate removal from our ecosystem.',
 						),
 						array(
 							'title' => 'Bilingual Governance:',
@@ -526,92 +535,96 @@ function solanique_get_final_copy(): array {
 					'heading' => 'Are you ready for excellence in patrimonial custody?',
 					'text'    => 'Your assets are the physical manifestation of your ambition. Let us defend them.',
 					'label'   => 'ESTATE ACCESS',
-					'email'   => 'estates@solaniquegroup.com',
+					'email'   => 'estate@solaniquegroup.com',
 				),
-				'final_line'  => 'Your vision, built. Your assets, guarded. Your lifestyle, mastered: we transform your vision into a legacy that lasts for generations.',
+				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
 			),
 		),
-		'concierge'   => array(
+		'concierge'      => array(
 			'es' => array(
 				'brand'       => 'SOLANIQUE GROUP',
 				'tagline'     => '“Una Marca Visionaria Global”',
 				'service'     => 'SOLANIQUE CONCIERGE',
 				'headline'    => 'Gestión de Estilo de Vida y Optimización del Tiempo',
-				'intro'       => 'La divisa definitiva del visionario global no es el dinero; es el tiempo. La riqueza pierde su brillo si sus días son consumidos por la fricción de la logística doméstica, el ruido administrativo y el caos operativo diario. Solanique Concierge es un ecosistema de gestión de estilo de vida de élite diseñado para devolverle la soberanía absoluta sobre sus horas. Actuamos como el estado mayor privado de su vida personal, dominando la logística diaria y de alto nivel para que usted pueda mantenerse completamente enfocado en su macroevolución, sus empresas y su paz mental.',
+				'intro'       => 'La divisa definitiva del visionario global no es el dinero; es el tiempo. La riqueza pierde su brillo si sus días son consumidos por la fricción de la logística doméstica, el ruido administrativo y el caos operativo diario. Solanique Concierge es un ecosistema de gestión de estilo de vida de élite diseñado para devolverte la soberanía absoluta sobre tus horas. Actuamos como el estado mayor privado de tu vida personal, dominando la logística diaria y de alto nivel para que tu puedas mantenerte completamente enfocado en tu macroevolución, tus empresas y tu paz mental.',
 				'services'    => array(
 					'heading' => 'Nuestro Ecosistema de Servicios',
 					'items'   => array(
 						array(
 							'title' => 'Cuidado Familiar y Desarrollo Infantil:',
-							'text'  => 'Soluciones de cuidado infantil exclusivas y confiables bajo los estándares más estrictos de su hogar. Gestionamos personal especializado en entornos privados seguros para proteger y estimular a la próxima generación de su legado.',
+							'text'  => 'Soluciones de cuidado infantil exclusivas y confiables bajo los estándares más estrictos de tu hogar. Gestionamos personal especializado en entornos privados seguros para proteger y estimular a la próxima generación de tu legado.',
 						),
 						array(
-							'title' => 'Atención Especializada para Personas Mayores:',
-							'text'  => 'Servicios de acompañamiento y gestión de transición altamente filtrados y empáticos. Protegemos la salud, dignidad y el entorno de sus seres queridos, combinando su atención con adaptaciones estratégicas en el hogar.',
+							'title' => 'Programas de Educación Internacional e Inmersión Bilingüe:',
+							'text'  => 'Programas especializados de avance lingüístico y académico diseñados para adolescentes y adultos jóvenes. Ya sea dominando el inglés para hispanohablantes o el español para angloparlantes, curamos trayectorias educativas inmersivas, tutoría privada y logística de estudios en el extranjero para cultivar a la próxima generación de líderes globales con fluidez de nivel nativo.',
 						),
 						array(
-							'title' => 'Servicio Doméstico de Élite:',
-							'text'  => 'Custodia impecable y detallada para sus residencias privadas. Orquestamos equipos especializados que mantienen su hogar en un estado constante de perfección inmediata con discreción de guante blanco.',
+							'title' => 'Atención Especializada para Personas Mayores y Gestión de Transiciones:',
+							'text'  => 'Servicios de acompañamiento y gestión de transición altamente filtrados y empáticos para los miembros mayores de la familia. Protegemos su salud, dignidad y entorno, combinando su atención con adaptaciones estratégicas en el hogar para su máximo bienestar.',
+						),
+						array(
+							'title' => 'Servicio Doméstico de Élite y Limpieza Residencial Profunda:',
+							'text'  => 'Custodia impecable y detallada para tus residencias privadas. Orquestamos equipos especializados que mantienen tu hogar en un estado constante de perfección inmediata con discreción de guante blanco y absoluta precisión.',
 						),
 						array(
 							'title' => 'Chofer y Conductores Privados Profesionales:',
-							'text'  => 'Movilidad fluida y sin fricciones a su disposición. Conductores altamente capacitados para gestionar sus trayectos diarios, traslados al aeropuerto y logística familiar con absoluta reserva y seguridad.',
+							'text'  => 'Movilidad fluida y sin fricciones a tu disposición. Proveemos conductores altamente capacitados para gestionar tus trayectos diarios, traslados al aeropuerto y logística de transporte familiar con puntualidad, seguridad y total privacidad.',
 						),
 						array(
-							'title' => 'Custodia Exclusiva para Mascotas:',
-							'text'  => 'Gestión de estilo de vida integral para los compañeros más leales de la familia. Desde cuidado residencial de primer nivel y estética de lujo, hasta entrenamiento especializado y transporte veterinario con atención de cinco estrellas.',
+							'title' => 'Custodia Exclusiva y Servicios de Lujo para Mascotas:',
+							'text'  => 'Gestión de estilo de vida integral para los compañeros más leales de la familia. Desde cuidado residencial de primer nivel y estética de lujo hasta entrenamiento especializado, transporte veterinario y atención diaria, garantizamos un estándar de cinco estrellas.',
 						),
 						array(
-							'title' => 'Optimización del Tiempo y Asistencia Personal:',
-							'text'  => 'Una oficina de estilo de vida bilingüe dedicada a resolver las infinitas variables de una vida global. Solucionamos agendas complejas y logísticas de última hora para que su día a día fluya sin un solo punto de fricción.',
+							'title' => 'Optimización del Tiempo y Asistencia Personal Integral:',
+							'text'  => 'Una oficina de estilo de vida bilingüe y altamente receptiva dedicada a resolver las infinitas variables de una vida global. Ya sea resolviendo logística doméstica de última hora, coordinando con proveedores locales exclusivos o gestionando agendas personales complejas, tomamos el control del resultado para que tu día fluya sin un solo punto de fricción.',
 						),
 					),
 				),
 				'manifesto'   => array(
 					'heading' => 'Manifiesto del Concierge: Precisión Operativa',
-					'text'    => 'Operamos bajo la premisa de que el tiempo es su activo más limitado. No procesamos solicitudes; gestionamos la infraestructura de su vida.',
+					'text'    => 'Operamos bajo la premisa de que el tiempo es tu activo más limitado. No solo procesamos solicitudes; gestionamos la infraestructura de tu vida.',
 				),
 				'principles'  => array(
-					'heading' => 'I. Pilares del Comando Concierge',
+					'heading' => 'I. Principios Inmutables',
 					'items'   => array(
 						array(
 							'title' => 'Logística de Estilo de Vida:',
-							'text'  => 'Supervisión total que abarca desde la orquestación de viajes internacionales y aviación privada, hasta la producción de eventos de alto nivel, ejecutados con total eficiencia bilingüe en mercados anglófonos e hispanohablantes.',
+							'text'  => 'Supervisión total que abarca desde la orquestación de viajes internacionales y aviación privada hasta la producción de eventos de alto nivel, ejecutados con total eficiencia bilingüe en mercados anglófonos e hispanohablantes.',
 						),
 						array(
 							'title' => 'Preservación del Legado (Seguridad Senior):',
-							'text'  => 'Evaluación e implementación profesional de sistemas de seguridad, accesibilidad y monitoreo de alta tecnología en sus residencias, garantizando la protección familiar sin comprometer la estética arquitectónica.',
+							'text'  => 'Evaluación e implementación profesional de sistemas de seguridad, accesibilidad y monitoreo de alta tecnología en tus residencias, garantizando la seguridad familiar sin comprometer la estética arquitectónica.',
 						),
 						array(
 							'title' => 'Gestión de Activos Premium:',
-							'text'  => 'Manejo bajo guante blanco, conservación, seguros y documentación de bienes muebles de alto valor (colecciones de arte, flotas de vehículos clásicos, activos de alta relojería) bajo estrictos estándares de privacidad.',
+							'text'  => 'Manejo bajo guante blanco, conservación, seguros y documentación de bienes muebles de alto valor (colecciones de arte, flotas de vehículos clásicos, alta relojería) bajo los más estrictos estándares de privacidad y seguridad.',
 						),
 					),
 				),
 				'protocols'   => array(
-					'heading' => 'II. Protocolo del Concierge',
+					'heading' => 'II. Protocolos de Operación',
 					'items'   => array(
 						array(
-							'title' => 'Directiva de "Llamada Única":',
-							'text'  => 'Todas sus solicitudes se canalizan a través de un Concierge Primario asignado. Sin transferencias, sin confusión, sin fragmentación.',
+							'title' => 'La Auditoría de Salud del Concierge y Soporte Predictivo:',
+							'text'  => 'Mediante la integración de datos en todo el ecosistema Solanique, cada horario y entorno doméstico se somete a un seguimiento continuo, lo que resulta en un soporte predictivo y un Informe de Salud del Estilo de Vida accesible a través de tu panel digital privado.',
 						),
 						array(
-							'title' => 'Validación de Integridad:',
-							'text'  => 'Cada proveedor de servicios (chefs, equipos de seguridad, tutores) es rigurosamente validado bajo nuestro Estándar de Integridad antes de tener acceso a su esfera privada.',
+							'title' => 'El Protocolo del Concierge (Validación de Integridad):',
+							'text'  => 'Cada proveedor de servicios —desde chefs y equipos de seguridad hasta tutores especializados— es rigurosamente validado bajo nuestro Estándar de Integridad antes de tener acceso a tu esfera privada. El incumplimiento resulta en la expulsión inmediata de nuestro ecosistema.',
 						),
 						array(
-							'title' => 'Soporte Predictivo:',
-							'text'  => 'Al integrar los datos de Capital y Estates, nuestro equipo anticipa sus necesidades antes de que surjan (ej. preparación y mantenimiento proactivo de una residencia secundaria previo a su llegada).',
+							'title' => 'Gobernanza Bilingüe:',
+							'text'  => 'Reconociendo la naturaleza global de nuestros clientes, todas las comunicaciones diarias, marcos logísticos y horarios se proporcionan tanto en inglés como en español, garantizando una claridad y supervisión absolutas.',
 						),
 					),
 				),
 				'cta'         => array(
 					'heading' => '¿Está listo para delegar la fricción diaria?',
-					'text'    => 'El control de su tiempo es la verdadera definición de la libertad. Permítanos coordinar su entorno.',
+					'text'    => 'El control de tu tiempo es la verdadera definición de la libertad. Permítenos coordinar tu entorno.',
 					'label'   => 'ACCESO CONCIERGE',
 					'email'   => 'concierge@solaniquegroup.com',
 				),
-				'final_line'  => 'Su visión, construida. Sus activos, custodiados. Su estilo de vida, dominado: transformamos su visión en un legado que perdure por generaciones.',
+				'final_line'  => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
 			),
 			'en' => array(
 				'brand'       => 'SOLANIQUE GROUP',
@@ -627,6 +640,10 @@ function solanique_get_final_copy(): array {
 							'text'  => 'Exclusive and trusted childcare solutions designed to the strictest standards of your home. We manage specialized professional staff and curated access to secure private environments, ensuring your children are stimulated, protected, and safe while you lead your legacy.',
 						),
 						array(
+							'title' => 'International Education and Bilingual Immersion Programs:',
+							'text'  => 'Tailored linguistic and academic advancement programs designed for teenagers and young adults. Whether mastering English for Spanish speakers or Spanish for English speakers, we curate immersive educational pathways, private tutoring, and study-abroad logistics to cultivate the next generation of global leaders with native-level fluency.',
+						),
+						array(
 							'title' => 'Specialized Senior Care and Transition Management:',
 							'text'  => 'Highly vetted, empathetic accompaniment and care services for senior family members. We manage their daily lifestyle support to protect their health, dignity, and environment, combining their care with strategic home adaptations for maximum well-being.',
 						),
@@ -640,7 +657,7 @@ function solanique_get_final_copy(): array {
 						),
 						array(
 							'title' => 'Exclusive Custody and Luxury Pet Services:',
-							'text'  => 'Comprehensive lifestyle management for the family’s most loyal companions. From premium residential care and luxury grooming to specialized training, veterinary transport, and daily attention, we ensure your pets receive a five-star standard of care.',
+							'text'  => 'Comprehensive lifestyle management for the family\'s most loyal companions. From premium residential care and luxury grooming to specialized training, veterinary transport, and daily attention, we ensure your pets receive a five-star standard of care.',
 						),
 						array(
 							'title' => 'Time Optimization and Integral Personal Assistance:',
@@ -653,7 +670,7 @@ function solanique_get_final_copy(): array {
 					'text'    => 'We operate on the premise that time is your most limited asset. We do not just process requests; we manage the infrastructure of your life.',
 				),
 				'principles'  => array(
-					'heading' => 'I. Pillars of Concierge Command',
+					'heading' => 'I. Immutable Principles',
 					'items'   => array(
 						array(
 							'title' => 'Lifestyle Logistics:',
@@ -670,19 +687,19 @@ function solanique_get_final_copy(): array {
 					),
 				),
 				'protocols'   => array(
-					'heading' => 'II. Concierge Protocol',
+					'heading' => 'II. Operating Protocols',
 					'items'   => array(
 						array(
-							'title' => '"Single Call" Directive:',
-							'text'  => 'All requests are channeled through your assigned Primary Concierge. No transfers, no confusion, no fragmentation.',
+							'title' => 'The Concierge Health Audit & Predictive Support:',
+							'text'  => 'By integrating data across the Solanique ecosystem, every schedule and domestic environment undergoes continuous tracking, resulting in predictive support and a Lifestyle Health Report accessible via your private digital dashboard.',
 						),
 						array(
-							'title' => 'Integrity Validation:',
-							'text'  => 'Every service provider—from chefs and security teams to specialized tutors—is validated under our Standard of Integrity before gaining access to your private sphere.',
+							'title' => 'The Concierge Protocol (Integrity Validation):',
+							'text'  => 'Every service provider—from chefs and security teams to specialized tutors—is rigorously validated under our Standard of Integrity before gaining access to your private sphere. Non-compliance results in immediate removal from our ecosystem.',
 						),
 						array(
-							'title' => 'Predictive Support:',
-							'text'  => 'By integrating data from Capital and Estates, our concierge team anticipates your needs before they arise (e.g., proactive maintenance of a secondary residence prior to your arrival).',
+							'title' => 'Bilingual Governance:',
+							'text'  => 'Recognizing the global nature of our clients, all daily communications, logistical frameworks, and schedules are provided in both English and Spanish, ensuring absolute clarity and oversight.',
 						),
 					),
 				),
@@ -692,14 +709,14 @@ function solanique_get_final_copy(): array {
 					'label'   => 'CONCIERGE ACCESS',
 					'email'   => 'concierge@solaniquegroup.com',
 				),
-				'final_line'  => 'Your vision, built. Your assets, guarded. Your lifestyle, mastered: we transform your vision into a legacy that lasts for generations.',
+				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
 			),
 		),
-		'the_mandate' => array(
+		'the_mandate'    => array(
 			'es' => array(
 				'brand'       => 'SOLANIQUE GROUP',
 				'tagline'     => '“Una Marca Visionaria Global”',
-				'title'       => 'THE MANDATE',
+				'title'       => 'EL MANDATO',
 				'mission'     => array(
 					'heading' => 'Misión',
 					'text'    => 'Nuestra misión es ofrecer un ecosistema integrado de estrategia de capital y maestría en el estilo de vida que empodere al visionario global para Ascender. En Solanique Group, vamos más allá de la transacción para proporcionar un viaje de maestría único y unificado, fusionando la planificación experta de capital, la estrategia de desarrollo y servicios de conserjería de élite. Servimos a una comunidad global de visionarios que esperan transformación en lugar de transacciones. Cada proyecto se trata con precisión, integridad y una visión bilingüe (inglés y español) para diseñar resultados inteligentes que construyan riqueza, belleza y un legado duradero.',
@@ -751,7 +768,7 @@ function solanique_get_final_copy(): array {
 					'items'   => array(
 						array(
 							'title' => 'Integridad:',
-							'text'  => 'Fusionamos Capital, Estates y Concierge en un solo ecosistema continuo de alto rendimiento.',
+							'text'  => 'Fusionamos Capital, Estate y Concierge en un solo ecosistema continuo de alto rendimiento.',
 						),
 						array(
 							'title' => 'Visionario:',
@@ -763,11 +780,11 @@ function solanique_get_final_copy(): array {
 						),
 					),
 				),
-				'final_line'  => 'Tu visión, construida. Tus activos, custodiados. Tu estilo de vida, dominado: transformamos tu visión en un legado que perdure por generaciones.',
+				'final_line'  => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
 			),
 			'en' => array(
-				'brand'       => 'Solanique Group',
-				'tagline'     => '(A Global Visionary Brand)',
+				'brand'       => 'SOLANIQUE GROUP',
+				'tagline'     => '“A Global Visionary Brand”',
 				'title'       => 'THE MANDATE',
 				'mission'     => array(
 					'heading' => 'Mission',
@@ -832,7 +849,117 @@ function solanique_get_final_copy(): array {
 						),
 					),
 				),
-				'final_line'  => 'Your vision, built. Your assets, guarded. Your lifestyle, mastered: we transform your vision into a legacy that lasts for generations.',
+				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
+			),
+		),
+		'solanique_club' => array(
+			'es' => array(
+				'brand'      => 'SOLANIQUE GROUP',
+				'tagline'    => '“Una Marca Visionaria Global”',
+				'service'    => 'CLUB SOLANIQUE',
+				'intro'      => 'Solanique Group se sustenta sobre un ecosistema integrado. Nuestro Club está dividido en dos vías exclusivas que garantizan precisión, seguridad y colaboración alineada: una para aquellos que buscan desplegar capital y adquirir activos, y otra para los profesionales de élite y contratistas seleccionados para ejecutar nuestros proyectos en Capital, Estate y Concierge.',
+				'pathways'   => array(
+					array(
+						'title'          => 'Vía 1: Portal de Inversionistas y Socios (Portal de Activos y Crecimiento)',
+						'subheading'     => 'Construye Riqueza. Adquiere. Expande.',
+						'focus_label'    => 'El Enfoque:',
+						'focus'          => 'Acceso exclusivo por invitación a portafolios inmobiliarios privados, oportunidades institucionales de Joint Venture y proyectos de desarrollo locales e internacionales en Canadá, EE. UU. y Latinoamérica. Diseñado para inversionistas que buscan visualizar nuestros listados exclusivos y oportunidades de incubación corporativa.',
+						'offers_label'   => 'Lo que ofrece:',
+						'offers'         => array(
+							'Portafolios privados de bienes raíces y desarrollo.',
+							'Oportunidades institucionales de Joint Venture.',
+							'Incubación corporativa y Estrategia para construir patrimonio.',
+						),
+						'security_label' => 'Nota de Seguridad:',
+						'security'       => 'El acceso a los listados privados y portafolios es estrictamente confidencial y se otorga tras una revisión ejecutiva, verificación y cumplimiento de los estándares de gobernanza bilingüe.',
+						'action'         => 'Solicitar Admisión de Inversionista',
+						'email'          => 'capital@solaniquegroup.com',
+					),
+					array(
+						'title'            => 'Vía 2: Ecosistema de Contratistas y Socios de Servicio (La Red JV)',
+						'subheading'       => 'Construye con Nosotros. Ejecuta con Precisión.',
+						'focus_label'      => 'El Enfoque:',
+						'focus'            => 'Diseñado para profesionales acreditados —desde especialistas en construcción y oficios de élite hasta proveedores de estilo de vida especializado— que conforman el brazo ejecutor de nuestros tres pilares. Todas las operaciones y comunicaciones se mantienen bajo estrictos estándares bilingües (inglés y español).',
+						'areas_label'      => 'Dónde operan los socios:',
+						'areas'            => array(
+							array(
+								'title'  => 'CAPITAL JV:',
+								'text'   => 'Contratistas de desarrollo regional y proveedores de servicios corporativos.',
+								'action' => 'Enviar Credenciales de profesión',
+								'email'  => 'capital@solaniquegroup.com',
+							),
+							array(
+								'title'  => 'ESTATE JV:',
+								'text'   => 'Empresas de construcción, contratistas generales, electricistas, plomeros y técnicos de sistemas críticos.',
+								'action' => 'Enviar Credenciales de ocupación',
+								'email'  => 'estate@solaniquegroup.com',
+							),
+							array(
+								'title'  => 'CONCIERGE JV:',
+								'text'   => 'Proveedores de movilidad ejecutiva, especialistas en cuidado de personas mayores, gestión de cuidado infantil y servicios domésticos y para mascotas de primera calidad.',
+								'action' => 'Enviar Credenciales de Ocupación',
+								'email'  => 'concierge@solaniquegroup.com',
+							),
+						),
+						'compliance_label' => 'Estándar de Cumplimiento:',
+						'compliance'       => 'Todos los socios participantes se someten a una rigurosa evaluación bajo nuestro Estándar de Integridad, verificando una experiencia y referencias de élite, licencias completas, seguros y estándares de cumplimiento institucional. El incumplimiento resulta en la expulsión inmediata de nuestro ecosistema.',
+					),
+				),
+				'final_line' => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
+			),
+			'en' => array(
+				'brand'      => 'SOLANIQUE GROUP',
+				'tagline'    => '“A Global Visionary Brand”',
+				'service'    => 'SOLANIQUE CLUB',
+				'intro'      => 'Solanique Group is built on an integrated ecosystem. Our Club is divided into two exclusive pathways ensuring precision, security, and aligned collaboration: one for those looking to deploy capital and acquire assets, and another for the elite professionals and contractors chosen to execute our projects across Capital, Estates, and Concierge.',
+				'pathways'   => array(
+					array(
+						'title'          => 'Pathway 1: Investors & Partners Portal (The Asset & Growth Portal)',
+						'subheading'     => 'Build Wealth. Acquire. Expand.',
+						'focus_label'    => 'The Focus:',
+						'focus'          => 'Exclusive, invitation-only access to private real estate portfolios, institutional Joint Venture opportunities, and local and international development projects in Canada, the U.S., and Latin America. Designed for investors looking to view our exclusive listings and corporate incubation opportunities.',
+						'offers_label'   => 'What it offers:',
+						'offers'         => array(
+							'Private real estate and development portfolios.',
+							'Institutional Joint Venture opportunities.',
+							'Corporate incubation and wealth strategy.',
+						),
+						'security_label' => 'Security Note:',
+						'security'       => 'Access to private listings and portfolios is strictly confidential and granted following executive review, verification, and bilingual governance standards.',
+						'action'         => 'Request Investor Admission',
+						'email'          => 'capital@solaniquegroup.com',
+					),
+					array(
+						'title'            => 'Pathway 2: The Contractor & Service Partner Ecosystem (The JV Network)',
+						'subheading'       => 'Build with Us. Execute with Precision.',
+						'focus_label'      => 'The Focus:',
+						'focus'            => 'Designed for vetted professionals—from elite construction and trade specialists to specialized lifestyle providers—who form the execution arm of our three pillars. All operations and communications are maintained under strict bilingual standards (English and Spanish).',
+						'areas_label'      => 'Where partners operate:',
+						'areas'            => array(
+							array(
+								'title'  => 'CAPITAL JV:',
+								'text'   => 'Regional development contractors and corporate service providers.',
+								'action' => 'Submit Partner Credentials',
+								'email'  => 'capital@solaniquegroup.com',
+							),
+							array(
+								'title'  => 'ESTATE JV:',
+								'text'   => 'Construction companies, general contractors, electricians, plumbers, and critical systems technicians.',
+								'action' => 'Submit Partner Credentials',
+								'email'  => 'estate@solaniquegroup.com',
+							),
+							array(
+								'title'  => 'CONCIERGE JV:',
+								'text'   => 'Executive mobility providers, senior care specialists, childcare management, and premium domestic/pet services.',
+								'action' => 'Submit Partner Credentials',
+								'email'  => 'concierge@solaniquegroup.com',
+							),
+						),
+						'compliance_label' => 'Compliance Standard:',
+						'compliance'       => 'All participating partners undergo rigorous vetting under our Standard of Integrity, verifying elite craftsmanship, full licensing, insurance, and institutional compliance standards. Non-compliance results in immediate removal from our ecosystem.',
+					),
+				),
+				'final_line' => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
 			),
 		),
 	);
