@@ -7,6 +7,59 @@
 
 defined( 'ABSPATH' ) || exit;
 
+/** Returns the approved intake form for the current page. */
+function sg_get_native_ghl_popup(): array {
+	$forms = array(
+		'capital' => array( 'A09fGOKG0qMdqOm3kNBF', 'Capital' ),
+		'estates' => array( 'ZkIp2RDdL2MT2ZiwUABK', 'Estates' ),
+		'concierge' => array( 'mLgnoua7O94pvh4kYsFc', 'Concierge' ),
+		'inquiry' => array( '7RZNMVuqafSzVAnKkhn4', 'Inquiry' ),
+	);
+	foreach ( $forms as $page => $form ) {
+		$slugs = 'estates' === $page ? array( 'estate', 'estates' ) : array( $page );
+		if ( is_page( $slugs ) || is_page_template( 'page-' . $page . '.php' ) ) {
+			return $form;
+		}
+	}
+	return array();
+}
+
+add_action( 'wp_footer', function (): void {
+	$form = sg_get_native_ghl_popup();
+	if ( ! $form ) {
+		return;
+	}
+	$id = 'inline-' . $form[0];
+	?>
+	<dialog class="sg-intake-dialog" id="sg-intake-dialog" aria-labelledby="sg-intake-title" data-sg-intake>
+		<header class="sg-intake-dialog__header">
+			<h2 id="sg-intake-title"><?php echo esc_html( $form[1] ); ?></h2>
+			<button type="button" data-sg-intake-close aria-label="<?php esc_attr_e( 'Close inquiry form', 'solanique' ); ?>">&#215;</button>
+		</header>
+		<p data-sg-intake-status role="status"><?php esc_html_e( 'Loading form...', 'solanique' ); ?></p>
+	<iframe
+		data-src="<?php echo esc_url( 'https://api.leadconnectorhq.com/widget/form/' . $form[0] ); ?>"
+		style="width:100%;height:1100px;border:none;border-radius:8px"
+		id="<?php echo esc_attr( $id ); ?>"
+		data-layout="{'id':'INLINE'}"
+		data-trigger-type="alwaysShow"
+		data-trigger-value=""
+		data-activation-type="alwaysActivated"
+		data-activation-value=""
+		data-deactivation-type="neverDeactivate"
+		data-deactivation-value=""
+		data-form-name="<?php echo esc_attr( $form[1] ); ?>"
+		data-height="1100"
+		data-layout-iframe-id="<?php echo esc_attr( $id ); ?>"
+		data-form-id="<?php echo esc_attr( $form[0] ); ?>"
+		data-cookie-consent="true"
+		data-cookie-consent-provider="auto"
+		title="<?php echo esc_attr( $form[1] ); ?>"
+	></iframe>
+	</dialog>
+	<?php
+}, 10 );
+
 /**
  * Returns planned CRM form entries.
  *

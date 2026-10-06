@@ -1178,6 +1178,8 @@ function solanique_get_pillar_email_tab( string $pillar, string $label = '' ): s
 function solanique_get_footer_social_network_labels(): array {
 	return array(
 		'instagram' => __( 'Instagram', 'solanique' ),
+		'tiktok'    => __( 'TikTok', 'solanique' ),
+		'threads'   => __( 'Threads', 'solanique' ),
 		'linkedin'  => __( 'LinkedIn', 'solanique' ),
 		'facebook'  => __( 'Facebook', 'solanique' ),
 		'youtube'   => __( 'YouTube', 'solanique' ),
@@ -1190,13 +1192,15 @@ function solanique_get_footer_social_network_labels(): array {
  * @return array<string,array{label:string,url:string}>
  */
 function solanique_get_footer_social_links(): array {
-	// Add official social media URLs before production.
+	// Client-confirmed profiles; deployments can override them through the filter.
 	$links = (array) apply_filters(
 		'solanique_footer_social_links',
 		array(
-			'instagram' => '',
-			'linkedin'  => '',
-			'facebook'  => '',
+			'instagram' => 'https://www.instagram.com/solaniquegroup/',
+			'tiktok'    => 'https://www.tiktok.com/@solanique_group',
+			'threads'   => 'https://www.threads.com/@solaniquegroup',
+			'linkedin'  => 'https://www.linkedin.com/in/solanique-group-97b353412/',
+			'facebook'  => 'https://web.facebook.com/profile.php?id=61590578995799',
 			'youtube'   => '',
 		)
 	);
@@ -1227,6 +1231,8 @@ function solanique_get_footer_social_links(): array {
  */
 function solanique_get_social_icon_svg( string $network ): string {
 	$icons = array(
+		'tiktok'    => '<svg class="sg-site-footer__social-svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M14 3v12.5a4.5 4.5 0 1 1-4-4.47M14 3c0 4 2.5 6 6 6"></path></svg>',
+		'threads'   => '<svg class="sg-site-footer__social-svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M19.5 7.5C18.3 4.5 15.8 3 12 3 6.4 3 3.5 6.5 3.5 12s2.9 9 8.5 9c4.5 0 7.5-2.3 7.5-5.5 0-3.5-3-5.5-7-5.5-2.8 0-4.5 1.2-4.5 3s1.4 3 3.5 3c3.1 0 4.5-2 4.5-5 0-2.8-1.4-4.5-4-4.5-1.5 0-2.8.5-3.5 1.5"></path></svg>',
 		'instagram' => '<svg class="sg-site-footer__social-svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"></rect><circle cx="12" cy="12" r="3.2"></circle><circle cx="17" cy="7" r="0.8"></circle></svg>',
 		'linkedin'  => '<svg class="sg-site-footer__social-svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M6.5 10v8"></path><path d="M10.5 18v-8"></path><path d="M10.5 13.4c0-2 1.2-3.4 3.2-3.4s3.3 1.3 3.3 3.7V18"></path><circle cx="6.5" cy="6.5" r="1"></circle></svg>',
 		'facebook'  => '<svg class="sg-site-footer__social-svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M14 8h2V5h-2.4C10.9 5 10 6.8 10 8.7V11H8v3h2v5h3v-5h2.4l0.6-3H13V8.9c0-.6.3-.9 1-.9Z"></path></svg>',

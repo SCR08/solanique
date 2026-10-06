@@ -12,6 +12,7 @@ get_header();
 $solanique_capital_copy = solanique_get_final_page_copy( 'capital' );
 
 get_template_part( 'template-parts/pages/capital/hero' );
+sg_render_service_video_slot( 'capital', array( 'class' => 'sg-video-slot--capital' ) );
 
 solanique_render_immersive_section(
 	array(
@@ -30,20 +31,9 @@ solanique_render_immersive_section(
 	)
 );
 
-if ( function_exists( 'sg_render_service_video_slot' ) ) {
-	sg_render_service_video_slot(
-		'capital',
-		array(
-			'eyebrow' => __( 'Smart Capital video', 'solanique' ),
-			'title'   => __( 'Approved Capital media placement.', 'solanique' ),
-			'intro'   => __( 'This placement appears only when approved Smart Capital video files are available and enabled.', 'solanique' ),
-			'class'   => 'sg-video-slot--capital',
-		)
-	);
-}
-
 get_template_part( 'template-parts/pages/capital/services' );
 get_template_part( 'template-parts/pages/capital/broker-partners' );
+sg_render_service_video_slot( 'capital', array( 'placement' => 'closing', 'class' => 'sg-video-slot--capital' ) );
 get_template_part( 'template-parts/pages/capital/intro' );
 get_template_part( 'template-parts/pages/capital/strategy' );
 

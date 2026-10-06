@@ -11,6 +11,7 @@ import { initServiceExplorer } from './modules/service-explorer.js';
 import { initParallax } from './modules/parallax.js';
 import { initVideoModal } from './modules/video-modal.js';
 import { initIlluminationToggle } from './modules/illumination-toggle.js';
+import { initIntakeModal } from './modules/intake-modal.js';
 
 window.SG = window.SG || {};
 window.SG.initNavigation = initNavigation;
@@ -30,6 +31,7 @@ const initApp = () => {
 	window.SG.initParallax();
 	window.SG.initVideoModal();
 	window.SG.initIlluminationToggle();
+	initIntakeModal();
 };
 
 if (document.readyState === 'loading') {

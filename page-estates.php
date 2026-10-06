@@ -12,6 +12,7 @@ get_header();
 $solanique_estate_copy = solanique_get_final_page_copy( 'estate' );
 
 get_template_part( 'template-parts/pages/estates/hero' );
+sg_render_service_video_slot( 'estate', array( 'class' => 'sg-video-slot--estate' ) );
 
 solanique_render_immersive_section(
 	array(
@@ -29,18 +30,6 @@ solanique_render_immersive_section(
 		'speed'    => '0.22',
 	)
 );
-
-if ( function_exists( 'sg_render_service_video_slot' ) ) {
-	sg_render_service_video_slot(
-		'estate',
-		array(
-			'eyebrow' => __( 'Estate video', 'solanique' ),
-			'title'   => __( 'Approved Estate media placement.', 'solanique' ),
-			'intro'   => __( 'This placement appears only when approved Estate video files are available and enabled.', 'solanique' ),
-			'class'   => 'sg-video-slot--estate',
-		)
-	);
-}
 
 get_template_part( 'template-parts/pages/estates/advisory' );
 get_template_part( 'template-parts/pages/estates/intro' );

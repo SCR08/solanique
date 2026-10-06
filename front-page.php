@@ -15,19 +15,8 @@ get_header();
 $solanique_home_copy = solanique_get_final_page_copy( 'home' );
 
 get_template_part( 'template-parts/home/hero' );
+sg_render_service_video_slot( 'brand', array( 'class' => 'sg-video-slot--home' ) );
 get_template_part( 'template-parts/home/manifesto' );
-
-if ( function_exists( 'sg_render_service_video_slot' ) ) {
-	sg_render_service_video_slot(
-		'brand',
-		array(
-			'eyebrow' => __( 'Solanique presentation', 'solanique' ),
-			'title'   => __( 'A controlled place for the approved Solanique presentation.', 'solanique' ),
-			'intro'   => __( 'This placement appears only when a production-approved local video is available and enabled.', 'solanique' ),
-			'class'   => 'sg-video-slot--home',
-		)
-	);
-}
 
 solanique_render_immersive_section(
 	array(
@@ -68,6 +57,7 @@ solanique_render_immersive_section(
 
 get_template_part( 'template-parts/home/founder' );
 get_template_part( 'template-parts/home/presence' );
+sg_render_service_video_slot( 'brand', array( 'placement' => 'closing', 'class' => 'sg-video-slot--home' ) );
 get_template_part( 'template-parts/home/cta' );
 
 get_footer();

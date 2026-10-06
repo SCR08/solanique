@@ -23,9 +23,6 @@ const FOCUSABLE_SELECTOR = [
 	'[tabindex]:not([tabindex="-1"])',
 ].join(',');
 
-const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
-const MOBILE_QUERY = '(max-width: 47.98rem)';
-
 export const initVideoModal = (scope = document) => {
 	const modal = document.querySelector(SELECTORS.modal);
 	const triggers = Array.from(scope.querySelectorAll(SELECTORS.trigger));
@@ -84,6 +81,10 @@ export const initVideoModal = (scope = document) => {
 		}
 
 		previousFocus = document.activeElement;
+		const width = Number(trigger.dataset.videoWidth) || 16;
+		const height = Number(trigger.dataset.videoHeight) || 9;
+		dialog.classList.toggle('sg-video-modal__dialog--portrait', height > width);
+		dialog.style.setProperty('--sg-video-ratio', `${width} / ${height}`);
 		player.src = src;
 
 		if (trigger.dataset.videoPoster) {
@@ -139,7 +140,11 @@ export const initVideoModal = (scope = document) => {
 			return;
 		}
 
-		trigger.addEventListener('click', () => openModal(trigger));
+		trigger.addEventListener('click', (event) => {
+			if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+			event.preventDefault();
+			openModal(trigger);
+		});
 	});
 
 	closeButtons.forEach((button) => {
@@ -160,36 +165,4 @@ export const initVideoModal = (scope = document) => {
 		trapFocus(event);
 	});
 
-	const reducedMotion = window.matchMedia(REDUCED_MOTION_QUERY);
-	const mobile = window.matchMedia(MOBILE_QUERY);
-
-	triggers.forEach((trigger) => {
-		if (!(trigger instanceof HTMLElement) || trigger.dataset.videoAutoplayMode !== 'section-once') {
-			return;
-		}
-
-		if (reducedMotion.matches || mobile.matches || !('IntersectionObserver' in window)) {
-			return;
-		}
-
-		const key = `solanique-video-seen:${trigger.dataset.videoId || trigger.dataset.videoSrc || ''}`;
-
-		if (window.sessionStorage.getItem(key)) {
-			return;
-		}
-
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (!entry.isIntersecting || window.sessionStorage.getItem(key)) {
-					return;
-				}
-
-				window.sessionStorage.setItem(key, 'true');
-				openModal(trigger);
-				observer.disconnect();
-			});
-		}, { threshold: 0.68 });
-
-		observer.observe(trigger);
-	});
 };

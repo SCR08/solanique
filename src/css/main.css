@@ -20,6 +20,7 @@
 @import "./components/card.css" layer(components);
 @import "./components/form.css" layer(components);
 @import "./components/video-modal.css" layer(components);
+@import "./components/intake-modal.css" layer(components);
 @import "./components/illumination-toggle.css" layer(components);
 
 @import "./pages/home.css" layer(pages);

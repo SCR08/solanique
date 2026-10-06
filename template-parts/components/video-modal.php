@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 
 		<div class="sg-video-modal__frame">
-			<video class="sg-video-modal__player" controls playsinline preload="metadata" data-sg-video-player>
+			<video class="sg-video-modal__player" controls playsinline preload="none" data-sg-video-player>
 				<?php esc_html_e( 'Your browser does not support embedded video playback.', 'solanique' ); ?>
 			</video>
 		</div>

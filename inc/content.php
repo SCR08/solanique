@@ -218,7 +218,7 @@ function solanique_get_final_copy(): array {
 				'headline'    => 'Arquitectura Estratégica y Soberanía Financiera',
 				'intro'       => 'El capital es la roca sólida sobre la cual se construyen los imperios. En Solanique, no tratamos tus activos como transacciones aisladas; los tratamos como vehículos de alto rendimiento que exigen precisión matemática y visión de futuro. Actuamos como tus Estrategas Principales, alineando tu liquidez con activos de alto crecimiento y marcos corporativos modernos para blindar, optimizar y multiplicar tu patrimonio.',
 				'services'    => array(
-					'heading' => 'Nuestro Ecosistema de Servicios',
+					'heading' => 'Nuestro Ecosistema de Servicios de Capital',
 					'items'   => array(
 						array(
 							'title' => 'Adquisición Inmobiliaria de Alta Precisión:',
@@ -299,7 +299,7 @@ function solanique_get_final_copy(): array {
 				'headline'    => 'Strategic Architecture and Financial Sovereignty',
 				'intro'       => 'Capital is the bedrock upon which empires are built. At Solanique, we do not treat your assets as isolated transactions; we treat them as high-performance vehicles that demand mathematical precision and forward-thinking vision. We serve as your Lead Strategists, aligning your liquidity with high-growth assets and modern corporate frameworks to shield, optimize, and multiply your wealth.',
 				'services'    => array(
-					'heading' => 'Our Ecosystem of Services',
+					'heading' => 'Our Capital Services Ecosystem',
 					'items'   => array(
 						array(
 							'title' => 'High-Precision Real Estate Acquisition and Asset Strategy:',

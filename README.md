@@ -46,7 +46,7 @@ Classification key:
 | The Mandate locked copy | `inc/content.php`, `page-the-mandate.php`, `template-parts/pages/the-mandate/` | C. Developer-controlled | History / Origin, Mission, Vision, Values, and final phrase remain protected. |
 | Inquiry gateway copy | `page-inquiry.php`, `template-parts/pages/inquiry/` | B. Should become client-editable | Keep minimal until approved GHL/partner intake copy is supplied. |
 | Inquiry optional editor slot | WordPress page editor rendered by `solanique_render_current_page_editor_slot()` | A. Client-editable now | If the Inquiry page has editor content, it renders inside a controlled premium section after the coded gateway. |
-| Solanique Club copy | `page-solanique-club.php`, `template-parts/pages/solanique-club/` | B. Should become client-editable | Current copy is provisional and should move to controlled fields or approved content once finalized. |
+| Solanique Club copy | `inc/content.php`, `page-solanique-club.php`, `template-parts/pages/solanique-club/` | B. Should become client-editable | Final client PDF copy is implemented; move to controlled fields in a future editability sprint. |
 | Solanique Club optional editor slot | WordPress page editor rendered by `solanique_render_current_page_editor_slot()` | A. Client-editable now | If the Solanique Club page has editor content, it renders inside a controlled premium section after the coded overview. |
 | Privacy Policy body | WordPress page editor, with PHP fallback in `page-privacy-policy.php` | A. Client-editable now | If the Privacy Policy page has editor content, the template renders that content inside the premium legal layout. |
 | Terms & Conditions body | WordPress page editor, with PHP fallback in `page-terms-conditions.php` | A. Client-editable now | If the Terms page has editor content, the template renders that content and hides the pending fallback. |
@@ -307,7 +307,7 @@ Do not load assets from `_references`, `_incoming`, or `_review` in production t
 
 Metallic title and tab treatments are silver/platinum/titanium-oriented. Muted champagne/antique gold is reserved for small accents only: fine divider lines, card hairlines, subtle CTA details, and micro-interaction highlights.
 
-No production-safe local video files are currently available. The approved video folders contain only placeholder `.gitkeep` files, so no video has been integrated.
+Video files are hosted in the client's WordPress Media Library. Six approved uploads are integrated through manual playback previews; local video folders remain unused.
 
 ## Visual Brightness And Background Detail
 
@@ -564,7 +564,6 @@ GHL or partner-provided forms should only be embedded after approval. The follow
 
 Required client or production inputs:
 
-- official social media URLs
 - optional official pillar emails for Capital, Estate, and Concierge
 - Terms copy
 - Legal copy
@@ -581,21 +580,31 @@ Required client or production inputs:
 - compressed logo package
 - license information supplied by the client
 - final Inquiry copy
-- final Client Access copy
-- final Solanique Club copy
 - GHL inquiry form/embed code, if the client wants GHL visible on Inquiry
-- approved second video asset
+- any additional approved video assets beyond the six integrated uploads
 - Google Search Console access
 - preferred canonical domain: `https://solaniquegroup.com` or `https://www.solaniquegroup.com`
 - final production image optimization/compression pass
 
 Terms, Legal, and Accessibility pages require final legal copy before production.
-Official social media URLs are required before production.
-Solanique Club copy is provisional. Final client-provided copy is pending.
-Approved video asset pending. No production video integrated.
+Instagram, TikTok, Threads, LinkedIn, and Facebook profile URLs are client-confirmed and configured in `inc/helpers.php`. YouTube remains unconfigured and does not render.
+Final Solanique Club PDF copy is implemented in the bilingual content system.
+Six client-approved WordPress-hosted videos are integrated with click-to-play previews; see Approved Video Integration below.
 Inquiry registration requires approved GHL/partner embed code after the CRM/data ownership decision.
 Homepage/Mandate relationship and return-flow strategy pending client discussion. Current implementation uses logo as homepage return.
 Broker/license information, disclaimers, agent levels, partner logos, and partner descriptions are structurally prepared but require approved client content before publication.
+
+## September 16 Meeting Follow-up (October 3 Audit)
+
+- Capital already renders the supplied full name, `MORTGAGE AGENT-LEVEL 1`, `BROKERAGE: #12052`, `REALTOR`, and `C21 Heritage Group Ltd.` from `inc/partners.php`. Both approved logo files exist. Any additional C21 broker/license disclosure wording still requires client input; no additional numbers have been supplied.
+- The separate Professional Affiliations dataset remains empty and its public box does not render. The construction company still requires its name, approved production logo, authorization, and approved category/description.
+- Concierge's repeated protocol excerpt was removed from the page composition. The complete protocol list remains in `template-parts/pages/concierge/process.php`. International Education and Bilingual Immersion Programs already appears in the final bilingual service copy; any additional student-program wording requires an approved source.
+- Capital's service heading now explicitly identifies Capital in both languages. Homepage ecosystem content and the logo homepage link remain in place; navigation has no Home or Client Access tab.
+- Footer links for Instagram, TikTok, Facebook, LinkedIn, and Threads are client-confirmed and configured in `inc/helpers.php`. TikTok uses `@solanique_group`; Instagram and Threads use `@solaniquegroup`. LinkedIn uses the supplied personal-profile URL and Facebook the supplied numeric profile URL. The `solanique_footer_social_links` filter supports deployment overrides; empty entries, including YouTube, never render.
+- GHL slots remain disabled following the requested rollback. Historical IDs are Capital `A09fGOKG0qMdqOm3kNBF`, Estate `ZkIp2RDdL2MT2ZiwUABK`, Concierge `mLgnoua7O94pvh4kYsFc`, and Inquiry `7RZNMVuqafSzVAnKkhn4`. These historical IDs do not establish renewed approval. Confirm current embeds, language versions, field configuration, and consent wording before enabling them. No native submissions or account registration are implemented.
+- Future approved forms should contain First Name, Last Name, Email, Phone, Service Type, Message/Comments, and consent. Capital options: Mortgage, Real Estate, Business Loan, Other. Concierge options: Family Care, Next Gen Development, Legacy Preservation, Daycare, Babysitting, Pet Service, International Students, Other. Estate and Inquiry options require confirmation. Preserve the existing direct email pathways; configure fields inside GHL rather than in WordPress.
+- Six client-approved videos have now been connected from production WordPress uploads. Home has two placements, Capital two, Estate one, and Concierge one. Any additional videos from the original meeting list remain unsupplied. Language placement is configurable per video; shared placement is the current default.
+- The client rechecked and approved the uploaded videos. Public site branding remains Solanique Group. No reference/review/incoming media was published in this pass.
 
 ## Media Asset System
 
@@ -625,21 +634,27 @@ Video manifest and modal infrastructure:
 
 - `inc/videos.php` defines `sg_get_service_videos()`, `sg_get_enabled_service_videos()`, `sg_render_video_trigger()`, and `sg_render_service_video_slot()`.
 - `template-parts/components/video-modal.php` provides the shared accessible video modal shell.
-- `src/js/modules/video-modal.js` opens approved local videos manually, traps focus, closes on Escape, restores trigger focus, and pauses/unloads video on close.
+- `src/js/modules/video-modal.js` opens approved WordPress-hosted videos manually, traps focus, closes on Escape, restores trigger focus, and pauses/unloads video on close.
 - `src/css/components/video-modal.css` controls modal layout and responsive behavior.
 
-Current pending video slots:
+## Approved Video Integration
 
-- Solanique presentation EN
-- Solanique presentation ES
-- Smart Capital video 1
-- Smart Capital video 2
-- Estate video 1
-- Estate video 2
-- Concierge video
-- Brand vision / luxury concept video
+The six uploaded video URLs were read from the production WordPress media API and approved by the client. Videos stay in the client's Media Library rather than in the theme export. `inc/videos.php` contains verified default URLs and placement data; it never calls the remote API during front-end rendering.
 
-All video manifest entries are disabled because no approved production-safe video files are currently present. Do not show public video buttons until the matching local file, poster if needed, title, trigger label, language, and approval status are confirmed.
+| Video | Placement | Production attachment ID |
+| --- | --- | --- |
+| Solanique Presentation | Home, immediately after hero | 47 |
+| Tu Vision | Home, before closing CTA | 49 |
+| Smart Capital | Capital, immediately after hero | 46 |
+| Si tus inversiones produjeran por ti | Capital, after credentials | 50 |
+| El verdadero lujo | Estate, immediately after hero | 51 |
+| Concierge Ritmo Corregido | Concierge, immediately after hero | 48 |
+
+Use **Appearance > Customize > Solanique Videos** to select a replacement video or poster from the Media Library, choose EN-only/ES-only/shared placement, or hide a video. No local attachment IDs are assumed to match the production IDs above. An empty video selection uses the verified production URL; an empty poster selection uses the extracted theme poster. Both languages currently share the approved set, with localized interface labels; language-specific replacements can be selected when supplied.
+
+Poster JPEGs in `src/assets/images/videos/` were extracted from the supplied approved files. They reserve stable landscape/portrait space and lazy-load. Video sources are assigned only when a preview is opened; playback is manual with sound controls. Closing the modal pauses and clears the video source. Ordinary MP4 links remain usable if JavaScript fails. Videos preserve their framing instead of cropping into hero backgrounds.
+
+The uploaded originals are approximately 45-161 MB each. Playback integration defers downloads but does not compress those originals. Optimized H.264/AAC MP4 replacements are recommended, with visual checks before uploading. Keep original masters separately; provide approved captions where needed. These files are not included in theme ZIP exports.
 
 Client-editable content images belong in the WordPress Media Library, not in the theme. Theme assets should be reserved for design-critical imagery that ships with the theme.
 
@@ -778,3 +793,126 @@ Available modifiers:
 - `.sg-cluster--center`
 - `.sg-cluster--between`
 - `.sg-cluster--end`
+
+## GHL inquiry acknowledgments - October 3, 2026
+
+Four workflows were saved in the Solanique GHL location as **Draft**, with zero
+enrollments. Each uses `Form Submitted`, filtered to its own form and
+`Terms and Conditions = Yes`. Each contains one email acknowledgment and one
+SMS acknowledgment. No test messages were sent, contacts enrolled, or workflows
+published. These are inquiry acknowledgments, not promotional campaigns.
+
+| Workflow | Form ID | Approved email sender |
+| --- | --- | --- |
+| Solanique - Capital Inquiry Acknowledgment | A09fGOKG0qMdqOm3kNBF | capital@solaniquegroup.com |
+| Solanique - Estates Inquiry Acknowledgment | ZkIp2RDdL2MT2ZiwUABK | estate@solaniquegroup.com |
+| Solanique - Concierge Inquiry Acknowledgment | mLgnoua7O94pvh4kYsFc | concierge@solaniquegroup.com |
+| Solanique - Inquiry Acknowledgment | 7RZNMVuqafSzVAnKkhn4 | inquiry@solaniquegroup.com |
+
+The email actions use the sender name `Solanique Group`. The requested SMS
+number is `+16474666314`, but it could not be selected: GHL's workflow sender
+dropdown returned `No Data`, and Phone System displayed that configuration
+requires support assistance. No number was purchased, ported, or provisioned.
+Email Services currently displays the shared domain `send.lcmsgsndr.com`;
+a dedicated Solanique sending domain was not shown. Sender authentication,
+reply routing, and delivery require verification before publication.
+
+### Saved response drafts
+
+Capital email subject: `We received your Capital inquiry | Solanique Group`
+
+```text
+Hello,
+
+Thank you for contacting Solanique Group about Capital. We have received your inquiry, and our team will review it and contact you personally.
+
+You can reply to this email to share any additional details. Please do not send sensitive financial documents or identification by email.
+
+Warm regards,
+Solanique Group
+```
+
+Estates email subject: `We received your Estates inquiry | Solanique Group`
+
+```text
+Hello,
+
+Thank you for contacting Solanique Group about Estates. We have received your inquiry, and our team will review it and contact you personally.
+
+You can reply to this email to share any additional details. Please do not send sensitive documents or identification by email.
+
+Warm regards,
+Solanique Group
+```
+
+Concierge email subject: `We received your Concierge inquiry | Solanique Group`
+
+```text
+Hello,
+
+Thank you for contacting Solanique Group about Concierge. We have received your inquiry, and our team will review it and contact you personally.
+
+You can reply to this email to share any additional details or preferences. Please do not send sensitive documents or identification by email.
+
+Warm regards,
+Solanique Group
+```
+
+Inquiry email subject: `We received your inquiry | Solanique Group`
+
+```text
+Hello,
+
+Thank you for contacting Solanique Group. We have received your inquiry, and our team will review it and contact you personally.
+
+You can reply to this email to share any additional details about how we can help. Please do not send sensitive documents or identification by email.
+
+Warm regards,
+Solanique Group
+```
+
+Saved SMS drafts:
+
+- Capital: `Solanique Group: Thank you for your Capital inquiry. Our team will review it and contact you personally. Reply STOP to opt out of texts.`
+- Estates: `Solanique Group: Thank you for your Estates inquiry. Our team will review it and contact you personally. Reply STOP to opt out of texts.`
+- Concierge: `Solanique Group: Thank you for your Concierge inquiry. Our team will review it and contact you personally. Reply STOP to opt out of texts.`
+- Inquiry: `Solanique Group: Thank you for your inquiry. Our team will review it and contact you personally. Reply STOP to opt out of texts.`
+
+### Publication prerequisites
+
+- Preferred-contact, service-interest, and message fields were saved into all
+  four forms. The client subsequently corrected field ordering. Recheck their
+  published versions before launch; preference routing still needs configuration.
+- Configure an authorized SMS sender in GHL. Confirm SMS-specific consent,
+  channel DND/opt-out behavior, recipient eligibility, and sending hours.
+- Verify the approved email senders and reply-to routing with a controlled test.
+- Add preferred-contact routing before activation; do not send SMS to someone
+  choosing Email or WhatsApp. WhatsApp automation is not configured.
+- Test consent checked/unchecked, channel DND, actual form filters, and duplicate
+  submissions using approved test recipients before publishing.
+- Review the response drafts with the client. No delivery SLA or financial
+  approval, returns, or eligibility promise is included.
+
+### Popup integration status
+
+After reviewing GHL's automatic popups, the client approved a click-only website
+dialog. Capital, Estates, Concierge, and Inquiry use their approved form IDs in
+`inc/crm.php`, with official INLINE iframe attributes and cookie-consent handling.
+Matching primary email CTAs open the dialog; dedicated email tabs and
+no-JavaScript email fallbacks remain intact. There are no timer/scroll triggers.
+
+`src/js/modules/intake-modal.js` loads the iframe and official GHL embed script
+only on first opening, once per page. Native dialog behavior provides modal
+focus handling and Escape dismissal; closing restores the opener and body scroll.
+Only the outer dialog is styled, not the cross-origin GHL form contents.
+No native submissions or test leads were added. The local site refused browser
+connections during final packaging, so responsive and iframe interaction checks
+must be repeated before uploading this package.
+
+Email/SMS workflows remain drafts. Sender verification, channel consent/DND,
+preferred-contact routing, and controlled delivery tests are required before
+activation. The current forms are English; approved Spanish forms are still
+required for fully localized intake.
+
+References: [GHL form embedding options](https://help.gohighlevel.com/support/solutions/articles/155000004538)
+and [GHL automatic email/SMS follow-up](https://help.gohighlevel.com/support/solutions/articles/155000005060-getting-started-automatic-email-and-sms-followup).
