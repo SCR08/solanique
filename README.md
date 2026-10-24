@@ -4,6 +4,24 @@ Premium WordPress theme for Solanique Group.
 
 ## October 24 Release Authorization
 
+**Production verified October 24:** both pages are published at
+`https://solaniquegroup.com/international-student-program/` (page 60, original
+template) and `https://solaniquegroup.com/international-student-program-v2/`
+(page 62, V2 template). WordPress confirmed the fresh theme replacement and
+LiteSpeed confirmed a full cache purge. Deployed assets `main-DmfzBBvv.css` and
+`app-CfR_540f.js` match local SHA-256 hashes. Theme implementation commit:
+`cb00ac9`. The following local-only sections are historical review records.
+
+Production checks passed: six program route/language cases preserve all 68 source
+strings; all 15 photo variants respond; 16 program responsive cases (320–1920px)
+and 14 main-page smoke cases (390/1440px) have no page overflow. All seven main
+pages have one h1 and no video UI/nav or hero intake actions in the tested checks.
+Explorers retain 6/6/7 services/images. The Capital non-hero GHL dialog still uses
+its existing form ID; Escape closes it and restores focus. No submission or
+workflow change occurred. `/videos/` returns a 302 to Home, not a public gallery.
+Raw uploaded videos remain stored/reachable; no private-storage claim is made.
+No new Lighthouse, complete accessibility or email-delivery audit is claimed.
+
 The user explicitly requested publication of **both** student-page versions and
 committing all current theme work. This supersedes the earlier local-only hold
 and recommendation to publish only one option. Prepare both program routes using

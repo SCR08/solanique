@@ -2,6 +2,19 @@
 
 ## October 24: Both Student Pages Authorized for Release
 
+**Completed and verified on production:** original page 60 at
+`/international-student-program/`; lighter page 62 at
+`/international-student-program-v2/`. Correct native page templates were selected
+and WordPress confirmed publication for each. Theme replacement and LiteSpeed
+cache purge succeeded. Public CSS/JS hashes match `main-DmfzBBvv.css` /
+`app-CfR_540f.js`; implementation is committed as `cb00ac9`.
+Six content/language HTTP cases, 15 image URLs, 16 program responsive cases and
+14 main-page smoke cases passed. The Capital dialog opens the existing form,
+Escape closes it and restores focus; no form submission or automation action.
+Videos remains absent; the former gallery route redirects 302 to Home. Release
+proof is under WordPress-root `output/solanique-release-2026-10-24-student-pages/`.
+Previous local-only hold entries below are historical, superseded by this release.
+
 User requested: publish both student versions and commit everything. This
 supersedes the previous publication hold and single-version recommendation only
 for the current theme/page release. Both Spanish routes are to be created with
