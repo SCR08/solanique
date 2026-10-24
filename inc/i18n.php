@@ -25,9 +25,24 @@ function sg_supported_langs(): array {
  * @return string
  */
 function sg_current_lang(): string {
+	if ( sg_is_student_program() ) {
+		return 'es';
+	}
 	$lang = isset( $_GET['lang'] ) ? sanitize_key( wp_unslash( $_GET['lang'] ) ) : 'en';
 
 	return in_array( $lang, sg_supported_langs(), true ) ? $lang : 'en';
+}
+
+/** The student landing is Spanish-only, without changing other page locales. */
+function sg_is_student_program(): bool {
+	return ! is_admin() && did_action( 'wp' )
+		&& ( is_page( array( 'international-student-program', 'international-student-program-v2' ) )
+			|| is_page_template( array( 'page-international-student-program.php', 'page-international-student-program-v2.php' ) ) );
+}
+
+/** Separate local design option, using the same approved Spanish program copy. */
+function sg_is_student_program_v2(): bool {
+	return sg_is_student_program() && ( is_page( 'international-student-program-v2' ) || is_page_template( 'page-international-student-program-v2.php' ) );
 }
 
 /**
@@ -88,6 +103,9 @@ function sg_localize_url( string $url ): string {
  */
 function sg_spanish_content_map(): array {
 	return array(
+		'Increase visual illumination' => 'Aumentar la iluminación visual',
+		'Reduce visual illumination' => 'Reducir la iluminación visual',
+		'Legal navigation' => 'Navegación legal',
 		'The Mandate' => 'The Mandate',
 		'Inquiry' => 'Inquiry',
 		'Client Access' => 'Acceso de Cliente',
@@ -823,6 +841,9 @@ add_filter( 'gettext', 'sg_filter_gettext', 10, 3 );
  */
 function sg_filter_language_attributes( string $output, string $doctype ): string {
 	unset( $doctype );
+	if ( sg_is_student_program() ) {
+		return 'lang="es-CO" dir="ltr"';
+	}
 
 	$lang = sg_current_lang();
 

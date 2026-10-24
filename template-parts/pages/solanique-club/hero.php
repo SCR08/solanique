@@ -8,10 +8,6 @@
 defined( 'ABSPATH' ) || exit;
 
 $content       = solanique_get_final_page_copy( 'solanique_club' );
-$pathways      = (array) ( $content['pathways'] ?? array() );
-$primary       = $pathways[0] ?? array();
-$primary_url   = solanique_get_final_mailto( $primary['email'] ?? '' );
-$secondary_url = '#sg-solanique-club-areas';
 $alt           = function_exists( 'sg_is_spanish' ) && sg_is_spanish()
 	? __( 'Mapa digital de desarrollo inmobiliario representando una red privada de Solanique Club.', 'solanique' )
 	: __( 'Digital real estate development map representing a private Solanique Club network.', 'solanique' );
@@ -45,12 +41,6 @@ $alt           = function_exists( 'sg_is_spanish' ) && sg_is_spanish()
 				<?php echo esc_html( $content['service'] ?? '' ); ?>
 			</h1>
 			<p class="sg-product-hero__text" data-sg-reveal="fade-up"><?php echo esc_html( $content['intro'] ?? '' ); ?></p>
-			<div class="sg-cluster sg-product-hero__actions" data-sg-reveal="fade-up">
-				<?php if ( '' !== $primary_url ) : ?>
-					<a class="sg-button sg-button--lg" href="<?php echo esc_url( $primary_url ); ?>"><?php echo esc_html( $primary['action'] ?? '' ); ?></a>
-				<?php endif; ?>
-				<a class="sg-button sg-button--ghost sg-product-hero__secondary-link" href="<?php echo esc_url( $secondary_url ); ?>"><?php esc_html_e( 'View Areas', 'solanique' ); ?></a>
-			</div>
 		</div>
 	</div>
 </section>

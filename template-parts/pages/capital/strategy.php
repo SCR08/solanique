@@ -23,9 +23,9 @@ $principles = $content['principles'] ?? array();
 			</h2>
 		</div>
 
-		<ol class="sg-product-list sg-product-list--cards sg-product-list--grid sg-capital-framework__grid" data-sg-stagger>
+		<ol class="sg-product-list sg-product-list--editorial" data-sg-stagger>
 			<?php foreach ( (array) ( $principles['items'] ?? array() ) as $index => $item ) : ?>
-				<li class="sg-product-list__item sg-capital-framework__item sg-capital-reveal" data-sg-reveal="fade-up">
+				<li class="sg-product-list__item sg-capital-reveal" data-sg-reveal="fade-up">
 					<span class="sg-product-list__number sg-capital-framework__number"><?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?></span>
 					<div class="sg-product-list__body sg-capital-framework__item-body sg-flow">
 						<h3 class="sg-product-list__title sg-capital-framework__item-title"><?php echo esc_html( $item['title'] ?? '' ); ?></h3>

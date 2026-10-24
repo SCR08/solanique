@@ -40,9 +40,6 @@ $content = solanique_get_final_page_copy( 'home' );
 				<?php echo esc_html( $content['headline'] ?? '' ); ?>
 			</h1>
 
-			<p class="sg-home-hero__scope sg-home-reveal" data-sg-reveal="fade-up">
-				<?php echo esc_html( $content['tagline'] ?? '' ); ?>
-			</p>
 		</div>
 
 	</div>

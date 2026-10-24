@@ -72,10 +72,21 @@ const scrollToPanel = (panels, nextIndex) => {
 		return;
 	}
 
-	panel.scrollIntoView({
+	const stage = panel.closest(SELECTORS.stage);
+	if (! stage) {
+		return;
+	}
+
+	// Scroll the stage only; page-level anchor offsets must not clip its cards.
+	const stageBounds = stage.getBoundingClientRect();
+	const panelBounds = panel.getBoundingClientRect();
+	const styles = getComputedStyle(stage);
+	const vertical = styles.overflowY === 'auto' && stage.scrollHeight > stage.clientHeight + 1;
+
+	stage.scrollTo({
 		behavior: getScrollBehavior(),
-		block: 'nearest',
-		inline: 'center',
+		top: vertical ? stage.scrollTop + panelBounds.top - stageBounds.top - stage.clientTop : 0,
+		left: vertical ? 0 : stage.scrollLeft + panelBounds.left - stageBounds.left - stage.clientLeft - (parseFloat(styles.paddingInlineStart) || 0),
 	});
 };
 

@@ -5,6 +5,101 @@
  */
 defined( 'ABSPATH' ) || exit;
 
+/** Keep the library header in document flow rather than over its first film. */
+function sg_video_library_body_class( array $classes ): array {
+	if ( is_page( 'videos' ) || is_page_template( 'page-videos.php' ) ) {
+		$classes[] = 'sg-has-video-library';
+	}
+	return $classes;
+}
+/** Stored media is retained, but no video presentation is currently approved. */
+function sg_public_videos_enabled(): bool {
+	return false;
+}
+
+/** IDs to remove from public discovery, without changing stored records. */
+function sg_retired_video_page_ids(): array {
+	static $ids = null;
+	if ( null === $ids ) {
+		$ids = get_posts( array(
+			'post_type' => 'page', 'post_status' => 'publish', 'posts_per_page' => -1,
+			'fields' => 'ids', 'suppress_filters' => true,
+			'meta_key' => '_wp_page_template', 'meta_value' => 'page-videos.php',
+		) );
+		$page = get_page_by_path( 'videos' );
+		if ( $page instanceof WP_Post ) {
+			$ids[] = $page->ID;
+		}
+		$ids = array_values( array_unique( array_map( 'absint', $ids ) ) );
+	}
+	return $ids;
+}
+
+/** Retire attachment documents too; their raw media URLs remain untouched. */
+function sg_retired_video_attachment_ids(): array {
+	static $ids = null;
+	if ( null === $ids ) {
+		$ids = get_posts( array(
+			'post_type' => 'attachment', 'post_status' => 'inherit', 'post_mime_type' => 'video',
+			'posts_per_page' => -1, 'fields' => 'ids', 'suppress_filters' => true,
+		) );
+		foreach ( sg_get_video_defaults() as $video ) {
+			$poster_id = absint( get_theme_mod( 'sg_video_poster_' . $video['id'], 0 ) );
+			if ( $poster_id ) {
+				$ids[] = $poster_id;
+			}
+		}
+		$ids = array_values( array_unique( array_map( 'absint', $ids ) ) );
+	}
+	return $ids;
+}
+
+/** Retired gallery and video attachment documents return to the homepage. */
+function sg_redirect_retired_video_documents(): void {
+	$gallery = is_page( 'videos' ) || is_page_template( 'page-videos.php' )
+		|| 'videos' === trim( (string) get_query_var( 'pagename' ), '/' );
+	$video = is_attachment() && ( wp_attachment_is( 'video', get_queried_object_id() )
+		|| in_array( get_queried_object_id(), sg_retired_video_attachment_ids(), true ) );
+	if ( $gallery || $video ) {
+		wp_safe_redirect( sg_localize_url( home_url( '/' ) ), 302, 'Solanique retired video presentation' );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'sg_redirect_retired_video_documents', 1 );
+
+/** Keep public search, archives and core sitemaps free of retired documents. */
+function sg_exclude_retired_video_documents( array $args ): array {
+	$args['post__not_in'] = array_values( array_unique( array_merge( (array) ( $args['post__not_in'] ?? array() ), sg_retired_video_page_ids(), sg_retired_video_attachment_ids() ) ) );
+	return $args;
+}
+add_filter( 'wp_sitemaps_posts_query_args', 'sg_exclude_retired_video_documents' );
+add_action( 'pre_get_posts', static function ( WP_Query $query ): void {
+	if ( is_admin() || ! $query->is_main_query() || $query->is_singular() ) {
+		return;
+	}
+	$args = sg_exclude_retired_video_documents( array( 'post__not_in' => $query->get( 'post__not_in' ) ) );
+	$query->set( 'post__not_in', $args['post__not_in'] );
+} );
+add_filter( 'posts_where', static function ( string $where, WP_Query $query ): string {
+	if ( ! is_admin() && $query->is_main_query() && ! $query->is_singular() ) {
+		global $wpdb;
+		$where .= " AND {$wpdb->posts}.post_mime_type NOT LIKE 'video/%'";
+	}
+	return $where;
+}, 10, 2 );
+add_filter( 'wp_list_pages_excludes', static function ( array $ids ): array {
+	return array_unique( array_merge( $ids, sg_retired_video_page_ids() ) );
+} );
+add_filter( 'wp_nav_menu_objects', static function ( array $items ): array {
+	$ids = sg_retired_video_page_ids();
+	return array_values( array_filter( $items, static function ( $item ) use ( $ids ): bool {
+		$path = trim( (string) wp_parse_url( $item->url, PHP_URL_PATH ), '/' );
+		return ! in_array( (int) $item->object_id, $ids, true ) && 'videos' !== $path;
+	} ) );
+} );
+add_filter( 'render_block_core/video', '__return_empty_string' );
+add_filter( 'wp_video_shortcode', '__return_empty_string' );
+
 /** URLs verified against the production WordPress media API. */
 function sg_get_video_defaults(): array {
 	return array(
@@ -46,6 +141,9 @@ function sg_get_service_videos( string $service = '', string $language = '' ): a
 }
 
 function sg_get_enabled_service_videos( string $service = '', string $language = '' ): array {
+	if ( ! sg_public_videos_enabled() ) {
+		return array();
+	}
 	return array_values( array_filter( sg_get_service_videos( $service, $language ), static function ( array $video ): bool {
 		return ! empty( $video['enabled'] ) && '' !== esc_url( $video['video_url'] ?? '' );
 	} ) );
@@ -53,7 +151,7 @@ function sg_get_enabled_service_videos( string $service = '', string $language =
 
 /** An ordinary media link is enhanced to modal playback by JavaScript. */
 function sg_render_video_trigger( array $video, string $class = '' ): void {
-	if ( empty( $video['enabled'] ) || empty( $video['video_url'] ) ) {
+	if ( ! sg_public_videos_enabled() || empty( $video['enabled'] ) || empty( $video['video_url'] ) ) {
 		return;
 	}
 	$portrait = $video['height'] > $video['width'];
@@ -66,7 +164,11 @@ function sg_render_video_trigger( array $video, string $class = '' ): void {
 		data-video-height="<?php echo absint( $video['height'] ); ?>" data-video-autoplay-mode="manual"
 		aria-label="<?php echo esc_attr( $video['trigger_label'] . ': ' . $video['title'] ); ?>">
 		<img class="sg-video-preview__image" src="<?php echo esc_url( $video['poster_url'] ); ?>" alt="" width="<?php echo absint( $video['width'] ); ?>" height="<?php echo absint( $video['height'] ); ?>" loading="lazy" decoding="async">
-		<span class="sg-video-preview__caption"><span class="sg-video-preview__play" aria-hidden="true">&#9654;</span><span><?php echo esc_html( $video['trigger_label'] ); ?></span></span>
+		<?php if ( false !== strpos( $class, 'gallery-poster' ) ) : ?>
+			<span class="gallery-play" aria-hidden="true"></span>
+		<?php else : ?>
+			<span class="sg-video-preview__caption"><span class="sg-video-preview__play" aria-hidden="true">&#9654;</span><span><?php echo esc_html( $video['trigger_label'] ); ?></span></span>
+		<?php endif; ?>
 	</a>
 	<?php
 }

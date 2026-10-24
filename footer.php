@@ -74,7 +74,6 @@ $legal_links  = function_exists( 'solanique_get_footer_legal_links' ) ? solaniqu
 	</div>
 </footer>
 
-<?php get_template_part( 'template-parts/components/video-modal' ); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -1,0 +1,353 @@
+/** Spanish program landing; extends the existing Solanique editorial system. */
+.sg-student-program {
+	color: var(--sg-color-text);
+	background: var(--sg-graphite);
+}
+
+.sg-student-hero {
+	position: relative;
+	display: grid;
+	align-items: end;
+	min-block-size: 46rem;
+	isolation: isolate;
+	background: var(--sg-graphite);
+}
+
+.sg-student-hero__media,
+.sg-student-hero__media::after {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+}
+
+.sg-student-hero__media img {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+	object-position: 62% 48%;
+}
+
+.sg-student-hero__media::after {
+	z-index: 0;
+	content: "";
+	background: linear-gradient(90deg, rgba(8, 9, 11, 0.88), rgba(8, 9, 11, 0.28)), linear-gradient(0deg, var(--sg-graphite), transparent 60%);
+}
+
+.sg-student-hero__inner {
+	min-inline-size: 0;
+	padding-block: 17rem 6rem;
+}
+
+.sg-student-hero h1 {
+	max-inline-size: min(19ch, 100%);
+	font-size: 3.75rem;
+	line-height: 1.12;
+	color: var(--sg-metal-platinum);
+	overflow-wrap: break-word;
+}
+
+@media (max-width: 23.4rem) {
+	.sg-student-program .sg-student-hero h1 {
+		font-size: 1.875rem;
+	}
+}
+
+.sg-student-hero__brand {
+	margin-block-end: 1.5rem;
+	font-family: var(--sg-font-family-heading);
+	font-size: 1.5rem;
+	color: var(--sg-metal-silver);
+}
+
+.sg-student-hero__intro {
+	max-inline-size: 36ch;
+	margin-block-start: 1.5rem;
+	font-size: 1.25rem;
+	color: var(--sg-metal-platinum);
+}
+
+.sg-student-band {
+	padding-block: clamp(4rem, 7vw, 7rem);
+}
+
+.sg-student-band h2 {
+	font-size: 2.5rem;
+	line-height: 1.18;
+	color: var(--sg-metal-silver);
+}
+
+.sg-student-band h3 {
+	font-size: 1.125rem;
+	line-height: 1.5;
+	color: var(--sg-metal-platinum);
+}
+
+.sg-student-band p,
+.sg-student-list {
+	max-inline-size: 68ch;
+}
+
+.sg-student-editorial,
+.sg-student-programs {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: clamp(2rem, 6vw, 6rem);
+	align-items: start;
+}
+
+.sg-student-band--destination,
+.sg-student-band--housing {
+	background: linear-gradient(120deg, var(--sg-charcoal), var(--sg-surface-dark));
+	border-block: 1px solid color-mix(in srgb, var(--sg-metal-silver) 12%, transparent);
+}
+
+.sg-student-band--academic {
+	background: url("../../assets/images/backgrounds/generated/global-network-lines.svg") 100% 50% / 80rem auto no-repeat, var(--sg-graphite);
+}
+
+.sg-student-subtitle {
+	color: var(--sg-metal-champagne);
+	font-size: 0.875rem;
+	line-height: 1.6;
+}
+
+.sg-student-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sg-student-list li {
+	padding-block: 1rem;
+	border-block-end: 1px solid color-mix(in srgb, var(--sg-metal-silver) 16%, transparent);
+}
+
+.sg-student-section-heading {
+	max-inline-size: 48rem;
+	margin-block-end: 3rem;
+}
+
+.sg-student-services {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0 4rem;
+}
+
+.sg-student-service {
+	padding-block: 2rem;
+	border-block-start: 1px solid color-mix(in srgb, var(--sg-metal-champagne) 28%, transparent);
+}
+
+.sg-student-service p {
+	margin-block-start: 0.75rem;
+}
+
+.sg-student-statement {
+	font-family: var(--sg-font-family-heading);
+	font-size: 1.5rem;
+	color: var(--sg-metal-platinum);
+}
+
+.sg-student-band--closing {
+	background: linear-gradient(130deg, var(--sg-charcoal), var(--sg-ink));
+}
+
+.sg-student-closing {
+	max-inline-size: 58rem;
+}
+
+.sg-student-contact {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1.25rem 2rem;
+	padding-block: 1.5rem;
+	font-style: normal;
+}
+
+.sg-student-contact a,
+.sg-student-return {
+	overflow-wrap: anywhere;
+}
+
+.sg-student-life-photo {
+	margin-block: 3rem;
+}
+
+.sg-student-life-photo img {
+	inline-size: 100%;
+	max-block-size: 35rem;
+	aspect-ratio: 16 / 8;
+	object-fit: cover;
+	object-position: 50% 42%;
+}
+
+.sg-student-life-photo figcaption {
+	margin-block-start: 1rem;
+	font-size: 0.8125rem;
+	color: var(--sg-metal-silver);
+}
+
+/* The same region explorer inherits the dark original or the light alternative. */
+.sg-student-region {
+	--region-ink: #e3e8e6;
+	--region-muted: #bacac5;
+	--region-water: #182e32;
+	--region-land: #36504b;
+	--region-line: #819e92;
+	--region-point: #f5e9c3;
+	--region-surface: #142326;
+	padding-block: 5rem;
+	color: var(--region-ink);
+	background: var(--region-surface);
+}
+
+.sg-student-region h2,
+.sg-student-region h3,
+.sg-student-region h4 {
+	color: var(--region-ink);
+}
+
+.sg-student-region__heading {
+	max-inline-size: 46rem;
+	margin-block-end: 3rem;
+}
+
+.sg-student-region__heading h2 {
+	font-size: 2.5rem;
+	line-height: 1.16;
+	margin-block-end: 1rem;
+}
+
+.sg-student-region__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+	gap: 4rem;
+	align-items: center;
+}
+
+.sg-student-region__figure {
+	margin: 0;
+	min-inline-size: 0;
+}
+
+.sg-student-region__map {
+	display: block;
+	inline-size: 100%;
+	block-size: auto;
+	aspect-ratio: 1;
+}
+
+.sg-student-region__water { fill: var(--region-water); }
+.sg-student-region__land { fill: var(--region-land); }
+.sg-student-region__shore { fill: none; stroke: var(--region-line); stroke-width: 1.5; }
+.sg-student-region__road { fill: none; stroke: var(--region-line); stroke-width: 1; stroke-dasharray: 5 7; }
+.sg-student-region__point { fill: var(--region-point); }
+.sg-student-region__point text { font-family: var(--sg-font-family-base); font-size: 17px; fill: var(--region-ink); }
+.sg-student-region__halo { opacity: 0.16; transition: opacity 180ms ease-out; }
+.sg-student-region__point.is-selected .sg-student-region__halo { opacity: 0.55; }
+.sg-student-region__point.is-selected text { font-weight: 700; }
+.sg-student-region__water-label { fill: var(--region-muted); font-size: 17px; font-style: italic; }
+.sg-student-region__area-label { fill: var(--region-muted); font-size: 16px; }
+.sg-student-region__context { fill: var(--region-ink); font-size: 15px; }
+
+.sg-student-region__figure figcaption {
+	margin-block-start: 1rem;
+	font-size: 0.8125rem;
+	color: var(--region-muted);
+}
+
+.sg-student-region__communities h3 {
+	font-size: 1.25rem;
+	margin-block-end: 1rem;
+}
+
+.sg-student-region__choices:not([hidden]) {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	column-gap: 1.5rem;
+}
+
+.sg-student-region__choices button {
+	display: flex;
+	align-items: center;
+	min-block-size: 3.5rem;
+	padding: 0.75rem 0.5rem;
+	border: 0;
+	border-block-end: 1px solid var(--region-line);
+	border-radius: 0;
+	color: var(--region-ink);
+	font: inherit;
+	text-align: start;
+	background: transparent;
+	cursor: pointer;
+}
+
+.sg-student-region__choices button::before {
+	content: "";
+	inline-size: 0.5rem;
+	block-size: 0.5rem;
+	margin-inline-end: 0.75rem;
+	border: 1px solid currentColor;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.sg-student-region__choices button[aria-pressed="true"]::before { background: currentColor; }
+.sg-student-region__choices button:hover { text-decoration: underline; text-underline-offset: 0.3em; }
+.sg-student-region :focus-visible { outline: 2px solid var(--region-point); outline-offset: 5px; }
+
+.sg-student-region__details {
+	min-block-size: 12rem;
+	padding-block: 2rem 1.5rem;
+}
+
+.sg-student-region__choices[hidden] + .sg-student-region__details article + article { margin-block-start: 1.5rem; }
+.sg-student-region__details article[hidden] { display: none; }
+.sg-student-region__details h4 { margin-block-end: 0.75rem; font-size: 1.875rem; }
+.sg-student-region__details a { display: inline-block; padding-block: 0.75rem; text-decoration: underline; text-underline-offset: 0.3em; color: var(--region-ink); }
+.sg-student-region__note,
+.sg-student-region__source { font-size: 0.8125rem; color: var(--region-muted); }
+.sg-student-region__source { display: inline-block; margin-block-start: 1rem; padding-block: 0.5rem; text-decoration: underline; text-underline-offset: 0.3em; }
+
+@media (prefers-reduced-motion: reduce) {
+	.sg-student-region__halo { transition: none; }
+}
+
+@media (max-width: 47.98rem) {
+	.sg-student-region { padding-block: 3.5rem; }
+	.sg-student-region__heading h2 { font-size: 1.875rem; }
+	.sg-student-region__layout { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+	.sg-student-region__point text { font-size: 26px; }
+	.sg-student-region__details { min-block-size: 11rem; }
+	.sg-student-life-photo img { aspect-ratio: 4 / 3; }
+}
+
+@media (max-width: 47.98rem) {
+	.sg-student-hero {
+		min-block-size: 40rem;
+	}
+
+	.sg-student-hero__inner {
+		padding-block: 15rem 4rem;
+	}
+
+	.sg-student-hero h1 {
+		font-size: 2.25rem;
+	}
+
+	.sg-student-band h2 {
+		font-size: 1.875rem;
+	}
+
+	.sg-student-editorial,
+	.sg-student-programs,
+	.sg-student-services {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.sg-student-contact {
+		align-items: start;
+		flex-direction: column;
+	}
+}

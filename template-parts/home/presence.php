@@ -15,13 +15,10 @@ $experience = $content['experience'] ?? array();
 	<div class="sg-container sg-container--xl">
 		<div class="sg-home-presence__layout">
 			<div class="sg-home-presence__content sg-flow" data-sg-stagger>
-				<p class="sg-home-presence__eyebrow sg-home-reveal" data-sg-reveal="fade-up">
-					<?php echo esc_html( $content['headline'] ?? '' ); ?>
-				</p>
-
 				<h2 id="solanique-home-presence-title" class="sg-home-presence__title sg-home-reveal" data-sg-reveal="fade-up">
 					<?php echo esc_html( $experience['heading'] ?? '' ); ?>
 				</h2>
+				<p class="sg-home-founder__text" data-sg-reveal="fade-up"><?php echo esc_html( $experience['intro'] ?? '' ); ?></p>
 			</div>
 
 			<div class="sg-home-presence__atlas sg-home-reveal" data-sg-reveal="scale-in">

@@ -339,6 +339,7 @@ function solanique_get_fallback_menu_items( bool $include_home = false ): array 
 function solanique_get_core_navigation_items( bool $include_current = true ): array {
 	$items = array();
 	$pages = array(
+		'home'           => __( 'Home', 'solanique' ),
 		'capital'        => __( 'Capital', 'solanique' ),
 		'estates'        => __( 'Estate', 'solanique' ),
 		'concierge'      => __( 'Concierge', 'solanique' ),
@@ -351,7 +352,7 @@ function solanique_get_core_navigation_items( bool $include_current = true ): ar
 		$items[] = array(
 			'slug'    => $slug,
 			'label'   => $label,
-			'url'     => solanique_get_page_url( $slug, '/' . $slug . '/' ),
+			'url'     => 'home' === $slug ? ( function_exists( 'sg_localize_url' ) ? sg_localize_url( home_url( '/' ) ) : home_url( '/' ) ) : solanique_get_page_url( $slug, '/' . $slug . '/' ),
 			'current' => $include_current ? solanique_is_fallback_menu_item_current( $slug ) : false,
 		);
 	}

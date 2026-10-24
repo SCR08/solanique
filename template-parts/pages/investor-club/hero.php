@@ -7,7 +7,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$primary_url   = solanique_get_inquiry_url();
 $secondary_url = '#sg-investor-club-overview';
 ?>
 
@@ -40,7 +39,6 @@ $secondary_url = '#sg-investor-club-overview';
 				<?php esc_html_e( 'A discreet channel for disciplined conversations around private real estate opportunities, off-market context, and strategic capital alignment.', 'solanique' ); ?>
 			</p>
 			<div class="sg-cluster sg-product-hero__actions" data-sg-reveal="fade-up">
-				<a class="sg-button sg-button--lg" href="<?php echo esc_url( $primary_url ); ?>"><?php esc_html_e( 'Investor Club Access', 'solanique' ); ?></a>
 				<a class="sg-button sg-button--ghost sg-product-hero__secondary-link" href="<?php echo esc_url( $secondary_url ); ?>"><?php esc_html_e( 'How it works', 'solanique' ); ?></a>
 			</div>
 		</div>

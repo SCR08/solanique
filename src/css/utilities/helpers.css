@@ -1034,3 +1034,39 @@
 		display: none !important;
 	}
 }
+
+/* Complete sections share a scene; no duplicated teaser copy or empty panels. */
+.sg-content-scene.sg-parallax-scene {
+	min-block-size: 0;
+}
+
+.sg-content-scene > .sg-parallax-scene__media {
+	min-block-size: 0;
+}
+
+.sg-content-scene > .sg-parallax-scene__panels > .sg-section {
+	position: relative;
+	min-block-size: auto;
+	background: linear-gradient(120deg, rgba(13, 15, 19, .78), rgba(13, 15, 19, .54));
+}
+
+.sg-content-scene > .sg-parallax-scene__panels {
+	min-block-size: 110svh;
+}
+
+.sg-content-scene .sg-product-intro__text,
+.sg-content-scene .sg-product-list__text,
+.sg-content-scene .sg-home-ecosystem__intro,
+.sg-content-scene .sg-home-founder__text,
+.sg-content-scene .sg-final-list__text {
+	color: var(--sg-metal-platinum);
+}
+
+@media (max-width: 47.98rem) {
+	.sg-content-scene > .sg-parallax-scene__panels {
+		min-block-size: auto;
+	}
+	.sg-content-scene .sg-product-intro__content {
+		backdrop-filter: none;
+	}
+}

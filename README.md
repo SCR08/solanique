@@ -2,6 +2,231 @@
 
 Premium WordPress theme for Solanique Group.
 
+## October 24 Release Authorization
+
+The user explicitly requested publication of **both** student-page versions and
+committing all current theme work. This supersedes the earlier local-only hold
+and recommendation to publish only one option. Prepare both program routes using
+their dedicated templates, keep the current main navigation, preserve video
+retirement and hero-intake removal, and verify the actual production result.
+Release evidence is recorded separately under WordPress-root
+`output/solanique-release-2026-10-24-student-pages/`; authorization is not itself
+proof of deployment. Existing content-claim review notes remain factual limitations,
+not newly verified school, housing, immigration or safety assurances. No GHL or
+workflow publication is included in this theme/page release.
+
+## Student Program Design Options (October 24, 2026; Local Only)
+
+The client explicitly approved lighter, student-focused sections for **Version 2
+only**. The global site remains dark; V1 retains its graphite/silver direction.
+Neither option is deployed or final client approval. No commit, push, export,
+production page/menu change or GHL operation was performed.
+
+- V1: `http://solanique.local/international-student-program/`, local page 35.
+- V2: `http://solanique.local/international-student-program-v2/`, local page 36,
+  template `page-international-student-program-v2.php`. It uses the same
+  `sg_get_student_program_copy()` source data rather than a new translation.
+- Both routes remain Spanish (`es-CO`) for bare/en/es query variants and have no
+  language-switch counterpart. No primary navigation item was added. Concierge's
+  existing program link still points to V1 until a preferred version is approved.
+- V2 uses a real student-photo hero, a simple in-page section index, open white /
+  sage editorial bands, alternating photography and content, graphite support
+  detail and direct Concierge email contact. Existing logo, navigation and footer
+  remain. No hero intake action or video was added. All supplied program copy,
+  housing correction and pre-launch claim-approval requirements remain unchanged.
+- `region-map.php` is shared by both options: six native community selectors,
+  geographic details, official municipal/tourism links and an original lightweight
+  schematic map. Barrie, Collingwood, Midland, Orillia, Innisfil and Bradford are
+  listed by [SCDSB's community reference](https://studyinsimcoecounty.com/explore-our-communities/).
+  These are regional references, not a school inventory, availability or placement
+  guarantee. The schematic is explicitly not to scale / not an official boundary.
+  No map service, tracking or external library is loaded. Keyboard/touch controls
+  use pressed states, focus outlines and a live detail region; all six descriptions
+  remain available without JS. Reduced motion disables the halo transition.
+- Three real student-life photos were selected from Pexels under its published
+  website/commercial-use license; attribution and illustrative-use notices are
+  visible. They do not depict actual Solanique participants, schools, housing or
+  partner endorsements. No reference-site media, brochure photography, fake people
+  or generated imagery was used. Responsive local JPEGs (640/768/960/1440/full)
+  use existing image helpers; V2 hero preload matches its eager/high-priority photo,
+  other photos are lazy. Full source/license links and limitations are in
+  `output/solanique-student-options/PHOTO-SOURCES.md` at the WordPress root.
+- The V2 stylesheet is deliberately unlayered but strictly `.sg-student-v2`
+  scoped, because WordPress's unlayered global styles otherwise override the light
+  surface's heading/link colors. Global dark settings and other pages are unchanged.
+
+Review material and measured QA are under WordPress-root
+`output/solanique-student-options/`. Choose V1 or V2 before a separately authorized
+release; do not expose duplicate design-option routes in production. The earlier
+student-program source/claims section below still governs launch approval.
+Build, seven changed/new PHP lints, six HTTP/content cases (all 68 source strings),
+15 photo URLs and 16 responsive cases at 320–1920px passed. All six map selections
+and 6/6/7 service-explorer smoke checks passed. Independent full design re-review
+returned `ship` for this local surface only; no production approval or fresh
+Lighthouse result is implied. See `QA-REPORT.md` for exact evidence and limits.
+
+## Current Corrections: Local Review Only (October 24, 2026)
+
+This entry supersedes the earlier public-video/gallery approval. No new commit,
+push, export, production menu/page update, deployment or GHL change was made.
+The October 21 alignment correction remains intact in the current source; the
+old gallery ZIPs do not contain this new correction sprint and must not be used
+as its release package.
+
+- All public video presentation is disabled by `sg_public_videos_enabled()`.
+  Videos is removed from shared navigation; the homepage gallery link and
+  Concierge video slot are removed. The player/modal markup and JS, gallery
+  dynamic import and video CSS are no longer loaded. Stored media, posters,
+  manifests and reusable source files remain intact.
+- Existing pages assigned the Videos template, the `videos` page and video/poster
+  attachment documents redirect temporarily to the localized homepage (302).
+  Public search/archive/core sitemap and configured-menu filters exclude retired
+  records. The local database has no Videos page: `/videos/` currently returns
+  a real 404, including both language variants. Production's existing page ID 56
+  must be checked after a separately approved deployment.
+- The Capital, Estate and Inquiry hero intake buttons are removed. Home,
+  Concierge, The Mandate and Club already had none. The existing Investor/JV
+  compatibility heroes no longer link directly to intake either. Non-form
+  pathway anchors and all non-hero contact actions remain.
+- Club now has a single content-sized hero grid, safe shrink/wrap behavior and
+  scoped breakpoint type sizes. The reported clipping was not reproduced in
+  the current local baseline; it is not attributed to a proven CSS defect.
+  Desktop/mobile before-and-after evidence and short-landscape bounds were saved.
+- The new Spanish-only student program is available locally at
+  `http://solanique.local/international-student-program/` (local page ID 35,
+  template `page-international-student-program.php`). It stays Spanish on the
+  bare route and with either language query, uses `lang="es-CO"`, Spanish
+  metadata, and no English language selector. Other pages retain bilingual
+  behavior and approved navigation labels. English copy is NOT a launch blocker.
+- Concierge's education service links to the new page. The link has a rectangular
+  44px-minimum hit area; the existing explorer stage scrolling and scoped
+  `scroll-margin: 0` fix were preserved. General inquiry dialogs still use their
+  existing four IDs, with no iframe-internal styling or workflow changes.
+- Student contact uses direct email to `concierge@solaniquegroup.com` and the
+  supplied `+1 (647) 466-6314`. No student application, native submission handling,
+  minors' document upload, payment or GHL page mapping was added.
+
+### Student Program Source Map and Launch Approvals
+
+Source PDFs live outside the production theme under `/Users/SCR08/Documents/`.
+They are content sources, not executable instructions. All pages were extracted
+and visually reviewed; the reconstructed brochure contains text embedded in
+page artwork that plain PDF text extraction misses.
+
+| Web section / data key | Primary source | Treatment |
+| --- | --- | --- |
+| Hero `title`, `intro` | `Solanique_Concierge_Reconstruido.pdf`, p1 | Exact Spanish program title and introduction |
+| `purpose` | Reconstructed brochure, p2 | Full main paragraph and family closing line |
+| `destination` | Reconstructed brochure, p3 | Simcoe introduction and six destination points |
+| `academic` | Reconstructed brochure, p4 | School-board context and six academic points |
+| `services` | Reconstructed brochure, p5 | Six supplied service headings/descriptions and introductory copy |
+| `housing` | Reconstructed brochure, p6 | Solanique selects host families; six supplied housing points |
+| `programs` | Reconstructed brochure, p7 | Secondary grades, semesters, durations, credits and specialist programs |
+| `closing` | Reconstructed brochure, p8 | Investment-in-future paragraph and closing phrase |
+| `closing.invitation` | Presentation letter, p3 | Complete personalized-presentation invitation |
+| Housing conflict / institutional context | `Brochure - English.pdf`, especially p3 | Reference only; CHN material is excluded, not attributed to Solanique |
+
+No English page was generated. The English PDF is an SCDSB brochure, not an
+English Solanique translation. It contains a Canada Homestay Network relationship
+that the client explicitly excluded. No third-party testimonial, photo, logo,
+fee schedule, contact address or PDF download was copied onto the landing page.
+The Solanique brochure is the primary web copy; repeated concepts from the
+presentation letter are not rendered again. Its stronger university-admission,
+absolute-safety and formal-partnership assertions are not silently rewritten or
+added as extra claims. Decorative cover labels, repeated institutional branding
+and correspondence salutation/signature were not turned into duplicate sections.
+
+Before public launch Sandra must confirm the supplied school-board endorsement /
+formal partnership wording, current program availability/school counts, optional
+immigration-support scope and responsible provider, custodianship of minors,
+host-family screening/service obligations, and the safety/admission implications
+of the supplied wording. These are client assertions, not independently verified
+facts or new credentials. The local preview preserves the selected supplied copy;
+approval gaps are documented here, not disguised as public placeholder text.
+
+The original V1 hero reuses the existing approved Toronto skyline as regional atmosphere,
+not a picture of a Simcoe campus, an actual host home, or a partner institution.
+The academic band reuses `global-network-lines.svg`. The initial V1 pass introduced
+no photography; the subsequent client-approved student-photo addition is documented
+above. Approved actual Simcoe / program imagery would improve specificity later;
+no third-party brochure image was extracted for production.
+
+### Local Review and Future Production Setup
+
+Local page 35 was created only in the local WordPress database to exercise the
+real route/template. The theme does not create pages automatically on activation.
+After content approval and separate release authorization, create one Spanish
+page with slug `international-student-program` and select its supplied template.
+Do not create DNS/subdomain infrastructure or add a new primary navigation tab.
+
+For a future authorized production release: back up first; install a fresh build
+of this source rather than either old gallery ZIP; retain stored media; unpublish
+the old Videos page (recoverably) and remove any database-managed gallery links
+or custom video widgets; inspect actual live post bodies, attachment pages and
+SEO-plugin video sitemaps. Purge the existing page/CDN caches, then verify both
+gallery-language routes and direct page-ID URLs no longer render the gallery.
+Theme filters handle core discovery and supported stored poster IDs, but do not
+certify third-party plugin output or cached production HTML. Raw MP4/poster URLs
+can remain reachable; no private-storage/access-control guarantee is made.
+
+QA evidence is under WordPress-root
+`output/solanique-client-feedback-2026-10-24/`. The eight main templates were
+tested at 320/375/390/430/768/1024/1440/1920px in both language modes (128
+responsive cases), with one h1, no page horizontal overflow, no video UI, no hero
+intake buttons and no broken already-loaded images. Lazy assets not requested by
+the viewport are not covered by that image check. Additional checks cover the
+Spanish-only route, Club at 768x375, 6/6/7 explorer images/settled last-panel state,
+program pointer/keyboard navigation and all four non-hero GHL dialogs at 390px
+(correct IDs, Escape closing, focus restoration, no submissions). Existing final
+bilingual page data matches the before-change snapshot exactly. Build and all
+107 PHP syntax checks passed. A final 32-case confirmation covered Concierge and
+the program page after the program-link hit-area correction; 28 local HTTP checks
+passed. Reduced-motion reveal and mobile/reduced-motion parallax logic guards
+passed a Node unit test. Actual OS preference and browser-200%-zoom tests were
+not performed. See the dated QA report for verification limits;
+these checks are not a Lighthouse, full accessibility or email-delivery audit.
+
+## Historical Finalization Status (October 21, 2026)
+
+### Gallery and Service Explorer Release
+
+The user subsequently approved a public Videos gallery and explicit Home and
+Videos navigation entries. This supersedes earlier no-Home/proposal-only notes.
+`page-videos.php` renders the six existing hosted films, with Masonry, Editorial
+and Cinema views and manual playback through the existing video dialog. Create
+one WordPress page with the slug `videos`; Home links to the existing root page.
+The gallery script loads only on pages containing the gallery. Posters are lazy
+loaded and MP4 sources are attached only after a playback request.
+
+The Capital, Estate and Concierge service explorers are restored using the latest
+approved bilingual copy: six, six and seven image-backed panels respectively.
+The shared `template-parts/components/service-explorer.php` replaces the October
+17 static-list presentation without dropping or rewriting service paragraphs.
+Controls support clicking, arrow keys and Home/End; native panel scrolling remains
+available. The Concierge education panel uses an existing approved Toronto image,
+not an invented campus photo. No new media or libraries were introduced.
+
+Concierge film placement, Mandate order, GHL forms and workflows are unchanged.
+Release evidence is stored outside the theme under
+`output/solanique-release-2026-10-21-gallery/`. Preflight rendering covered both
+languages, all 19 service paragraphs and image paths, and eight page templates.
+Browser smoke checks covered the three explorers and gallery at 320, 390, 768,
+1024 and 1440px. These checks are not a new Lighthouse or full accessibility audit.
+
+Use [FINALIZATION.md](FINALIZATION.md) as the current baseline, approval checklist
+and launch gate. Dated audits below are historical evidence, not cumulative
+requirements. The four existing English forms are connected; four branded
+acknowledgments are saved in unpublished workflows. Email-only eligibility guards
+were saved on October 21 without sending messages or enrolling contacts.
+
+Subsequently, the user authorized export/deployment and confirmed an existing
+backup on the computer. The October 21 theme export was installed through native
+WordPress theme replacement, followed by a successful LiteSpeed cache purge.
+Production smoke checks passed on seven main pages and four form dialogs at
+320, 390 and 1440px. Email workflows remain unpublished; this website release
+does not resolve repeat-send, reply-routing or sender-authentication decisions.
+See FINALIZATION.md for the release evidence and remaining scope.
+
 ## Brand Typography
 
 The theme uses a Cinzel-first heading/navigation stack and a Helvetica-style body/UI stack in CSS tokens. No external font requests are loaded.
@@ -509,13 +734,21 @@ zip -r solanique-production.zip solanique \
 
 ## Partner Integration Notes
 
-Backend, login, registration, and native data collection are paused. Client Access and Inquiry are front-end gateway concepts only. GHL forms, service workflows, or partner systems should be integrated later only when the client provides approved embed code or implementation instructions.
+Native backend, login, registration, and WordPress data collection remain paused.
+Four approved English GHL forms are connected through click-only dialogs on
+Capital, Estates, Concierge and Inquiry. Submissions go to GHL, not WordPress.
+Additional partner/application integrations still require explicit approval.
 
 ### Future GHL Form Strategy
 
-Do not implement native WordPress forms, username/password registration, fake account creation, or simulated submissions. Approved GHL or partner-provided forms may be embedded later when the client confirms the CRM/infrastructure decision and supplies the embed code.
+Do not implement native WordPress forms, username/password registration, fake
+account creation or simulated submissions. The four existing approved form IDs
+are active; Spanish and Club/JV application mappings remain separate pending work.
 
-GHL integration data is prepared in `inc/crm.php` through `sg_get_crm_forms()` and `sg_render_crm_form_slot()`. Current entries are disabled and render nothing publicly until approved embed code or approved external form URLs are supplied.
+The live dialogs use `sg_get_native_ghl_popup()` in `inc/crm.php`. The older
+`sg_get_crm_forms()` / `sg_render_crm_form_slot()` planning manifest has disabled
+entries; that does not disable the four live dialogs. Do not enable duplicate
+inline placements or recreate those forms from the planning manifest.
 
 Future GHL form planning:
 
@@ -543,7 +776,9 @@ Required GoHighLevel inputs before activation:
 
 ### GoHighLevel Data Backup Plan
 
-No native WordPress database mirror is currently implemented. If GoHighLevel is selected, establish a manual backup/export operating rhythm before launch:
+No native WordPress database mirror is currently implemented. GoHighLevel is in
+use for the four approved English forms. The following backup/export rhythm is
+proposed, not verified as an operating process:
 
 1. Export contacts weekly as CSV.
 2. Export companies, opportunities, and pipelines monthly if those objects are used.
@@ -558,43 +793,30 @@ Future technical options may include a webhook, serverless backup endpoint, encr
 
 ### CRM And Data Ownership Pending Review
 
-Client is evaluating Go High Level and alternatives. Contact database exportability, costs, security posture, ownership controls, and platform lock-in risks require review before final integration. No native WordPress data collection, username/password registration, native client portal, or payment collection is currently implemented by the theme.
+GoHighLevel is in use for the approved English inquiry forms. Contact database
+exportability, costs, security posture, ownership controls and platform lock-in
+risks still require an operational review; this sprint did not verify an export
+or backup restore. The August 25 meeting date is historical, not a future task.
+No native WordPress data collection, username/password registration, client
+portal or payment collection is implemented by the theme.
 
-GHL or partner-provided forms should only be embedded after approval. The follow-up CRM/data ownership review is scheduled for August 25, 2026 at 7:30 PM Colombia time.
+The current remaining-input list is in [FINALIZATION.md](FINALIZATION.md).
+Department emails, the four English form IDs, final Solanique Club PDF content,
+five social profile URLs, supplied professional credentials and the six approved
+WordPress-hosted videos have already been received. Do not request them again or
+infer that the disabled planning manifest disables the live English dialogs.
 
-Required client or production inputs:
-
-- optional official pillar emails for Capital, Estate, and Concierge
-- Terms copy
-- Legal copy
-- Accessibility statement copy
-- broker name
-- broker license number
-- required real estate disclosure wording
-- required mortgage disclosure wording
-- approved investment, opportunity, partner, and service disclaimers
-- approved agent-level names, descriptions, requirements, and distinctions
-- any additional approved partner company logos
-- approved partner company names and service descriptions
-- authorization for the business-loan partner logo before publication
-- compressed logo package
-- license information supplied by the client
-- final Inquiry copy
-- GHL inquiry form/embed code, if the client wants GHL visible on Inquiry
-- any additional approved video assets beyond the six integrated uploads
-- Google Search Console access
-- preferred canonical domain: `https://solaniquegroup.com` or `https://www.solaniquegroup.com`
-- final production image optimization/compression pass
-
-Terms, Legal, and Accessibility pages require final legal copy before production.
-Instagram, TikTok, Threads, LinkedIn, and Facebook profile URLs are client-confirmed and configured in `inc/helpers.php`. YouTube remains unconfigured and does not render.
-Final Solanique Club PDF copy is implemented in the bilingual content system.
-Six client-approved WordPress-hosted videos are integrated with click-to-play previews; see Approved Video Integration below.
-Inquiry registration requires approved GHL/partner embed code after the CRM/data ownership decision.
-Homepage/Mandate relationship and return-flow strategy pending client discussion. Current implementation uses logo as homepage return.
-Broker/license information, disclaimers, agent levels, partner logos, and partner descriptions are structurally prepared but require approved client content before publication.
+Actual WordPress legal-page content still requires inspection before release.
+The Terms template has an editable body and a pending fallback; that fallback
+alone does not establish what is stored or published in the client database.
+Additional brokerage disclosures and construction-company affiliation materials
+must come from the client if they are required. Do not fabricate them.
 
 ## September 16 Meeting Follow-up (October 3 Audit)
+
+Historical snapshot only. The October 17/18 corrections below supersede the
+earlier credential wording, generic service options, disabled-form status and
+video placement notes in this section.
 
 - Capital already renders the supplied full name, `MORTGAGE AGENT-LEVEL 1`, `BROKERAGE: #12052`, `REALTOR`, and `C21 Heritage Group Ltd.` from `inc/partners.php`. Both approved logo files exist. Any additional C21 broker/license disclosure wording still requires client input; no additional numbers have been supplied.
 - The separate Professional Affiliations dataset remains empty and its public box does not render. The construction company still requires its name, approved production logo, authorization, and approved category/description.
@@ -905,9 +1127,11 @@ no-JavaScript email fallbacks remain intact. There are no timer/scroll triggers.
 only on first opening, once per page. Native dialog behavior provides modal
 focus handling and Escape dismissal; closing restores the opener and body scroll.
 Only the outer dialog is styled, not the cross-origin GHL form contents.
-No native submissions or test leads were added. The local site refused browser
-connections during final packaging, so responsive and iframe interaction checks
-must be repeated before uploading this package.
+No native submissions or test leads were added. Local WordPress is now available:
+the October 18 browser checks below supersede the earlier connection failure.
+Escape works from the outer dialog controls; GHL's cross-origin text fields do
+not propagate Escape to the parent document. The sticky close control remains
+keyboard-reachable and returns focus to the opener.
 
 Email/SMS workflows remain drafts. Sender verification, channel consent/DND,
 preferred-contact routing, and controlled delivery tests are required before
@@ -916,3 +1140,425 @@ required for fully localized intake.
 
 References: [GHL form embedding options](https://help.gohighlevel.com/support/solutions/articles/155000004538)
 and [GHL automatic email/SMS follow-up](https://help.gohighlevel.com/support/solutions/articles/155000005060-getting-started-automatic-email-and-sms-followup).
+
+## October 17, 2026 Client Audit Corrections
+
+This section supersedes earlier placement notes for inline videos, service
+explorers, credentials and repeated immersive excerpts. Sources are the six
+annotated PDFs in the client-supplied `Auditoría_y_ajustes_pendientes_del_sitio_web_-_Solanique`
+folder. All 59 text annotations were reviewed alongside their surrounding copy.
+Only Capital's two service-section headings changed in `inc/content.php`, restoring
+the exact headings in this audit's EN/ES PDFs. Other approved body wording was
+preserved; removing repeated renderings is not removal of unique source copy.
+
+### Content-to-Render Map
+
+Both languages use the same templates and keys below. The temporary isolated
+template harness checked 250 substantial heading/body/list/closing-copy fields
+against rendered text and normalized PDF extraction, with no missing fields or
+unwanted repeated blocks. This is not a claim that punctuation was normalized in
+the website: normalization was only used for checking PDF extraction.
+
+| Page / content keys | Rendering location | Previous issue | Current state |
+| --- | --- | --- | --- |
+| Home `headline`, `target.*` | `home/hero.php`, `home/manifesto.php` | Short tagline repeated below the headline | Hero tagline removed; official logo artwork retains its approved tagline |
+| Home `geography.*` | `home/ecosystem.php` | Intro repeated without Hub/Bridge/Global Reach details | One complete section inside `home-geography` scene |
+| Home `difference.*` | `home/why.php` | Excerpt scene repeated the full section | One complete solid section |
+| Home `experience.*` | `home/presence.php` | Heading/intro separated from the list and repeated in a preview | Full introduction and all four items together inside `home-experience` scene |
+| Home `cta.*`, `final_line` | `home/cta.php` | Repeated CTA preview | Single closing CTA, separate email control and compact closing phrase |
+| Capital `services.*` | `pages/capital/services.php` -> `components/services-list.php` | Name-only tab column repeated the active service title | All six headings/descriptions visible in source order |
+| Estate `services.*` | `pages/estates/advisory.php` -> shared list | Same repeated explorer structure | All six custody services visible |
+| Concierge `services.*` | `pages/concierge/services.php` -> shared list | Same explorer structure; generic categories | All seven services visible, including International Education |
+| Pillars `manifesto.*`, `principles.*` | Each pillar's `intro.php` plus `strategy.php`, `intelligence.php` or `approach.php` | Partial preview before full copy | Complete sections share a content scene without repeating copy |
+| Pillars `protocols.*` | Each pillar's `process.php` | Individual protocol excerpts repeated elsewhere | All three protocols per pillar, once, as solid content |
+| Pillars `cta.*`, `final_line` | Each pillar's `cta.php` | Missing separate email icon; dominant closing phrase | Direct email plus existing form-opening CTA; smaller full-width closing phrase that wraps naturally |
+| Capital credential data | `inc/partners.php`, `capital/broker-partners.php` | Too early; extra heading sentence and repeated brokerage line | Immediately before closing CTA; single heading; name/title/approved mortgage number retained |
+| Mandate `mission`, `vision`, `values`, `personality` | Existing mission/vision and DNA parts | No unique source omission found | Preserved |
+| Mandate `origin.*` | `the-mandate/origin.php` | Story sliced around an empty solid separator and duplicate decorative image | One continuous story with founder signature at the end |
+| Mandate `words.*`, `final_line` | `words.php`, `pathways.php` | Closing phrase styled as a large heading | All three words preserved; closing phrase is subordinate paragraph text |
+| Club `intro` | `solanique-club/hero.php` | Also printed in overview | One introduction; no premature admission or View Areas action |
+| Club `pathways[0].*` | `solanique-club/areas.php` | Repeated preview and action in several places | One complete investor pathway; action label and explicit email alternative at its end; application form blocked |
+| Club `pathways[1].*` | `solanique-club/areas.php` | Repeated excerpts and mailto links pretending to be applications | Full JV content once; category action labels with honest direct-email alternatives; dedicated forms blocked |
+| Club `final_line` | `solanique-club/pathway.php` | Repeated pathway CTAs at closing | Compact closing phrase only |
+| Inquiry existing hero/gateway/pathways/access copy | Inquiry page and template parts | Hero Start Inquiry went to a gateway anchor; obsolete developer panels claimed the form integration was still in the future | Hero opens the approved Inquiry form; existing pathway copy shares one scene; future-integration placeholder panels removed from page flow |
+
+Template paths in the table are below `template-parts/`, except where an `inc/`
+path is shown. Optional native editor content remains available on Club and
+Inquiry. On October 18, Local was available again: all 250 substantial copy
+fields were also checked against the actual WordPress output in EN/ES, without
+missing or unwanted repeated blocks. This includes the current local database
+overrides, not an assertion about the deployed production database.
+
+### Visual and Integration Changes
+
+- `solanique_render_content_scene()` reuses the existing sticky media, observer,
+  transform enhancement and debug mode around full template sections, rather
+  than reprinting approved copy as teaser panels. No new motion library.
+- Scenes: Home geography and experience; Capital/Estate/Concierge philosophy and
+  principles; Mandate origin; Club pathways; Inquiry pathways. Protocols and closing CTAs provide
+  solid rhythm. Empty separators no longer interrupt audited narratives.
+- The old service explorer initializer was removed from the bundle after a
+  repository search found no remaining template using its attributes. The source
+  module remains available for a future approved component.
+- Home's two video calls, Capital's two, Estate's one and Club's brand-video call
+  were removed. The Club call did exist in the current source, contrary to the
+  planning prompt's assumption. Approved uploads, posters and manifest remain.
+  Concierge's video is retained pending explicit placement/removal confirmation.
+- No video gallery route or top-level navigation tab was invented. Confirm the
+  gallery location, label and desired media selections first.
+- Credentials retain Sandra's full name, MORTGAGE AGENT-LEVEL 1, BROKERAGE: #12052
+  and REALTOR. The redundant C21 Heritage Group Ltd. text line was removed per
+  the audit, not the logo or mortgage brokerage number. Only the developer-created
+  pending Capital/Estate disclosure panels were removed; no separate approved
+  mandatory disclosure was identified or removed. Client/compliance review remains
+  necessary; this work does not certify legal sufficiency.
+- Facebook is adjacent to Instagram in the approved social configuration. Shared
+  icon controls are aligned and 44px, with wrapping allowed on narrow screens.
+  The desktop social track now uses max-content instead of a narrow fractional
+  track that forced the fifth icon onto another line.
+- Direct email uses approved pillar addresses and a real envelope SVG. It remains
+  separate from form-opening buttons. Intake interception now targets matching
+  `.sg-button` email CTAs, never the dedicated `.sg-email-tab` controls.
+
+### GHL Service Corrections Saved October 18, 2026
+
+The client explicitly approved replacing the live Capital, Estates and Concierge
+options with the complete 6/6/7 approved PDF service headings. All three English
+forms were edited and saved in the authenticated GHL builder. Their published
+forms, and the same forms inside the real WordPress mobile dialogs, were checked
+for the `Services` label and every option below. First/last name, email, phone,
+preferred contact method, message and the approved inquiry consent were preserved.
+No leads were submitted and no automations were changed or activated.
+
+Trailing punctuation below is retained from the source. Existing filters or
+workflows that depend on the old option values still need an owner review; changing
+the selector does not automatically migrate those rules. The Spanish lists remain
+an implementation specification only: no approved Spanish form IDs/mappings were
+supplied, and the existing English forms do not localize automatically. Approve
+Spanish variants before changing language-specific intake behavior.
+
+Capital EN (`A09fGOKG0qMdqOm3kNBF`):
+- High-Precision Real Estate Acquisition and Asset Strategy:
+- Tailored Capital Planning and Mortgage Solutions:
+- The Solanique Investment Club:
+- Corporate Incubation and Launch Advisory:
+- Consolidated Business Transformation:
+- High-Level Portfolio and Estate Alignment:
+
+Capital ES:
+- Adquisición Inmobiliaria de Alta Precisión:
+- Planificación de Capital a Medida y Soluciones Hipotecarias:
+- El Club Solanique de Inversion:
+- Incubación Corporativa y Asesoría de Lanzamiento:
+- Transformación de Negocios Consolidados:
+- Alineación de Portafolio y Estates de Alto Nivel:
+
+Estate EN (`ZkIp2RDdL2MT2ZiwUABK`):
+- Luxury Project Management and Renovations:
+- Infrastructure and Technical Preservation:
+- Integral Management and Owner's Portal:
+- Elite Maintenance and Seasonal Custody:
+- Physical Asset Protection:
+- Integrated Portfolio Synchronization:
+
+Estate ES:
+- Dirección de Obras de Lujo y Renovaciones:
+- Infraestructura y Preservación Técnica:
+- Gestión Integral y Portal del Propietario:
+- Mantenimiento de Élite y Custodia Estacional:
+- Protección Física de Activos:
+- Sincronización de Portafolio Integrado:
+
+Concierge EN (`mLgnoua7O94pvh4kYsFc`):
+- Family Care and Next-Gen Development:
+- International Education and Bilingual Immersion Programs:
+- Specialized Senior Care and Transition Management:
+- Elite Domestic Staffing and Deep Residential Cleaning:
+- Professional Chauffeur and Private Driver Services:
+- Exclusive Custody and Luxury Pet Services:
+- Time Optimization and Integral Personal Assistance:
+
+Concierge ES:
+- Cuidado Familiar y Desarrollo Infantil:
+- Programas de Educación Internacional e Inmersión Bilingüe:
+- Atención Especializada para Personas Mayores y Gestión de Transiciones:
+- Servicio Doméstico de Élite y Limpieza Residencial Profunda:
+- Chofer y Conductores Privados Profesionales:
+- Custodia Exclusiva y Servicios de Lujo para Mascotas:
+- Optimización del Tiempo y Asistencia Personal Integral:
+
+General Inquiry (`7RZNMVuqafSzVAnKkhn4`) keeps its pillar-level selector. Approved
+Investor Admission and Capital/Estate/Concierge JV application forms/URLs are
+still required. No generic sales form was repurposed, and no native applications,
+portal or registration processing was added. GHL workflows were not activated.
+
+### Remaining Decisions and QA Limits
+
+- Mandate History stays immediately after Mission/Vision, per prior explicit
+  approval. The latest PDF body puts Values/Personality first; confirm any new
+  ordering separately. The annotation only requested uninterrupted storytelling.
+- The live EN GHL dropdown changes are approved, saved and verified. Review any
+  filters/workflows using old option values, supply dedicated Club/JV forms and
+  resolve Spanish intake mappings before calling all intake pathways complete.
+- GHL's mobile label, placeholder and dropdown-search contrast was corrected and
+  saved in all four live forms during the October 18 readability pass below.
+  WordPress CSS does not attempt to reach into the cross-origin document.
+- Escape closes the native dialog when focus is on the outer close control. GHL's
+  cross-origin frame does not propagate Escape from its text fields to the parent.
+  Shift+Tab from the first form field successfully reaches the sticky close
+  control, which closes the dialog and returns focus. Do not claim universal
+  iframe Escape handling without approved cooperation inside GHL.
+- Controlled first-open checks took about 3.1 seconds from automated click to
+  visible Submit, including browser-tool overhead. No network latency/Lighthouse
+  improvement is inferred from this. One GHL script per page, no automatic popup,
+  Escape close and focus restoration were verified; no submissions were sent.
+  GHL's Cloudflare challenge emitted third-party console errors during embedding.
+- PHP syntax and isolated template rendering passed. Browser overflow/h1/loaded
+  image checks covered the six pages plus Inquiry in EN/ES at 320, 375, 390, 430,
+  768, 1024, 1280, 1440, 1920 and 2560px (140 checks). All 84 local image/srcset
+  candidates referenced by the previews exist. These previews use actual theme templates/assets but not
+  WordPress database/editor overrides or the production header/footer shell.
+- Reduced-motion/mobile initialization checks confirm no parallax observer or
+  animation work is started in those modes. Desktop scroll position checks confirm
+  background/media movement differs from foreground content. Full OS-preference
+  visual testing and production Lighthouse comparison remain unverified.
+- October 18 follow-up: the real `http://solanique.local` WordPress site passed
+  140 checks across seven pages, EN/ES and the ten widths above. No horizontal
+  overflow, broken loaded images, visible PHP errors, unexpected open dialogs or
+  duplicate H1s were detected. The 6/6/7 complete service lists and all 250 audited
+  copy fields also passed against actual WordPress output. The local header and
+  footer were included, unlike the earlier isolated fixtures.
+- All four click-only dialogs were checked on the real mobile WordPress pages:
+  correct form IDs, one embed script per page, updated pillar options, no measured
+  iframe/page horizontal overflow, close behavior and focus restoration. Direct
+  email controls remain separate. The mobile navigation opens/closes correctly;
+  the hidden desktop navigation uses `display: none`, and the closed drawer is
+  `aria-hidden` and inert. Desktop social icons are aligned in one row with 44px
+  targets, Facebook immediately after Instagram.
+- Evidence is in `output/solanique-audit-qa/` under the local WordPress root:
+  `wordpress-responsive-checks.json`, `wordpress-content-checks.json`,
+  `wordpress-popup-checks.json`, published GHL dropdown screenshots and actual
+  WordPress desktop/mobile screenshots. Third-party Cloudflare challenge errors
+  remain observable when the GHL frames load; no clean third-party console or
+  successful delivery/submission test is claimed.
+- Production deployment/version comparison, production database overrides,
+  full OS reduced-motion visual QA and a same-settings Lighthouse comparison
+  remain separate launch checks. No push, export or deployment is performed as
+  part of this correction sprint.
+
+## October 18, 2026 Form Readability and Lead-Flow Verification
+
+### Live GHL Changes Saved
+
+All four approved form IDs were edited in GHL and checked in their published
+forms and actual Local WordPress dialogs. The defect was GHL's separate mobile
+styling, not missing WordPress iframe styling: desktop labels were already white,
+but mobile labels were `#344054` on black and mobile placeholders were `#667085`.
+
+- Mobile labels now match the existing white desktop labels. Measured contrast
+  against the black form surface increased from 2.01:1 to 21:1.
+- Mobile placeholders now match the existing desktop gray `#A8A8A8`, increasing
+  contrast from 4.22:1 to 8.83:1.
+- A small rule in each form's own GHL Custom CSS sets dropdown-search text/carets
+  to white. A scoped keyboard-focus outline uses the existing gray palette.
+  No CSS was injected into frames from WordPress.
+- Existing Capital, Concierge and Inquiry Custom CSS contained an unmatched
+  trailing closing brace. That brace was removed so the appended readability
+  rule parses correctly. Their other legacy background/spacing/overflow rules
+  were preserved. Estates previously had no custom CSS; only the targeted
+  readability/focus rules were added there.
+- No form labels, service headings, contact fields, consent wording, gold control
+  accents, backgrounds or desktop typography were intentionally changed. After
+  separate approval, the user corrected Inquiry's field order in GHL; its saved
+  and published order was then verified. No WordPress UI files needed modification
+  in this pass.
+
+### Read-Only Lead-Handling Findings
+
+- Initially, all four forms had Email notification and Auto responder OFF. After
+  the user approved department-specific internal recipients, Email notification
+  was enabled and saved to capital@, estate@, concierge@ and
+  inquiry@solaniquegroup.com respectively. The Estates mailbox is singular
+  `estate@solaniquegroup.com`. Auto responder remains OFF on all four forms.
+  Saved settings do not establish inbox delivery; department receipt is awaiting
+  confirmation.
+- The four acknowledgment workflows remain Draft with zero enrollments. Each
+  has its own Form Submitted filter plus Terms and Conditions = Yes, followed by
+  an email and an SMS action. No service-option filters using the old labels
+  were found in these four workflows. Other CRM filters/pipelines were not
+  comprehensively audited.
+- All four saved email actions were visually checked against the supplied
+  sender addresses: capital@, estate@, concierge@ and inquiry@solaniquegroup.com.
+  Matching a From address is not proof of sender authentication or delivery.
+- Email Services still shows shared domain `send.lcmsgsndr.com`, not a dedicated
+  Solanique sending domain. Reply/forward/BCC overrides are empty and forwarding
+  to the assigned user is OFF. Decide whether replies should remain in GHL
+  Conversations or be forwarded before changing those settings; do not silently
+  add a Reply-To override that changes conversation tracking.
+- Phone System says configuration requires support assistance. The Capital
+  workflow's From number selector is empty and returns No Data. The supplied
+  `+16474666314` has not been established as an available GHL sending number.
+- The four saved flows have no preferred-contact branch, explicit channel
+  opt-out/DND branch, internal notification or ownership-assignment action.
+  Review platform-level suppression as well as workflow logic before activation;
+  do not assume an opt-out is ignored or guaranteed by an untested default.
+- Allow Duplicate Contact is OFF, with Email first and Phone second for matching.
+  Five approved test submissions resolved to one matching contact. Capital allows
+  workflow re-entry/multiple opportunities,
+  has Stop on response OFF and no specific sending-time window. The account
+  timezone is America/Bogota; confirm the intended outreach schedule before SMS.
+
+### Approved Controlled Tests and Current Results
+
+The user supplied the test identity/contact details, approved up to two labeled
+submissions per form, selected department inboxes for alerts, and separately
+approved four isolated acknowledgment email tests. Private test addresses/numbers
+are not repeated in this tracked document.
+
+- Five submissions succeeded through the actual WordPress dialogs: two Capital,
+  one Estates, one Concierge and one Inquiry. Each GHL submissions table was
+  checked for the exact approved name, email, phone, Email contact preference,
+  selected service, test message and consent state. No records were deleted.
+- Empty-submit validation blocked all four forms and displayed readable Email
+  and Phone required errors. First/Last Name, preference, interest, Message and
+  consent are currently optional; required-field policies were not changed.
+- Capital accepted one unchecked-consent test, preserving an empty consent value,
+  then one consent-checked repeat with the exact approved consent text. Form
+  success is not marketing consent; the four draft workflows still filter for
+  Terms and Conditions = Yes and must remain unpublished until routing/suppression
+  is reviewed.
+- Contact search returned one matching contact after all five submissions; its
+  activity contains all five form events. Per-pillar interest fields remain
+  populated. The shared Message field contains the latest Inquiry message;
+  previous messages remain in individual submission records. The contact remains
+  Unassigned and its original source is Capital. Future department routing should
+  use the submitted form, not assume the contact's first source is its latest
+  inquiry.
+- One email-only test was sent from each existing workflow email action to the
+  approved test inbox. GHL reported "Email sent" four times and all four subjects
+  appear in the test contact's Conversations. These are isolated action tests,
+  NOT successful form-triggered workflow executions or proof of sender
+  authentication or reply routing. The user subsequently confirmed receiving an
+  email from each department. Internal alert inboxes were not independently
+  inspected.
+- All four workflows were rechecked as Draft with zero enrollments and unchanged
+  saved dates after testing. No workflow was published or enrolled, no SMS was
+  sent, and no phone/domain/billing settings were changed.
+- Inquiry's last three questions originally followed Submit. Browser drag
+  attempts did not retain the move; the original fields were restored without
+  publishing those attempts. The user then saved the correction in GHL. Builder,
+  published WordPress embed and seven responsive widths now show Preferred
+  Contact Method, interest and Message before consent/Submit. Wording and CRM
+  fields were preserved.
+
+Remaining launch decisions: independently verify department-alert routing as
+needed; authenticate the sending domain and decide reply routing; configure an
+approved sending number through GHL support if SMS is wanted; review preferred
+contact/DND/consent branches, ownership assignment, re-entry and sending windows
+before approving any workflow activation. No inbox delivery guarantee is claimed.
+
+### Verification Evidence
+
+- 28 actual WordPress dialog checks: four forms at 320, 375, 390, 430, 768, 1024
+  and 1440px. No page/frame horizontal overflow, clipped selected service text,
+  unreachable Submit controls or duplicate GHL scripts were detected.
+- After the Inquiry reorder, seven additional width checks confirmed its new
+  order, one embed script and no page/frame horizontal overflow. Mobile consent
+  and Submit remain reachable, the close control stays visible, and closing
+  returns focus to Start Inquiry. No additional submissions were made during
+  this responsive recheck.
+- The 6/6/7 approved pillar options and Inquiry's six general options remain.
+  White labels/search text, gray placeholders, selected values, keyboard focus,
+  close controls and opener focus restoration were checked. Direct-email
+  alternatives and click-only opening are unchanged.
+- Published 320px checks also selected each form's longest interest option with
+  no clipped selected text. Actual dropdown option spans use `#607179` on white
+  (5.08:1), with black text on the existing gold highlight (9.99:1). Transparent
+  option-wrapper colors alone are not a valid measure of the visible text.
+- The GHL script remains on-demand and loads once per page. No load-time or
+  Lighthouse improvement is claimed. Third-party Cloudflare challenge console
+  errors still occur when embedding; no CAPTCHA/security control was bypassed.
+- Evidence lives under the local WordPress root at
+  `output/solanique-form-readability-2026-10-18/`: before/after screenshots,
+  `before.json`, `responsive-checks.json`, `published-color-checks.json`, workflow
+  structure/sender evidence and backups of each form's previous Custom CSS.
+  Controlled test evidence includes `controlled-submission-checks.json`,
+  `email-only-test-results.json`, `inquiry-order-responsive-checks.json`, saved
+  notification settings, email-test responses and the single matching contact.
+  These are local QA artifacts, not production theme assets.
+- No Spanish/Club/JV forms, video placements, legal copy, navigation, parallax,
+  native backend or campaigns changed. No commit, push, export or deployment.
+- `npm run build`, syntax checks for the current changed PHP files and intake
+  module, and `git diff --check` pass. The scoped UI detector returned no findings.
+  Distribution output was generated only through Vite; no manual dist edits.
+
+### October 18 Acknowledgment Email Formatting Follow-Up
+
+After confirming receipt of the four original acknowledgment tests, the user
+requested logos, signatures, spacing and improved email design. All four saved
+workflow email actions now use GHL's native Smart Builder Code editor rather than
+Quick Compose. Only their message presentation changed; the original subjects,
+From names/addresses, inquiry response paragraphs and sensitive-document cautions
+were preserved.
+
+- The shared layout uses a 600px maximum reading width, dark graphite surfaces,
+  silver/off-white text, one restrained antique-gold divider and the existing
+  official Solanique logo. No personal credentials, addresses, response-time
+  promises or marketing claims were invented.
+- Each signature retains Warm regards / Solanique Group and adds its department
+  plus the approved department email link. Estates uses the singular mailbox
+  `estate@solaniquegroup.com`. Website and existing Privacy Policy links are real
+  HTTPS destinations, not placeholder links.
+- The logo source was verified against the live website header:
+  `https://solaniquegroup.com/wp-content/themes/solanique/assets/dist/images/brand/solanique-logo-horizontal-gold.png`.
+  It loaded in all four saved GHL messages. The logo's colors and proportions
+  were not changed. Keep this public asset URL available for received emails.
+- Native desktop/mobile previews checked readability, wrapping, loaded imagery
+  and links. The mobile editor preview is 375px wide, with no horizontal overflow.
+  Body text is 16px with 27px leading; the authored body colors measure 15.04:1
+  contrast. Email-client dark-mode transformations and Outlook/Gmail rendering
+  are not established by a browser preview alone.
+- All four actions were saved, each workflow was saved as Draft, and each saved
+  message was reopened to verify the new logo, copy and department link persisted.
+  Final workflow-list verification still showed Draft and zero enrollments for
+  every workflow. Trigger filters, SMS actions, phone setup, sender authentication,
+  reply routing and form notifications were not changed in this formatting pass.
+- With separate approval, exactly one newly formatted Capital email-only test
+  was sent to the previously approved test inbox. GHL reported Email sent. Inbox
+  design was subsequently approved by the user as the visual standard for all
+  four acknowledgment emails. This approval does not establish workflow-triggered
+  delivery, sender-domain authentication or reply handling.
+- Finished HTML copies and local preview/status evidence are outside the theme,
+  under the WordPress root at `output/solanique-email-design-2026-10-18/`:
+  `capital-acknowledgment.html`, `estates-acknowledgment.html`,
+  `concierge-acknowledgment.html`, `inquiry-acknowledgment.html`,
+  `native-preview-checks.json`, `saved-workflow-email-checks.json` and screenshots.
+  These are handoff/QA artifacts, not WordPress templates or production assets.
+- No additional form submissions, SMS, promotions or workflow enrollments were
+  created. No WordPress UI files were changed for email styling, and no commit,
+  push, export or deployment was performed.
+
+GHL editing reference: [Managing Email Templates in Workflow Steps](https://help.gohighlevel.com/support/solutions/articles/155000005553-managing-email-templates-in-workflow-steps).
+
+### October 21 Email-Only Draft Configuration
+
+All four existing acknowledgments and their original email/SMS content were
+preserved. Each form-submission trigger now requires its own form, submitted
+Terms and Conditions = Yes, and Preferred Contact Method = Email. Immediately
+before the email, an If/Else guard checks current Email preference, a nonempty
+Email field, and outbound DND enabled channels does not include Email. Only the
+eligible branch reaches the original branded email. The other branch ends with
+no automatic message. Inquiry consent is not promotional consent.
+
+The four existing SMS steps remain Disabled. Workflows remain Draft with zero
+enrollments. Form-level department notifications are ON and form autoresponders
+are OFF; no duplicate alerts or workflows were created. Phone, WhatsApp and
+missing-preference leads remain manual follow-up via those department alerts.
+
+Re-entry and multiple opportunities were already ON in all four workflows and
+were not changed. Repeat-send policy and reply routing await client decisions.
+GHL currently shows a shared sending domain; Solanique-domain authentication and
+reply delivery remain unverified. See FINALIZATION.md for exact mappings,
+suppression limitations, test gates and release blockers. Local read-only UI
+evidence is stored outside the theme under
+`output/solanique-finalization-2026-10-21/` in the WordPress root.

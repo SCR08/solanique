@@ -132,6 +132,20 @@ function solanique_get_public_seo_config(): array {
 			'path'        => '/concierge/',
 			'slugs'       => array( 'concierge' ),
 		),
+		'international_student_program_v2' => array(
+			'title' => 'Programa de Estudiantes Internacionales | Solanique Concierge',
+			'document_title' => 'Programa de Estudiantes Internacionales',
+			'description' => 'Una experiencia canadiense que transforma tu futuro.',
+			'path' => '/international-student-program-v2/',
+			'slugs' => array( 'international-student-program-v2' ),
+		),
+		'international_student_program' => array(
+			'title' => 'Programa de Estudiantes Internacionales | Solanique Concierge',
+			'document_title' => 'Programa de Estudiantes Internacionales',
+			'description' => 'Una experiencia canadiense que transforma tu futuro.',
+			'path' => '/international-student-program/',
+			'slugs' => array( 'international-student-program' ),
+		),
 		'the_mandate'   => array(
 			'title'          => __( 'The Mandate | Solanique Group', 'solanique' ),
 			'document_title' => __( 'The Mandate', 'solanique' ),

@@ -70,6 +70,12 @@ add_action( 'wp_head', 'solanique_preload_lcp_image', 1 );
  * @return string
  */
 function solanique_get_current_lcp_image_asset(): string {
+	if ( sg_is_student_program_v2() ) {
+		return 'images/student-program/student-friends-outdoors.jpg';
+	}
+	if ( sg_is_student_program() ) {
+		return 'images/estates/toronto-skyline-real-estate-investment.jpg';
+	}
 	if ( is_front_page() ) {
 		return 'images/estates/commercial-real-estate-skyscrapers-sunlight.jpg';
 	}

@@ -7,6 +7,34 @@
 	filter: saturate(0.92) contrast(1.06) brightness(0.9);
 }
 
+.sg-solanique-club-hero__inner {
+	grid-template-columns: minmax(0, 1fr);
+	min-inline-size: 0;
+}
+
+.sg-solanique-club-hero .sg-product-hero__content {
+	min-inline-size: 0;
+}
+
+.sg-solanique-club-hero .sg-product-hero__title {
+	max-inline-size: 100%;
+	font-size: 3.5rem;
+	line-height: 1.15;
+	overflow-wrap: anywhere;
+}
+
+@media (max-width: 47.98rem) {
+	.sg-solanique-club-hero .sg-product-hero__title {
+		font-size: 2.125rem;
+	}
+}
+
+@media (min-width: 80rem) {
+	.sg-solanique-club-hero .sg-product-hero__title {
+		font-size: 4.65rem;
+	}
+}
+
 .sg-solanique-club-overview,
 .sg-solanique-club-areas {
 	background:
@@ -181,6 +209,11 @@
 		linear-gradient(135deg, color-mix(in srgb, var(--sg-metal-silver) 12%, transparent), transparent 42%),
 		var(--sg-ink);
 	background-blend-mode: screen, screen, normal, normal;
+}
+
+.sg-solanique-club-card__action-label {
+	font-size: var(--sg-font-size-sm);
+	color: var(--sg-metal-platinum);
 }
 
 @media (min-width: 80rem) {

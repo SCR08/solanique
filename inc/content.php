@@ -218,7 +218,7 @@ function solanique_get_final_copy(): array {
 				'headline'    => 'Arquitectura Estratégica y Soberanía Financiera',
 				'intro'       => 'El capital es la roca sólida sobre la cual se construyen los imperios. En Solanique, no tratamos tus activos como transacciones aisladas; los tratamos como vehículos de alto rendimiento que exigen precisión matemática y visión de futuro. Actuamos como tus Estrategas Principales, alineando tu liquidez con activos de alto crecimiento y marcos corporativos modernos para blindar, optimizar y multiplicar tu patrimonio.',
 				'services'    => array(
-					'heading' => 'Nuestro Ecosistema de Servicios de Capital',
+					'heading' => 'Nuestro Ecosistema de Servicios',
 					'items'   => array(
 						array(
 							'title' => 'Adquisición Inmobiliaria de Alta Precisión:',
@@ -299,7 +299,7 @@ function solanique_get_final_copy(): array {
 				'headline'    => 'Strategic Architecture and Financial Sovereignty',
 				'intro'       => 'Capital is the bedrock upon which empires are built. At Solanique, we do not treat your assets as isolated transactions; we treat them as high-performance vehicles that demand mathematical precision and forward-thinking vision. We serve as your Lead Strategists, aligning your liquidity with high-growth assets and modern corporate frameworks to shield, optimize, and multiply your wealth.',
 				'services'    => array(
-					'heading' => 'Our Capital Services Ecosystem',
+					'heading' => 'Our Ecosystem of Services',
 					'items'   => array(
 						array(
 							'title' => 'High-Precision Real Estate Acquisition and Asset Strategy:',
@@ -992,4 +992,96 @@ function solanique_get_final_mailto( string $email ): string {
 	$email = sanitize_email( $email );
 
 	return is_email( $email ) ? 'mailto:' . $email : '';
+}
+
+/** Spanish program copy from the client brochure; source/approval map in README. */
+function sg_get_student_program_copy(): array {
+	return array(
+		'title' => 'PROGRAMA DE ESTUDIANTES INTERNACIONALES',
+		'intro' => 'Una experiencia canadiense que transforma tu futuro.',
+		'purpose' => array(
+			'title' => 'MUCHO MÁS QUE UN PROGRAMA ACADÉMICO',
+			'text' => 'En Solanique Concierge creemos que la educación internacional es una experiencia transformadora que va más allá del aula. Es una oportunidad para que los jóvenes desarrollen su potencial, su independencia y una visión global en un entorno seguro, inspirador y lleno de oportunidades.',
+			'closing' => 'Nos encargamos de todo, para que te enfoques en lo que más importa: tu familia.',
+		),
+		'destination' => array(
+			'title' => 'CONDADO DE SIMCOE',
+			'subtitle' => 'UN LUGAR AL QUE LLAMAR HOGAR',
+			'text' => 'El Condado de Simcoe, Ontario, a solo 60 minutos al norte de Toronto, ofrece el escenario ideal para el desarrollo académico, personal y cultural de los estudiantes internacionales.',
+			'items' => array(
+				'Entorno seguro y acogedor',
+				'Naturaleza y vida al aire libre en todas las estaciones',
+				'Wasaga Beach: la playa de agua dulce más larga del mundo',
+				'Esquí, senderos y actividades de invierno de clase mundial',
+				'Comunidades vibrantes y multiculturales',
+				'Fácil acceso por automóvil, autobús o tren desde Toronto',
+			),
+		),
+		'academic' => array(
+			'title' => 'EDUCACIÓN DE CALIDAD CON EL SCDSB',
+			'subtitle' => 'SIMCOE COUNTY DISTRICT SCHOOL BOARD',
+			'text' => 'Nuestros estudiantes se integran en el sistema oficial de educación secundaria canadiense, con el respaldo de la Junta Escolar del Distrito del Condado de Simcoe (SCDSB), reconocida por su excelencia académica, entornos seguros y comunidades inclusivas.',
+			'items' => array(
+				'Créditos académicos oficiales con validez internacional',
+				'15 escuelas secundarias en todo el condado',
+				'Programas flexibles: semestre, año completo o estancias de 3 a 4 meses',
+				'Apoyo dedicado de ESL (inglés como segundo idioma)',
+				'Programas especializados: artes, liderazgo, deportes y más',
+				'Vida extracurricular inigualable: clubes, servicio comunitario, esquí, curling y experiencias canadienses',
+			),
+		),
+		'services' => array(
+			'title' => 'NUESTROS SERVICIOS DE CONSERJERÍA',
+			'subtitle' => 'TIEMPO, TRANQUILIDAD Y CUIDADO INTEGRAL',
+			'text' => 'En Solanique Concierge nos encargamos de todo el proceso, de principio a fin. Ahorramos tu tiempo y cuidamos cada detalle para que tus hijos vivan una experiencia segura y única.',
+			// Supplied service scopes, not independently verified credentials. Approval required before launch.
+			'items' => array(
+				array( 'title' => 'GESTIÓN DOCUMENTAL Y ADMISIÓN', 'text' => 'Inscripción, documentación y coordinación del registro ante el distrito escolar.' ),
+				array( 'title' => 'ASESORÍA MIGRATORIA OPCIONAL', 'text' => 'Orientación especializada sobre visados y permisos de estudio, cuando aplique.' ),
+				array( 'title' => 'LOGÍSTICA DE PUERTA A PUERTA', 'text' => 'Coordinación de traslados, bienvenida y adaptación al llegar a Canadá.' ),
+				array( 'title' => 'FAMILIAS ANFITRIONAS SELECCIONADAS', 'text' => 'Alojamiento en hogares acogedores y cuidadosamente evaluados.' ),
+				array( 'title' => 'SEGUIMIENTO PERSONALIZADO', 'text' => 'Acompañamiento académico y atención al bienestar durante toda la estancia.' ),
+				array( 'title' => 'EXPERIENCIAS Y TOURS OPCIONALES', 'text' => 'Actividades culturales, recreativas y educativas para enriquecer la experiencia.' ),
+			),
+		),
+		'housing' => array(
+			'title' => 'FAMILIAS ANFITRIONAS',
+			'subtitle' => 'UN HOGAR CANADIENSE LEJOS DE CASA',
+			'text' => 'En Solanique Concierge seleccionamos cuidadosamente a nuestras familias anfitrionas para ofrecerte un hogar seguro, cálido y acogedor en Canadá.',
+			'items' => array(
+				'Habitación privada y espacio de estudio',
+				'Tres comidas al día y refrigerios',
+				'Acceso a Internet y uso de las instalaciones del hogar',
+				'Custodia para estudiantes menores de 18 años',
+				'Familias cuidadosamente evaluadas (entrevista, verificación de antecedentes y referencias)',
+				'Acompañamiento de Solanique Concierge',
+			),
+		),
+		'programs' => array(
+			'title' => 'PROGRAMAS Y OPORTUNIDADES',
+			'subtitle' => 'FORMANDO LÍDERES GLOBALES',
+			'groups' => array(
+				array( 'title' => 'PROGRAMA DE ESCUELA SECUNDARIA (GRADOS 9 A 12)', 'items' => array(
+					'Año escolar: septiembre a junio',
+					'Dos semestres:',
+					'Semestre 1: septiembre a enero',
+					'Semestre 2: febrero a junio',
+					'Estancias de un semestre, un año o múltiples años',
+					'Obtención de créditos de Ontario o Diploma de Escuela Secundaria de Ontario (OSSD)',
+					'Apoyo académico y orientación vocacional y universitaria',
+				) ),
+				array( 'title' => 'PROGRAMAS ESPECIALIZADOS', 'items' => array(
+					'Advanced Placement (AP)', 'Francés Extendido', 'Programas de habilidades enfocados en carreras',
+					'Educación Cooperativa (Co-op)', 'Programa de Créditos EduTravel', 'Campamento de Liderazgo de Verano',
+				) ),
+			),
+		),
+		'closing' => array(
+			'title' => 'UNA INVERSIÓN EN TU FUTURO',
+			'text' => 'El Programa de Estudiantes Internacionales de Solanique Concierge es una puerta abierta a las mejores universidades del mundo, a una red global de oportunidades y a una experiencia de vida que forma carácter, confianza y visión.',
+			'phrase' => 'Porque cada gran futuro comienza con una gran experiencia.',
+			// Presentation letter, page 3: invitation, not an admission or placement guarantee.
+			'invitation' => 'El siguiente paso hacia este gran proyecto es coordinar una presentación personalizada diseñada exclusivamente para ustedes. En este encuentro, tendremos el gusto de mostrarles a detalle las tablas de tarifas (fee schedules), la oferta de deportes de alto rendimiento y el funcionamiento de nuestros semestres de estudio y alojamientos, resolviendo cada una de sus inquietudes para hacer este proceso impecable.',
+		),
+	);
 }

@@ -790,6 +790,29 @@ function solanique_render_immersive_section( array $args ): void {
 }
 
 /**
+ * Render complete template sections over the existing sticky scene, without excerpts.
+ */
+function solanique_render_content_scene( array $args ): void {
+	$args = wp_parse_args( $args, array( 'id' => '', 'modifier' => '', 'image' => '', 'width' => 2048, 'height' => 1365, 'speed' => '0.2', 'parts' => array() ) );
+	if ( empty( $args['image'] ) || empty( $args['parts'] ) ) {
+		return;
+	}
+	?>
+	<div class="sg-content-scene sg-parallax sg-parallax-scene sg-parallax-scene--<?php echo esc_attr( sanitize_html_class( $args['modifier'] ) ); ?>" data-sg-parallax-scene data-parallax-id="<?php echo esc_attr( $args['id'] ); ?>" data-parallax-speed="<?php echo esc_attr( $args['speed'] ); ?>">
+		<div class="sg-parallax-scene__media sg-parallax__media" data-sg-parallax-media aria-hidden="true">
+			<?php echo sg_asset_img( $args['image'], '', array( 'class' => 'sg-parallax-scene__image', 'width' => absint( $args['width'] ), 'height' => absint( $args['height'] ), 'sizes' => '100vw' ) ); ?>
+			<div class="sg-parallax-scene__overlay"></div>
+		</div>
+		<div class="sg-parallax-scene__panels">
+			<?php foreach ( $args['parts'] as $part ) : ?>
+				<?php get_template_part( $part ); ?>
+			<?php endforeach; ?>
+		</div>
+	</div>
+	<?php
+}
+
+/**
  * Renders a restrained pending-information panel for unsupplied client content.
  *
  * @param array<string,mixed> $args Panel arguments.
@@ -948,6 +971,9 @@ function solanique_get_current_language(): string {
  * @return string
  */
 function solanique_get_language_selector( string $aria_label ): string {
+	if ( sg_is_student_program() ) {
+		return '';
+	}
 	$current_language = solanique_get_current_language();
 	$languages        = array(
 		'en' => array(
@@ -1111,13 +1137,15 @@ function solanique_get_pillar_email_config(): array {
 	$config = (array) apply_filters(
 		'solanique_pillar_email_config',
 		array(
-			'capital_email'   => '',
-			'estates_email'   => '',
-			'concierge_email' => '',
+			'capital_email'   => 'capital@solaniquegroup.com',
+			'estates_email'   => 'estate@solaniquegroup.com',
+			'concierge_email' => 'concierge@solaniquegroup.com',
+			'inquiry_email'   => 'inquiry@solaniquegroup.com',
 		)
 	);
 
 	return array(
+		'inquiry_email'   => isset( $config['inquiry_email'] ) ? sanitize_email( (string) $config['inquiry_email'] ) : '',
 		'capital_email'   => isset( $config['capital_email'] ) ? sanitize_email( (string) $config['capital_email'] ) : '',
 		'estates_email'   => isset( $config['estates_email'] ) ? sanitize_email( (string) $config['estates_email'] ) : '',
 		'concierge_email' => isset( $config['concierge_email'] ) ? sanitize_email( (string) $config['concierge_email'] ) : '',
@@ -1146,9 +1174,14 @@ function solanique_get_pillar_email( string $pillar ): string {
  * @return string
  */
 function solanique_get_pillar_email_tab( string $pillar, string $label = '' ): string {
-	$email = solanique_get_pillar_email( $pillar );
+	return solanique_get_direct_email_link( solanique_get_pillar_email( $pillar ), $label );
+}
 
-	if ( '' === $email ) {
+/** A direct email control, distinct from form-opening CTAs. */
+function solanique_get_direct_email_link( string $email, string $label = '' ): string {
+	$email = sanitize_email( $email );
+
+	if ( ! is_email( $email ) ) {
 		return '';
 	}
 
@@ -1164,7 +1197,7 @@ function solanique_get_pillar_email_tab( string $pillar, string $label = '' ): s
 	);
 
 	return '<a' . solanique_get_attribute_string( $attributes ) . '>'
-		. '<span class="sg-email-tab__icon" aria-hidden="true">Mail</span>'
+		. '<svg class="sg-email-tab__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 6 9 7 9-7"></path></svg>'
 		. '<span class="sg-email-tab__label">' . esc_html( $label ) . '</span>'
 		. '<span class="sg-email-tab__address">' . esc_html( $email ) . '</span>'
 		. '</a>';
@@ -1178,10 +1211,10 @@ function solanique_get_pillar_email_tab( string $pillar, string $label = '' ): s
 function solanique_get_footer_social_network_labels(): array {
 	return array(
 		'instagram' => __( 'Instagram', 'solanique' ),
+		'facebook'  => __( 'Facebook', 'solanique' ),
 		'tiktok'    => __( 'TikTok', 'solanique' ),
 		'threads'   => __( 'Threads', 'solanique' ),
 		'linkedin'  => __( 'LinkedIn', 'solanique' ),
-		'facebook'  => __( 'Facebook', 'solanique' ),
 		'youtube'   => __( 'YouTube', 'solanique' ),
 	);
 }
@@ -1197,10 +1230,10 @@ function solanique_get_footer_social_links(): array {
 		'solanique_footer_social_links',
 		array(
 			'instagram' => 'https://www.instagram.com/solaniquegroup/',
+			'facebook'  => 'https://web.facebook.com/profile.php?id=61590578995799',
 			'tiktok'    => 'https://www.tiktok.com/@solanique_group',
 			'threads'   => 'https://www.threads.com/@solaniquegroup',
 			'linkedin'  => 'https://www.linkedin.com/in/solanique-group-97b353412/',
-			'facebook'  => 'https://web.facebook.com/profile.php?id=61590578995799',
 			'youtube'   => '',
 		)
 	);

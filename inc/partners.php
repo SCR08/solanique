@@ -98,7 +98,6 @@ function sg_get_professional_credentials( bool $authorized_only = true ): array 
 			'credential_lines' => array(
 				'SANDRA LORENA MEDINA SOLANO',
 				'REALTOR',
-				'C21 Heritage Group Ltd.',
 			),
 			'website_url'     => '',
 			'authorized'      => true,

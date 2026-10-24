@@ -14,10 +14,6 @@ $geography = $content['geography'] ?? array();
 <section id="ecosystem" class="sg-section sg-home-ecosystem" aria-labelledby="solanique-home-ecosystem-title">
 	<div class="sg-container sg-container--xl">
 		<div class="sg-home-ecosystem__header sg-flow" data-sg-stagger>
-			<p class="sg-home-ecosystem__eyebrow sg-home-reveal" data-sg-reveal="fade-up">
-				<?php echo esc_html( $content['headline'] ?? '' ); ?>
-			</p>
-
 			<h2 id="solanique-home-ecosystem-title" class="sg-home-ecosystem__title sg-home-reveal" data-sg-reveal="fade-up">
 				<?php echo esc_html( $geography['heading'] ?? '' ); ?>
 			</h2>

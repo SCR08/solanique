@@ -15,10 +15,6 @@ $difference = $content['difference'] ?? array();
 	<div class="sg-container sg-container--xl">
 		<div class="sg-home-why__layout">
 			<div class="sg-home-why__header sg-flow" data-sg-stagger>
-				<p class="sg-home-why__eyebrow sg-home-reveal" data-sg-reveal="fade-up">
-					<?php echo esc_html( $content['headline'] ?? '' ); ?>
-				</p>
-
 				<h2 id="solanique-home-why-title" class="sg-home-why__title sg-home-reveal" data-sg-reveal="fade-up">
 					<?php echo esc_html( $difference['heading'] ?? '' ); ?>
 				</h2>

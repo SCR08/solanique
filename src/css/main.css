@@ -19,7 +19,6 @@
 @import "./components/button.css" layer(components);
 @import "./components/card.css" layer(components);
 @import "./components/form.css" layer(components);
-@import "./components/video-modal.css" layer(components);
 @import "./components/intake-modal.css" layer(components);
 @import "./components/illumination-toggle.css" layer(components);
 
@@ -34,6 +33,9 @@
 @import "./pages/inquiry.css" layer(pages);
 @import "./pages/solanique-club.css" layer(pages);
 @import "./pages/legal.css" layer(pages);
+@import "./pages/international-student-program.css" layer(pages);
+/* This scoped surface must override WordPress's unlayered dark global styles. */
+@import "./pages/international-student-program-v2.css";
 @import "./pages/client-access.css" layer(pages);
 @import "./pages/investor-club.css" layer(pages);
 @import "./pages/jv-club.css" layer(pages);

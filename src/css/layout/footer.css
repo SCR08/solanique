@@ -101,6 +101,7 @@
 
 .sg-site-footer__social-list {
 	display: flex;
+	align-items: center;
 	flex-wrap: wrap;
 	gap: var(--sg-space-sm);
 	justify-content: flex-start;
@@ -112,8 +113,8 @@
 .sg-site-footer__social-link {
 	display: inline-grid;
 	place-items: center;
-	inline-size: 2.35rem;
-	block-size: 2.35rem;
+	inline-size: 2.75rem;
+	block-size: 2.75rem;
 	border: var(--sg-border-width-hairline) solid color-mix(in srgb, var(--sg-color-white) 16%, transparent);
 	border-radius: var(--sg-radius-circle);
 	color: var(--sg-color-white);
@@ -123,6 +124,10 @@
 		border-color var(--sg-duration-fast) var(--sg-ease-standard),
 		background-color var(--sg-duration-fast) var(--sg-ease-standard),
 		transform var(--sg-duration-fast) var(--sg-ease-standard);
+}
+
+.sg-site-footer__social-item {
+	display: flex;
 }
 
 .sg-site-footer__social-link:hover,
@@ -233,7 +238,7 @@
 
 @media (min-width: 80rem) {
 	.sg-site-footer__main {
-		grid-template-columns: minmax(12rem, 0.7fr) minmax(30rem, 1.8fr) minmax(10rem, 0.5fr);
+		grid-template-columns: minmax(10rem, 0.7fr) minmax(0, 1.8fr) max-content;
 		gap: clamp(var(--sg-space-2xl), 5vw, var(--sg-space-4xl));
 	}
 

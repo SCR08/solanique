@@ -8,8 +8,6 @@
 defined( 'ABSPATH' ) || exit;
 
 $content       = solanique_get_final_page_copy( 'capital' );
-$primary_url   = solanique_get_final_mailto( $content['cta']['email'] ?? '' );
-$secondary_url = '#sg-capital-services';
 ?>
 
 <section class="sg-product-hero sg-capital-hero" aria-labelledby="sg-capital-hero-title">
@@ -53,16 +51,6 @@ $secondary_url = '#sg-capital-services';
 				<?php echo esc_html( $content['intro'] ?? '' ); ?>
 			</p>
 
-			<div class="sg-cluster sg-product-hero__actions sg-capital-hero__actions sg-capital-reveal" data-sg-reveal="fade-up">
-				<?php if ( '' !== $primary_url ) : ?>
-					<a class="sg-button sg-button--lg" href="<?php echo esc_url( $primary_url ); ?>">
-						<?php echo esc_html( $content['cta']['label'] ?? '' ); ?>
-					</a>
-				<?php endif; ?>
-				<a class="sg-button sg-button--ghost sg-product-hero__secondary-link sg-capital-hero__secondary-link" href="<?php echo esc_url( $secondary_url ); ?>">
-					<?php echo esc_html( $content['services']['heading'] ?? '' ); ?>
-				</a>
-			</div>
 		</div>
 	</div>
 </section>

@@ -7,7 +7,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$primary_url   = '#sg-inquiry-gateway';
 $secondary_url = '#sg-inquiry-pathways';
 ?>
 
@@ -42,7 +41,6 @@ $secondary_url = '#sg-inquiry-pathways';
 				<?php esc_html_e( 'A discreet starting point for clients who require Capital, Estate, Concierge, or Solanique Club guidance through the right private channel.', 'solanique' ); ?>
 			</p>
 			<div class="sg-cluster sg-product-hero__actions" data-sg-reveal="fade-up">
-				<a class="sg-button sg-button--lg" href="<?php echo esc_url( $primary_url ); ?>"><?php esc_html_e( 'Start Inquiry', 'solanique' ); ?></a>
 				<a class="sg-button sg-button--ghost sg-product-hero__secondary-link" href="<?php echo esc_url( $secondary_url ); ?>"><?php esc_html_e( 'View Pathways', 'solanique' ); ?></a>
 			</div>
 		</div>

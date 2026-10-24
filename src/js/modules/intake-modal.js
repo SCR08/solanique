@@ -24,7 +24,7 @@ export function initIntakeModal() {
 		document.body.style.overflow = previousOverflow;
 		opener?.focus();
 	});
-	document.querySelectorAll('main a[href^="mailto:"]').forEach((link) => {
+	document.querySelectorAll('main .sg-button[href^="mailto:"]').forEach((link) => {
 		if (link.classList.contains('sg-email-tab')) return;
 		const email = link.getAttribute('href').slice(7).split('?')[0].toLowerCase();
 		if (email !== emails[frame.title]) return;

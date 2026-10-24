@@ -30,12 +30,13 @@ $cta_url = solanique_get_final_mailto( $cta['email'] ?? '' );
 					<a class="sg-button sg-button--lg" href="<?php echo esc_url( $cta_url ); ?>">
 						<?php echo esc_html( $cta['label'] ?? '' ); ?>
 					</a>
+					<?php echo solanique_get_pillar_email_tab( 'concierge' ); ?>
 				</div>
 			<?php endif; ?>
 
-			<p class="sg-product-cta__final sg-concierge-cta__final sg-concierge-reveal" data-sg-reveal="fade-up">
-				<?php echo esc_html( $content['final_line'] ?? '' ); ?>
-			</p>
 		</div>
 	</div>
+			<p class="sg-container sg-container--xl sg-brand-line sg-product-cta__final sg-concierge-cta__final sg-concierge-reveal" data-sg-reveal="fade-up">
+				<?php echo esc_html( $content['final_line'] ?? '' ); ?>
+			</p>
 </section>

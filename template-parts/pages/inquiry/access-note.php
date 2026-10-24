@@ -20,6 +20,7 @@ defined( 'ABSPATH' ) || exit;
 			</p>
 			<div class="sg-product-cta__action" data-sg-reveal="fade-up">
 				<a class="sg-button sg-button--lg" href="<?php echo esc_url( solanique_get_final_mailto( 'inquiry@solaniquegroup.com' ) ); ?>"><?php esc_html_e( 'Start Inquiry', 'solanique' ); ?></a>
+				<?php echo solanique_get_pillar_email_tab( 'inquiry' ); ?>
 			</div>
 		</div>
 	</div>

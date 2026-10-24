@@ -20,8 +20,7 @@ if ( empty( $credentials ) && empty( $affiliations ) ) {
 		<?php if ( ! empty( $credentials ) ) : ?>
 			<div class="sg-capital-credentials" data-sg-stagger>
 				<div class="sg-product-section__header sg-flow">
-					<p class="sg-product-section__eyebrow" data-sg-reveal="fade-up"><?php esc_html_e( 'Professional Credentials', 'solanique' ); ?></p>
-					<h2 id="sg-capital-credentials-title" class="sg-product-section__title" data-sg-reveal="fade-up"><?php esc_html_e( 'Credentials aligned with Capital guidance.', 'solanique' ); ?></h2>
+					<h2 id="sg-capital-credentials-title" class="sg-product-section__title" data-sg-reveal="fade-up"><?php echo esc_html( sg_is_spanish() ? 'Credenciales Profesionales' : 'Professional Credentials' ); ?></h2>
 				</div>
 
 				<div class="sg-capital-credentials__grid" aria-label="<?php esc_attr_e( 'Professional credential logos', 'solanique' ); ?>">

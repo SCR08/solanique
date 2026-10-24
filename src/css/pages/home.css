@@ -1143,11 +1143,11 @@
 }
 
 .sg-home-cta__final {
-	max-inline-size: var(--sg-container-sm);
+	max-inline-size: var(--sg-container-xl);
 	margin-block-start: var(--sg-space-xl);
 	margin-inline: auto;
 	color: color-mix(in srgb, var(--sg-color-white) 82%, transparent);
-	font-size: var(--sg-font-size-md);
+	font-size: var(--sg-font-size-sm);
 }
 
 .sg-home-cta .sg-button {
@@ -1358,12 +1358,12 @@ html[data-sg-theme="light"] .sg-home-cta .sg-button:focus-visible {
 	}
 
 	.sg-home-presence__content {
-		order: 2;
-		justify-self: end;
+		order: 1;
+		justify-self: start;
 	}
 
 	.sg-home-presence__atlas {
-		order: 1;
+		order: 2;
 	}
 
 	.sg-home-presence__audience {

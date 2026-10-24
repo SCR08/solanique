@@ -66,7 +66,8 @@ $pathways = (array) ( $content['pathways'] ?? array() );
 												$area_url = solanique_get_final_mailto( $area['email'] ?? '' );
 												if ( '' !== $area_url && ! empty( $area['action'] ) ) :
 													?>
-													<a class="sg-solanique-club-card__link" href="<?php echo esc_url( $area_url ); ?>"><?php echo esc_html( $area['action'] ); ?></a>
+													<span class="sg-solanique-club-card__action-label"><?php echo esc_html( $area['action'] ); ?></span>
+													<?php echo solanique_get_direct_email_link( $area['email'] ?? '' ); ?>
 												<?php endif; ?>
 											</li>
 										<?php endforeach; ?>
@@ -96,7 +97,8 @@ $pathways = (array) ( $content['pathways'] ?? array() );
 							$pathway_url = solanique_get_final_mailto( $pathway['email'] ?? '' );
 							if ( '' !== $pathway_url && ! empty( $pathway['action'] ) ) :
 								?>
-								<a class="sg-button sg-button--ghost" href="<?php echo esc_url( $pathway_url ); ?>"><?php echo esc_html( $pathway['action'] ); ?></a>
+								<p class="sg-solanique-club-card__action-label"><?php echo esc_html( $pathway['action'] ); ?></p>
+								<?php echo solanique_get_direct_email_link( $pathway['email'] ?? '' ); ?>
 							<?php endif; ?>
 						</div>
 					</article>
