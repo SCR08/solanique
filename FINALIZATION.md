@@ -1,5 +1,106 @@
 # Solanique Finalization Checklist
 
+## November 12: Theme Release Authorized
+
+- [x] User authorizes save, commit, clean export and upload of current theme.
+- [x] Preserve pending closing-message, phone and both student-palette changes.
+- [x] Verify clean ZIP/build/PHP: 541 files, 112 PHP files lint clean; release
+  archive fingerprint is in the November 12 release manifest.
+- [ ] Install through native WordPress uploader and independently verify assets.
+- [ ] Transfer the three approved review records and verify public copy/layout.
+- [ ] Record cache state and production checks; no GHL activation or Git push.
+
+## November 12: Homepage Reviews - Local Only
+
+- [x] Add a bilingual homepage review invitation before the closing contact area.
+- [x] Link the client's exact Google review-writing destination.
+- [x] Add native staff-managed Reviews entries with source/language/approval gates.
+- [x] Keep empty state honest: no testimonials, ratings or counts were invented.
+- [x] Verify the actual WordPress empty state in EN/ES at seven widths from
+  320-1920px; keyboard navigation, visible focus and no horizontal overflow.
+- [x] Read-only WP-CLI verifies native registration and editor permissions;
+  collection has no public route/REST endpoint.
+- [x] Add client-supplied Claudia/Ervin/Joselin testimonials exactly as supplied
+  to local entries 37/38/39, ordered and original-English on both page versions.
+- [x] Verify populated EN/ES layouts at seven widths from 320-1920px, all three
+  texts/names match, no overflow, no fake ratings or invented Google attribution.
+- [ ] Optional individual source URLs and any approved Spanish translations.
+- [ ] Optional automatic sync: authorize Google Business Profile in GHL Reputation,
+  obtain actual review-widget embed and review appearance/privacy/performance.
+  No automatic feed or external review script is enabled by this local change.
+- [ ] Deploy theme and separately add/migrate approved review database entries.
+
+## November 2: Approved Inquiry Email Activation
+
+- [x] Obtain fresh approval for four email-only tests and the four inquiry workflows.
+- [x] Save a 24-hour post-email cooldown in each existing department workflow.
+- [x] Preserve consent/Email-only triggers, DND/preference guards and disabled SMS.
+- [x] Verify matching department form alerts ON and form autoresponders OFF.
+- [x] Request exactly four tests and verify all four same-day GHL conversation
+  records; save three immediate Email sent confirmations. No fifth test sent.
+- [x] Publish the four inquiry workflows under the scoped user authorization.
+- [x] Record approved birthday-over-holiday and single permitted/preferred-channel
+  policies. These are not yet activated seasonal automations.
+- [ ] Confirm actual inbox/reply delivery and separately test form-triggered
+  suppression, duplicates and elapsed cooldown if required. No new form tests
+  were authorized in this pass.
+- [ ] Verify corporate sender authentication and any desired reply forwarding;
+  no DNS/global-routing changes made. Existing shared sending service is healthy.
+- [ ] Resolve seasonal eligible audience, final copy/public footer and scheduling
+  checks before separate activation. SMS is blocked by account configuration.
+- [ ] WhatsApp setup deferred explicitly to the user; no changes made.
+
+Earlier Draft-only and no-message statements below are historical. This pass
+does not authorize website deployment or activate seasonal/SMS/WhatsApp sending.
+Evidence: WordPress-root `output/solanique-automation-launch-2026-11-02/`.
+
+## November 2: Student Palette Clarification - Local Only
+
+- [x] Restore V1's full dark Solanique palette, superseding V1-light notes below.
+- [x] Center both V1 photo figures with the text containers, including ultrawide.
+- [x] Keep V2 light/student-focused; replace green with graphite, silver and gold.
+- [x] Preserve both routes, Spanish copy, images/map and updated company phone.
+- [x] Pass 20 responsive cases, loaded images, copy comparison, two keyboard map
+  checks and sampled contrast; console clean and npm run build passes.
+- [ ] Obtain client visual approval and separate release authorization.
+
+No production publication, GHL edit, commit, push or export. Review evidence:
+WordPress-root `output/solanique-palette-correction-2026-11-02/`.
+
+## October 30: Refinements and Seasonal Messaging - Not a Release
+
+- [x] Preserve the existing local bilingual closing-line correction.
+- [x] Apply scoped V1 light/silver/graphite branding and V2 wide-screen sizing.
+- [x] Centralize the approved public phone: +1 647 947 5580 / +16479475580.
+- [x] Update both program contact links; no active old number remains in theme PHP.
+- [x] Save GHL Business Profile phone and verify it after reload.
+- [x] Audit Phone System: configuration required; SMS sender remains unverified.
+- [x] Save 26 EN/ES email templates and 26 SMS text snippets as DRAFT REVIEW.
+- [x] Prepare 2026-2028 calendar, recurrence/source notes and SMS segment estimates.
+- [x] Recheck all four acknowledgment workflows: Draft and zero enrollments.
+- [x] Keep existing inquiry responders, opt-outs, timezone and sender setup unchanged.
+- [x] Build, three changed PHP lints, diff whitespace and scoped CSS detector pass.
+- [x] Complete recorded WordPress QA: 20 student-page sizes, 14 main-page cases,
+  loaded images, map keyboard checks, Spanish routing and database phone audit.
+- [x] Preview 26 saved emails on desktop/mobile (52 passing cases); no sends.
+- [x] Inspect four public forms and four acknowledgment email/SMS bodies for old
+  company numbers; no matches. Workflows rechecked November 2: Draft, zero enrolled.
+- [x] Record sender inquiry@solaniquegroup.com, 10 AM recipient-local, Easter
+  Sunday, March 1 leap-day fallback and exclusion of unknown language/permission.
+  Save approved sender on all 26 seasonal email templates; leave account timezone.
+- [ ] Confirm actual eligible recurring audience records, sender authentication/
+  replies, mailing address/footer, SMS connectivity and collision/channel policy.
+- [ ] Verify native scheduling/leap-day behavior with separately approved tests.
+- [ ] Approve respectful remembrance copy and optional family/religious occasions.
+- [ ] Obtain separate testing, activation and website release authorization.
+
+Evidence, saved CRM IDs, drafts and sources:
+WordPress-root `output/solanique-refinements-2026-10-30/`.
+No test messages, campaigns, enrollments, new workflow responders, commits,
+pushes, exports or deployment occurred. Historical production entries below
+remain historical. Local layout QA is recorded, not production deployment or
+final client sign-off. Fresh OS reduced-motion testing and Lighthouse were not run.
+
 ## October 24: Both Student Pages Authorized for Release
 
 **Completed and verified on production:** original page 60 at

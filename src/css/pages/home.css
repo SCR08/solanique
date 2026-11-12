@@ -1197,6 +1197,107 @@ html[data-sg-theme="light"] .sg-home-cta .sg-button:focus-visible {
 	color: var(--sg-color-heading);
 }
 
+.sg-home-reviews {
+	background: var(--sg-graphite-soft);
+	color: var(--sg-metal-platinum);
+	border-block-start: 1px solid color-mix(in srgb, var(--sg-metal-silver) 18%, transparent);
+}
+
+.sg-home-reviews__header {
+	display: grid;
+	gap: var(--sg-space-xl);
+	align-items: center;
+}
+
+.sg-home-reviews__title {
+	max-inline-size: 18ch;
+	color: var(--sg-metal-silver);
+	font-size: var(--sg-font-size-3xl);
+	font-weight: var(--sg-font-weight-regular);
+	line-height: var(--sg-line-height-heading);
+	text-wrap: balance;
+}
+
+.sg-home-reviews__invitation {
+	display: grid;
+	gap: var(--sg-space-lg);
+	justify-items: start;
+	max-inline-size: 38rem;
+	color: var(--sg-metal-platinum);
+}
+
+.sg-home-reviews__list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+	gap: var(--sg-space-2xl);
+	margin: var(--sg-space-3xl) 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sg-home-reviews__item {
+	min-inline-size: 0;
+	padding-block-start: var(--sg-space-xl);
+	border-block-start: 1px solid var(--sg-metal-champagne);
+}
+
+.sg-home-reviews .sg-home-reviews__quote {
+	margin: 0;
+}
+
+.sg-home-reviews blockquote {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: var(--sg-metal-platinum);
+	font-size: var(--sg-font-size-lg);
+	font-style: italic;
+	line-height: var(--sg-line-height-body);
+	overflow-wrap: anywhere;
+}
+
+.sg-home-reviews blockquote p:first-child::before {
+	content: "\201c";
+}
+
+.sg-home-reviews blockquote p:last-child::after {
+	content: "\201d";
+}
+
+.sg-home-reviews blockquote p + p {
+	margin-block-start: var(--sg-space-md);
+}
+
+.sg-home-reviews figcaption {
+	display: grid;
+	gap: var(--sg-space-xs);
+	margin-block-start: var(--sg-space-xl);
+	font-size: var(--sg-font-size-sm);
+}
+
+.sg-home-reviews__name {
+	color: var(--sg-metal-silver);
+	overflow-wrap: anywhere;
+}
+
+.sg-home-reviews figcaption a {
+	justify-self: start;
+	color: var(--sg-metal-champagne);
+	text-underline-offset: 0.25em;
+}
+
+.sg-home-reviews a:focus-visible {
+	outline: 2px solid var(--sg-metal-silver);
+	outline-offset: 4px;
+}
+
+@media (min-width: 48rem) {
+	.sg-home-reviews__header {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		gap: var(--sg-space-3xl);
+	}
+}
+
 @media (hover: hover) and (pointer: fine) {
 	.sg-home-panel:hover {
 		border-color: color-mix(in srgb, var(--sg-color-accent) 48%, transparent);

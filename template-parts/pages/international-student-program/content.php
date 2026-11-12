@@ -2,6 +2,7 @@
 /** Spanish program presentation, retaining source wording. @package Solanique */
 defined( 'ABSPATH' ) || exit;
 $program = sg_get_student_program_copy();
+$phone   = solanique_get_company_phone();
 $render_list = static function ( array $items ): void {
 	echo '<ul class="sg-student-list">';
 	foreach ( $items as $item ) {
@@ -79,7 +80,7 @@ $render_list = static function ( array $items ): void {
 			<address class="sg-student-contact">
 				<a class="sg-button sg-email-tab" href="mailto:concierge@solaniquegroup.com">Solicitar una presentación</a>
 				<a href="mailto:concierge@solaniquegroup.com">concierge@solaniquegroup.com</a>
-				<a href="tel:+16474666314">+1 (647) 466-6314</a>
+				<a href="<?php echo esc_url( $phone['url'] ); ?>"><?php echo esc_html( $phone['display'] ); ?></a>
 			</address>
 			<a class="sg-student-return" href="<?php echo esc_url( solanique_get_page_url( 'concierge', '/concierge/' ) ); ?>">Volver a Solanique Concierge</a>
 		</div>

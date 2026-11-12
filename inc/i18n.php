@@ -103,6 +103,11 @@ function sg_localize_url( string $url ): string {
  */
 function sg_spanish_content_map(): array {
 	return array(
+		'Your experience, in your words.' => 'Tu experiencia, en tus palabras.',
+		'Share your experience with Solanique Group on Google.' => 'Comparte tu experiencia con Solanique Group en Google.',
+		'Write a Google review' => 'Escribir una reseña en Google',
+		'Read on Google' => 'Leer en Google',
+		'(opens in a new tab)' => '(se abre en una pestaña nueva)',
 		'Increase visual illumination' => 'Aumentar la iluminación visual',
 		'Reduce visual illumination' => 'Reducir la iluminación visual',
 		'Legal navigation' => 'Navegación legal',

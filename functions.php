@@ -15,6 +15,7 @@ $solanique_includes = array(
 	'inc/i18n.php',
 	'inc/content.php',
 	'inc/partners.php',
+	'inc/reviews.php',
 	'inc/videos.php',
 	'inc/crm.php',
 	'inc/setup.php',

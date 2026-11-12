@@ -2,6 +2,7 @@
 /** Student-focused alternative: same Spanish source copy, lighter editorial composition. @package Solanique */
 defined( 'ABSPATH' ) || exit;
 $program = sg_get_student_program_copy();
+$phone   = solanique_get_company_phone();
 $list = static function ( array $items ): void {
 	echo '<ul class="sg-student-v2__list">';
 	foreach ( $items as $item ) {
@@ -91,7 +92,7 @@ $list = static function ( array $items ): void {
 			<p><?php echo esc_html( $program['closing']['text'] ); ?></p>
 			<p class="sg-student-v2__statement"><?php echo esc_html( $program['closing']['phrase'] ); ?></p>
 			<p><?php echo esc_html( $program['closing']['invitation'] ); ?></p>
-			<address class="sg-student-v2__contact"><a class="sg-button sg-email-tab" href="mailto:concierge@solaniquegroup.com">Solicitar una presentación</a><a href="mailto:concierge@solaniquegroup.com">concierge@solaniquegroup.com</a><a href="tel:+16474666314">+1 (647) 466-6314</a></address>
+			<address class="sg-student-v2__contact"><a class="sg-button sg-email-tab" href="mailto:concierge@solaniquegroup.com">Solicitar una presentación</a><a href="mailto:concierge@solaniquegroup.com">concierge@solaniquegroup.com</a><a href="<?php echo esc_url( $phone['url'] ); ?>"><?php echo esc_html( $phone['display'] ); ?></a></address>
 			<a class="sg-student-v2__return" href="<?php echo esc_url( solanique_get_page_url( 'concierge', '/concierge/' ) ); ?>">Volver a Solanique Concierge</a>
 		</div>
 	</section>

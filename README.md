@@ -1,5 +1,231 @@
 # Solanique
 
+## November 12, 2026 - Release Authorization
+
+The user authorized saving, committing, exporting and uploading the current theme
+after approving the three italicized testimonials. This supersedes the local-only
+release hold for the pending theme changes below, not any messaging/SMS/WhatsApp
+activation. Scope: corrected bilingual closing phrase; company phone; dark V1,
+light graphite/silver/gold V2 and width/centering fixes; homepage Reviews section.
+Review database entries require a separate content transfer after theme upload.
+Release artifacts and verified installation status are recorded in WordPress-root
+`output/solanique-release-2026-11-12-reviews/`. Authorization alone is not proof
+of installation or public availability. No remote Git push was requested.
+
+## November 12, 2026 - Homepage Reviews (Local Only)
+
+- Added `template-parts/home/reviews.php` immediately before the homepage's
+  closing contact section. Dark graphite, silver type and a restrained gold
+  review button reuse the current theme. English/Spanish labels follow the
+  existing language system; approved page copy and footer wording are unchanged.
+- The button uses the client's exact Google review-writing URL:
+  `https://g.page/r/CeAaHKKd0OStECE/review`. It opens a new tab with an accessible
+  announcement. Google may require the visitor to sign in before writing.
+- The client supplied three approved testimonials later in this same pass:
+  Claudia Mosquera, Ervin Mena and Joselin Ramirez. Their exact English wording
+  and requested order are saved as local Reviews entries 37/38/39. They display
+  on both language versions, with `lang="en"` on the original quotes. No Spanish
+  translation, star rating, average or review count was invented. The empty
+  state still renders only the invitation/button if no approved entries exist.
+- Testimonials use italic text and typographic opening/closing quotation marks;
+  reviewer names remain upright. This is presentation-only: stored copy is unchanged.
+- `inc/reviews.php` adds a native **Reviews** admin collection for users with
+  page-editing permissions. To add an approved excerpt: use the reviewer name as
+  the title, exact approved text as the body, optional original HTTPS Google
+  review URL, display language, original review language and explicit website
+  approval checkbox; publish. No individual source URLs were supplied for these
+  three, so their source links are intentionally omitted rather than fabricated.
+  Use the native Order field for editorial order. Up to three eligible excerpts
+  display, sorted by Order then newest date. Unapproved, draft, incomplete
+  or wrong-language entries do not display. "Both languages" preserves the
+  original review wording; no automatic translation is performed.
+- This is a custom theme section, not a free-layout Gutenberg block or a public
+  submission form. Review entries live in the WordPress database, not the theme
+  ZIP. They must be added to production or migrated separately after release.
+- There is **no automatic Google synchronization yet**. The write-review URL
+  is not a review feed. Recommended next step: authorize the client's Google
+  Business Profile connection in existing GHL Reputation, then supply the actual
+  GHL review widget embed code. That widget can sync Google reviews and embed on
+  WordPress; style it in GHL and replace the excerpt area rather than rendering
+  duplicate feeds. Connection permissions, widget availability, display rules,
+  privacy/performance implications and any costs must be reviewed before use.
+  No Google API keys, scraping, plugin, third-party widget script, external
+  review requests, or GHL configuration changes were added in this sprint.
+  Official guide: https://help.gohighlevel.com/support/solutions/articles/155000000997-customising-review-widgets-in-reputation-management
+- Source added locally only; no commit, push, export or production deployment.
+- Checks: build passed (`main-Bud2oPHh.css`, 41.50 KB gzip; existing JS unchanged),
+  changed PHP files lint clean, `git diff --check` clean, and 35 offline
+  mocked rendering/guard assertions passed. After the user started Local,
+  actual WordPress EN/ES homepage checks passed at 320, 375, 390, 430, 768, 1440
+  and 1920px: no horizontal overflow, heading/button fit, 48px button target,
+  visible 2px focus outline, keyboard Tab/Shift+Tab navigation and one h1.
+  No console errors/warnings or visible PHP warnings were observed. Read-only
+  WP-CLI confirmed registered admin UI, page-editor capabilities, no public/REST
+  collection. The later approved local import created exactly three testimonials;
+  all three database values matched supplied copy. A fresh 14-case EN/ES browser
+  pass at the same widths verified all three original quotes and names, original
+  English language attributes, no invented source links and no text/page overflow.
+  Client admin editing walkthrough remains optional; no test/fake reviews were
+  inserted. The guarded local importer and exact supplied JSON are in the
+  evidence folder for a separately authorized production migration.
+  Evidence is in WordPress-root `output/solanique-reviews-2026-11-12/`, outside
+  the theme export. Browser viewport restored after testing.
+- A pre-existing Spanish-preview document-language issue was observed (root
+  remains `en-US`). The new review section declares its own accurate `en`/`es`
+  language for assistive technology. Global language correction is separate;
+  no unrelated site-wide behavior was changed during this verification pass.
+- The client URL was opened in a browser and resolved to **Solanique Group**.
+  Its Google Maps profile still showed `+1 647-466-6314`; an authorized profile
+  owner should update this to the approved company number separately. No Google
+  profile changes or review submissions were made.
+
+## November 2, 2026 - Approved Inquiry Email Activation
+
+The user authorized four email-only tests and publication of the four existing
+inquiry acknowledgment workflows after checks. This supersedes the prior Draft
+hold for those four workflows only, not seasonal campaigns, SMS or WhatsApp.
+
+- Capital, Estates, Concierge and Inquiry now have a saved **24-hour Wait after
+  their acknowledgment email**. It does not delay the first email. Re-entry stays
+  ON; GHL skips a repeat enrollment while that contact is still active in the
+  same department workflow. Stop on response stays OFF so replying does not end
+  the cooldown early. Skipped repeats are not queued. Administrative removal
+  from a workflow can bypass the remaining cooldown and must not be routine.
+- Matching form + submitted inquiry consent + Email preference are still required.
+  Pre-email guards retain Email DND exclusion, current Email preference and
+  nonempty email. Phone/WhatsApp/blank preference remains manual follow-up.
+- All four form notification panels were checked: the matching department alert
+  is ON, and form-level autoresponder is OFF. No duplicate alerts or responders.
+- Exactly four email action tests were requested, one per department, to the
+  approved test inbox. Three immediate GHL "Email sent" confirmations were saved;
+  Capital's same-day test record was verified in the approved contact conversation.
+  All four same-day test records appear there. This is not a new form-triggered,
+  24-hour elapsed, unsubscribe or actual inbox/reply-delivery test.
+- The existing LC shared sender `send.lcmsgsndr.com` reports healthy sending.
+  Dedicated Solanique SPF/DKIM/DMARC alignment remains unverified; no DNS changes.
+  No Reply Address/forwarding/BCC override was added. Existing reply tracking and
+  unassigned lead ownership remain unchanged; inbox alerts are not an assignment.
+- Approved seasonal policies now include birthday priority on collisions and one
+  explicitly preferred/permitted channel, otherwise hold. Existing 26 email and
+  26 SMS drafts remain inactive. Their actual eligible audience, copy/occasion
+  sign-off, public address/footer and scheduling tests are still required.
+- Phone System still reports configuration required. SMS remains disabled;
+  WhatsApp was explicitly deferred to the user. No phone provisioning or sending.
+
+Activation evidence and exact final workflow state:
+WordPress-root `output/solanique-automation-launch-2026-11-02/`.
+No website source/layout, form fields, deployment, commit, push or export is
+included in this automation pass. No historical contacts were bulk-enrolled.
+
+## November 2, 2026 - Student Palette Clarification (Local Only)
+
+The client's clarification supersedes the October 30 V1-light direction below:
+**V1 is the fully dark Solanique option; V2 is the light student option using
+graphite/black, silver and restrained gold, not green.** Both keep their current
+routes, Spanish copy, student photos, map, new company phone and contact behavior.
+
+- Restored V1 graphite surfaces, silver/platinum text, champagne accents and
+  existing abstract academic background. Shared map defaults are now neutral
+  graphite/silver with gold markers, not green.
+- Fixed V1's two photo figures with scoped `margin-inline: auto`. At 1920px the
+  figure previously started at x=0 while its matching text container started at
+  x=264.5px: WordPress's unlayered figure reset overrode layered container margins.
+  Both now use the same centered content alignment. Image order/crops unchanged.
+- V2 retains white/light-silver reading surfaces and student imagery. Removed
+  green from hero overlays, headings, links, dividers, map, dark service band,
+  closing band and CTA states. Wide-screen sizing fixes remain intact.
+- QA: 20 fresh layout cases across both pages at 320, 375, 390, 430, 768, 1024,
+  1440, 1920, 2560 and 3440px passed; images loaded, no page overflow, one h1,
+  correct phone and unchanged visible main content. Both mobile maps support
+  keyboard selection with visible focus. Sampled text contrast passed (minimum
+  5.97:1 on tested light surfaces); not a full accessibility audit. Console clean.
+- Build passes; no PHP/JS, GHL, production, commit, push or export changes for
+  this palette correction. Evidence: WordPress-root
+  `output/solanique-palette-correction-2026-11-02/`.
+
+## October 30, 2026 - Local Landing Refinements and Saved Seasonal Drafts
+
+This entry supersedes historical V1-dark and old-company-phone instructions
+below. It does **not** authorize or record deployment. The October 24 release
+remains the last recorded production theme release. No commit/push/export was
+performed for this correction sprint.
+
+- V1 (`/international-student-program/`) now has scoped light silver/white reading
+  surfaces, graphite text/headings, existing Solanique typography and restrained
+  gold details. Its photographic hero and closing band retain dark contrast.
+  Main-site dark styling is unchanged. V1 and V2 remain distinct Spanish pages.
+- V2 keeps its student-friendly palette. Before-change public checks at 1920
+  and 3440px found no page horizontal overflow, but a fixed 688px hero and 750px
+  portrait panels, plus an oversized region map, produced weak wide-screen
+  proportions. The local correction uses a viewport-aware bounded hero,
+  90rem editorial containers, capped portrait/map sizes and shrinkable grid
+  children. No viewport-scaled font sizing or global container change was added.
+- Student CSS is unlayered but component-scoped, like the prior V2 approach,
+  because WordPress's unlayered global styles otherwise override layered colors.
+- `solanique_get_company_phone()` in `inc/helpers.php` is the website source of
+  truth: display `+1 647 947 5580`, machine `+16479475580`. Both program contact
+  links use it. No active old-number match remained in theme PHP/template source.
+  Historical notes/PDFs/received messages were not rewritten. The read-only local
+  WordPress audit found no active old-number matches in the inspected posts,
+  options or post metadata. Production database content was not changed.
+- GHL Business Profile previously showed `+1 647-466-9314`; the new number was
+  saved and confirmed after reload. This is distinct from the old `466-6314`
+  number in the program templates. Phone System reports configuration required:
+  the new number is **not verified as an SMS sender**. No number was bought,
+  ported, disconnected or activated for WhatsApp. GHL timezone remains Bogotá.
+- GHL email-template and snippet libraries were empty before this work. There
+  are now **26 branded email templates and 26 text snippets**, EN/ES for 13
+  occasions, all labeled `DRAFT REVIEW`. They are reusable drafts, not scheduled
+  campaigns or new workflow responders. The client approved the sender
+  Solanique Group / inquiry@solaniquegroup.com; it was saved on all 26 email
+  templates. Authentication/reply delivery remains unverified. No test,
+  enrollment or message send was performed.
+- All four existing acknowledgment workflows were rechecked November 2 as Draft
+  with zero total/active enrollments. Their email and disabled SMS message bodies
+  were reviewed across October 30 and November 2; none contains the old company
+  number. The four public forms also had no old company-number reference.
+  Existing responder rules and form fields were not changed. This is a scoped
+  audit, not a claim about every historical CRM message or account setting.
+- Default LC Email unsubscribe insertion was confirmed ON; no duplicate manual
+  tag was added. Public mailing address and delivered Spanish opt-out/footer
+  behavior need approval/testing before campaigns may launch.
+- Native Scheduler is contactless and cannot directly send to contacts. Birthday
+  Reminder is contact-based. No misleading Scheduler-to-contact-send workflow
+  was created. Proposed launch path, suppression, audience/language rules,
+  collision policy, leap-day decision and sources are in the handoff below.
+- The latest bilingual closing-line correction already present in
+  `inc/content.php` was preserved, not reverted or reworded.
+
+Review materials are outside the theme, at WordPress-root
+`output/solanique-refinements-2026-10-30/`: before screenshots from production,
+GHL save evidence, `messaging/calendar.csv`, `inventory.json`, `MESSAGES.md`,
+`AUTOMATION-READINESS.md`, and exact saved-template/snippet manifests. Offline
+component HTML was generated during the initial outage, but was not used as
+runtime proof; actual WordPress checks subsequently passed. Do not package these
+review artifacts as production theme assets or equate local files with deployment.
+
+**Recorded QA:** build, three changed PHP lints, calendar/SMS checks and diff
+whitespace passed; the scoped CSS detector returned no issues. After Local
+recovered, both pages passed all ten requested widths (20 cases, 320-3440px),
+including loaded-image/overflow checks. Seven main pages passed 14 mobile/desktop
+regression cases; 52 saved-email desktop/mobile previews passed. Both maps passed
+keyboard checks and incoming English queries still rendered Spanish. Sampled
+solid-surface text contrast was at least 5.95:1; this is not a full accessibility
+audit or image-background contrast guarantee. Console checks were clean. The
+read-only database audit passed all 12 exact closing-line checks. Reduced-motion
+source fallbacks were preserved; a fresh OS-level reduced-motion test and new
+Lighthouse measurement were not performed. Technical QA is not client sign-off.
+
+**Approved policies:** Inquiry seasonal sender; 10 AM known recipient-local time
+(Toronto only where explicitly approved; GHL remains Bogota); Easter Sunday;
+March 1 for February 29 birthdays in non-leap years; exclude unknown language
+and missing documented recurring-message permission. Unknown timezone stays held.
+**Remaining:** actual eligible audience records, copy/occasion approval, public
+mailing address/footer, sender authentication/replies, SMS connectivity,
+birthday/holiday collision and one-channel-versus-both policy, scoped testing and
+separate activation/release approval. No inquiry consent was promoted to marketing
+permission. Latest follow-through: November 2, 2026; nothing deployed or sent.
+
 Premium WordPress theme for Solanique Group.
 
 ## October 24 Release Authorization

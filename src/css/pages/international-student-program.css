@@ -1,7 +1,38 @@
 /** Spanish program landing; extends the existing Solanique editorial system. */
 .sg-student-program {
-	color: var(--sg-color-text);
-	background: var(--sg-graphite);
+	--student-v1-ink: var(--sg-metal-silver);
+	--student-v1-body: var(--sg-metal-platinum);
+	--student-v1-muted: var(--sg-metal-titanium);
+	--student-v1-canvas: var(--sg-graphite);
+	--student-v1-surface: var(--sg-charcoal);
+	--student-v1-line: #42464e;
+	--student-v1-accent: var(--sg-metal-champagne);
+	color: var(--student-v1-body);
+	background: var(--student-v1-canvas);
+	color-scheme: dark;
+}
+
+.sg-student-program :where(h1, h2, h3, h4) {
+	color: var(--student-v1-ink);
+}
+
+.sg-student-program a { color: var(--student-v1-ink); }
+.sg-student-program :focus-visible { outline: 2px solid var(--student-v1-accent); outline-offset: 5px; }
+.sg-student-program ::selection { background: var(--sg-metal-silver); color: var(--sg-graphite); }
+.sg-student-program .sg-student-statement { color: var(--student-v1-ink); }
+.sg-student-program .sg-student-subtitle { color: var(--student-v1-accent); }
+.sg-student-program .sg-student-service { border-color: var(--student-v1-line); }
+.sg-student-program .sg-student-list li { border-color: var(--student-v1-line); }
+.sg-student-program .sg-student-life-photo figcaption { color: var(--student-v1-muted); }
+
+.sg-student-program .sg-student-region {
+	--region-ink: var(--sg-metal-silver);
+	--region-muted: #b8bcc4;
+	--region-water: #101217;
+	--region-land: #343840;
+	--region-line: #8b909a;
+	--region-point: var(--sg-metal-champagne);
+	--region-surface: var(--student-v1-surface);
 }
 
 .sg-student-hero {
@@ -73,13 +104,13 @@
 .sg-student-band h2 {
 	font-size: 2.5rem;
 	line-height: 1.18;
-	color: var(--sg-metal-silver);
+	color: var(--student-v1-ink);
 }
 
 .sg-student-band h3 {
 	font-size: 1.125rem;
 	line-height: 1.5;
-	color: var(--sg-metal-platinum);
+	color: var(--student-v1-ink);
 }
 
 .sg-student-band p,
@@ -98,11 +129,11 @@
 .sg-student-band--destination,
 .sg-student-band--housing {
 	background: linear-gradient(120deg, var(--sg-charcoal), var(--sg-surface-dark));
-	border-block: 1px solid color-mix(in srgb, var(--sg-metal-silver) 12%, transparent);
+	border-block: 1px solid var(--student-v1-line);
 }
 
 .sg-student-band--academic {
-	background: url("../../assets/images/backgrounds/generated/global-network-lines.svg") 100% 50% / 80rem auto no-repeat, var(--sg-graphite);
+	background: url("../../assets/images/backgrounds/generated/global-network-lines.svg") 100% 50% / 80rem auto no-repeat, var(--student-v1-canvas);
 }
 
 .sg-student-subtitle {
@@ -152,6 +183,25 @@
 	background: linear-gradient(130deg, var(--sg-charcoal), var(--sg-ink));
 }
 
+.sg-student-program .sg-student-band--closing {
+	color: var(--sg-metal-silver);
+}
+
+.sg-student-program .sg-student-band--closing :where(h2, p, a) {
+	color: var(--sg-metal-silver);
+}
+
+.sg-student-program .sg-student-band--closing .sg-button {
+	background: var(--sg-metal-silver);
+	color: var(--sg-graphite);
+	border-color: var(--sg-metal-silver);
+}
+
+.sg-student-program .sg-student-band--closing .sg-button:hover {
+	background: var(--sg-metal-white);
+	color: var(--sg-graphite);
+}
+
 .sg-student-closing {
 	max-inline-size: 58rem;
 }
@@ -174,6 +224,11 @@
 	margin-block: 3rem;
 }
 
+/* WordPress's unlayered figure reset otherwise overrides container centering. */
+.sg-student-program .sg-student-life-photo {
+	margin-inline: auto;
+}
+
 .sg-student-life-photo img {
 	inline-size: 100%;
 	max-block-size: 35rem;
@@ -190,13 +245,13 @@
 
 /* The same region explorer inherits the dark original or the light alternative. */
 .sg-student-region {
-	--region-ink: #e3e8e6;
-	--region-muted: #bacac5;
-	--region-water: #182e32;
-	--region-land: #36504b;
-	--region-line: #819e92;
-	--region-point: #f5e9c3;
-	--region-surface: #142326;
+	--region-ink: var(--sg-metal-silver);
+	--region-muted: #b8bcc4;
+	--region-water: #101217;
+	--region-land: #343840;
+	--region-line: #8b909a;
+	--region-point: var(--sg-metal-champagne);
+	--region-surface: var(--sg-charcoal);
 	padding-block: 5rem;
 	color: var(--region-ink);
 	background: var(--region-surface);

@@ -115,7 +115,7 @@ function solanique_get_final_copy(): array {
 					'label'   => 'ACCESO SOLANIQUE',
 					'email'   => 'inquiry@solaniquegroup.com',
 				),
-				'final_line'  => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
+				'final_line'  => 'Tu visión construida. Tu patrimonio resguardado. Tu estilo de vida perfeccionado—Convierte tu visión en un legado que perdure por generaciones.',
 			),
 			'en' => array(
 				'brand'       => 'SOLANIQUE GROUP',
@@ -207,7 +207,7 @@ function solanique_get_final_copy(): array {
 					'label'   => 'SOLANIQUE ACCESS',
 					'email'   => 'inquiry@solaniquegroup.com',
 				),
-				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
+				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered—turn your vision into a legacy that lasts for generations.',
 			),
 		),
 		'capital'        => array(
@@ -290,7 +290,7 @@ function solanique_get_final_copy(): array {
 					'label'   => 'ACCESO CAPITAL',
 					'email'   => 'capital@solaniquegroup.com',
 				),
-				'final_line'  => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
+				'final_line'  => 'Tu visión construida. Tu patrimonio resguardado. Tu estilo de vida perfeccionado—Convierte tu visión en un legado que perdure por generaciones.',
 			),
 			'en' => array(
 				'brand'       => 'SOLANIQUE GROUP',
@@ -371,7 +371,7 @@ function solanique_get_final_copy(): array {
 					'label'   => 'CAPITAL ACCESS',
 					'email'   => 'capital@solaniquegroup.com',
 				),
-				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
+				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered—turn your vision into a legacy that lasts for generations.',
 			),
 		),
 		'estate'         => array(
@@ -455,7 +455,7 @@ function solanique_get_final_copy(): array {
 					'label'   => 'ACCESO ESTATE',
 					'email'   => 'estate@solaniquegroup.com',
 				),
-				'final_line'  => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
+				'final_line'  => 'Tu visión construida. Tu patrimonio resguardado. Tu estilo de vida perfeccionado—Convierte tu visión en un legado que perdure por generaciones.',
 			),
 			'en' => array(
 				'brand'       => 'SOLANIQUE GROUP',
@@ -537,7 +537,7 @@ function solanique_get_final_copy(): array {
 					'label'   => 'ESTATE ACCESS',
 					'email'   => 'estate@solaniquegroup.com',
 				),
-				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
+				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered—turn your vision into a legacy that lasts for generations.',
 			),
 		),
 		'concierge'      => array(
@@ -624,7 +624,7 @@ function solanique_get_final_copy(): array {
 					'label'   => 'ACCESO CONCIERGE',
 					'email'   => 'concierge@solaniquegroup.com',
 				),
-				'final_line'  => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
+				'final_line'  => 'Tu visión construida. Tu patrimonio resguardado. Tu estilo de vida perfeccionado—Convierte tu visión en un legado que perdure por generaciones.',
 			),
 			'en' => array(
 				'brand'       => 'SOLANIQUE GROUP',
@@ -709,7 +709,7 @@ function solanique_get_final_copy(): array {
 					'label'   => 'CONCIERGE ACCESS',
 					'email'   => 'concierge@solaniquegroup.com',
 				),
-				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
+				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered—turn your vision into a legacy that lasts for generations.',
 			),
 		),
 		'the_mandate'    => array(
@@ -780,7 +780,7 @@ function solanique_get_final_copy(): array {
 						),
 					),
 				),
-				'final_line'  => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
+				'final_line'  => 'Tu visión construida. Tu patrimonio resguardado. Tu estilo de vida perfeccionado—Convierte tu visión en un legado que perdure por generaciones.',
 			),
 			'en' => array(
 				'brand'       => 'SOLANIQUE GROUP',
@@ -849,7 +849,7 @@ function solanique_get_final_copy(): array {
 						),
 					),
 				),
-				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
+				'final_line'  => 'Your vision built. Your assets guarded. Your lifestyle mastered—turn your vision into a legacy that lasts for generations.',
 			),
 		),
 		'solanique_club' => array(
@@ -905,7 +905,7 @@ function solanique_get_final_copy(): array {
 						'compliance'       => 'Todos los socios participantes se someten a una rigurosa evaluación bajo nuestro Estándar de Integridad, verificando una experiencia y referencias de élite, licencias completas, seguros y estándares de cumplimiento institucional. El incumplimiento resulta en la expulsión inmediata de nuestro ecosistema.',
 					),
 				),
-				'final_line' => 'Tu visión construida. Tus activos custodiados. Tu estilo de vida dominado: Transformamos tu visión en un legado que perdure por generaciones.',
+				'final_line' => 'Tu visión construida. Tu patrimonio resguardado. Tu estilo de vida perfeccionado—Convierte tu visión en un legado que perdure por generaciones.',
 			),
 			'en' => array(
 				'brand'      => 'SOLANIQUE GROUP',
@@ -959,7 +959,7 @@ function solanique_get_final_copy(): array {
 						'compliance'       => 'All participating partners undergo rigorous vetting under our Standard of Integrity, verifying elite craftsmanship, full licensing, insurance, and institutional compliance standards. Non-compliance results in immediate removal from our ecosystem.',
 					),
 				),
-				'final_line' => 'Your vision built. Your assets guarded. Your lifestyle mastered: We transform your vision into a legacy that lasts for generations.',
+				'final_line' => 'Your vision built. Your assets guarded. Your lifestyle mastered—turn your vision into a legacy that lasts for generations.',
 			),
 		),
 	);

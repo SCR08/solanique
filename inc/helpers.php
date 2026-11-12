@@ -1128,10 +1128,19 @@ function solanique_get_footer_legal_links(): array {
 }
 
 /**
- * Returns configured pillar email addresses with empty defaults.
+ * Approved public company phone; not proof of CRM sending capability.
  *
- * @return array{capital_email:string,estates_email:string,concierge_email:string}
+ * @return array{display:string,e164:string,url:string}
  */
+function solanique_get_company_phone(): array {
+	return array(
+		'display' => '+1 647 947 5580',
+		'e164'    => '+16479475580',
+		'url'     => 'tel:+16479475580',
+	);
+}
+
+/** Returns configured department email destinations. */
 function solanique_get_pillar_email_config(): array {
 	// Add official pillar email addresses before production if the client approves email reveal tabs.
 	$config = (array) apply_filters(

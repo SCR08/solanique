@@ -16,5 +16,6 @@ solanique_render_content_scene( array(
 	'image' => 'images/estates/modern-office-towers-commercial-real-estate.jpg',
 	'speed' => '0.18', 'parts' => array( 'template-parts/home/presence' ),
 ) );
+get_template_part( 'template-parts/home/reviews' );
 get_template_part( 'template-parts/home/cta' );
 get_footer();
