@@ -1,16 +1,19 @@
 # Solanique Finalization Checklist
 
-## November 12: Theme Release Authorized
+## November 12: Theme Release Verified
 
 - [x] User authorizes save, commit, clean export and upload of current theme.
 - [x] Preserve pending closing-message, phone and both student-palette changes.
 - [x] Verify clean ZIP/build/PHP: 541 files, 112 PHP files lint clean; release
   archive fingerprint is in the November 12 release manifest.
-- [ ] Install through native WordPress uploader and independently verify assets.
-- [ ] Transfer the three approved review records and verify public copy/layout.
-- [ ] Record cache state and production checks; no GHL activation or Git push.
+- [x] Commit runtime as `3ff2b78`; native WordPress confirms theme update success.
+- [x] Anonymous public CSS/JS hashes match the release; 18 HTTP page checks pass.
+- [x] Transfer approved reviews to production 67/69/72; public names/texts match,
+  italics/quotation marks present in both language versions.
+- [x] LiteSpeed purge confirmed; main/student responsive checks pass as detailed
+  in README and the release artifact directory. No GHL activation or Git push.
 
-## November 12: Homepage Reviews - Local Only
+## November 12: Homepage Reviews - Published
 
 - [x] Add a bilingual homepage review invitation before the closing contact area.
 - [x] Link the client's exact Google review-writing destination.
@@ -28,7 +31,7 @@
 - [ ] Optional automatic sync: authorize Google Business Profile in GHL Reputation,
   obtain actual review-widget embed and review appearance/privacy/performance.
   No automatic feed or external review script is enabled by this local change.
-- [ ] Deploy theme and separately add/migrate approved review database entries.
+- [x] Deploy theme and separately add the three approved review database entries.
 
 ## November 2: Approved Inquiry Email Activation
 

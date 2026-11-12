@@ -1,18 +1,37 @@
 # Solanique
 
-## November 12, 2026 - Release Authorization
+## November 12, 2026 - Production Release Verified
 
 The user authorized saving, committing, exporting and uploading the current theme
 after approving the three italicized testimonials. This supersedes the local-only
 release hold for the pending theme changes below, not any messaging/SMS/WhatsApp
 activation. Scope: corrected bilingual closing phrase; company phone; dark V1,
 light graphite/silver/gold V2 and width/centering fixes; homepage Reviews section.
-Review database entries require a separate content transfer after theme upload.
-Release artifacts and verified installation status are recorded in WordPress-root
-`output/solanique-release-2026-11-12-reviews/`. Authorization alone is not proof
-of installation or public availability. No remote Git push was requested.
+The active theme was replaced through WordPress's native ZIP uploader, which
+confirmed "Theme updated successfully." The three review records were separately
+created through native production admin: Claudia 67, Ervin 69, Joselin 72, exact
+English wording, both display languages, original English and Order 0/1/2.
+LiteSpeed confirmed "Purged all caches successfully."
 
-## November 12, 2026 - Homepage Reviews (Local Only)
+- Runtime commit: `3ff2b78`; clean 541-file ZIP, 112 PHP files linted, build passes.
+- Anonymous HTTP checks: 18 EN/ES page responses passed; public CSS
+  `main-Bud2oPHh.css` and JS `app-CfR_540f.js` SHA-256 match the uploaded files.
+- Homepage EN/ES at actual 390/1440px: all three names/texts exactly match supplied
+  copy, italic styling and both quotation marks present, no page overflow.
+- Capital/Estate/Concierge/Mandate/Club/Inquiry at 390/1440px: one h1, no page
+  overflow, no video UI/links; the service explorers retain all 6/6/7 panels/images.
+- Both student versions at 320/390/1440/3440px: no page overflow, Spanish document,
+  new company phone, V1 dark with centered photo, V2 light within the global dark
+  site. Orillia map selection worked on both. No messaging or form tests sent.
+- No fresh Lighthouse, exhaustive screen-reader/reduced-motion, full backup
+  restore or Google review synchronization test is claimed.
+
+Release artifacts and installation/public evidence are in WordPress-root
+`output/solanique-release-2026-11-12-reviews/`. Prior local-only statements below
+are historical for these deployed theme changes. Messaging holds remain intact.
+No remote Git push was requested or performed.
+
+## November 12, 2026 - Homepage Reviews
 
 - Added `template-parts/home/reviews.php` immediately before the homepage's
   closing contact section. Dark graphite, silver type and a restrained gold
@@ -52,7 +71,8 @@ of installation or public availability. No remote Git push was requested.
   No Google API keys, scraping, plugin, third-party widget script, external
   review requests, or GHL configuration changes were added in this sprint.
   Official guide: https://help.gohighlevel.com/support/solutions/articles/155000000997-customising-review-widgets-in-reputation-management
-- Source added locally only; no commit, push, export or production deployment.
+- Initial implementation was local-only; the later verified release above
+  committed/exported/installed it and separately transferred the review records.
 - Checks: build passed (`main-Bud2oPHh.css`, 41.50 KB gzip; existing JS unchanged),
   changed PHP files lint clean, `git diff --check` clean, and 35 offline
   mocked rendering/guard assertions passed. After the user started Local,
