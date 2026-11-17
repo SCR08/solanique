@@ -1134,9 +1134,9 @@ function solanique_get_footer_legal_links(): array {
  */
 function solanique_get_company_phone(): array {
 	return array(
-		'display' => '+1 647 947 5580',
-		'e164'    => '+16479475580',
-		'url'     => 'tel:+16479475580',
+		'display' => '+1 647 466 6314',
+		'e164'    => '+16474666314',
+		'url'     => 'tel:+16474666314',
 	);
 }
 

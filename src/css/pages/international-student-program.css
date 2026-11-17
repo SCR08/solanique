@@ -243,6 +243,26 @@
 	color: var(--sg-metal-silver);
 }
 
+.sg-student-program .sg-student-destination-photo {
+	margin: 2rem 0 0;
+}
+
+.sg-student-destination-photo img {
+	display: block;
+	inline-size: 100%;
+	block-size: auto;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+	object-position: center;
+}
+
+.sg-student-destination-photo figcaption {
+	margin-block-start: 1rem;
+	font-size: 0.8125rem;
+	line-height: 1.6;
+	color: var(--student-v1-muted);
+}
+
 /* The same region explorer inherits the dark original or the light alternative. */
 .sg-student-region {
 	--region-ink: var(--sg-metal-silver);

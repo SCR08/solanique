@@ -24,10 +24,13 @@ export function initIntakeModal() {
 		document.body.style.overflow = previousOverflow;
 		opener?.focus();
 	});
-	document.querySelectorAll('main .sg-button[href^="mailto:"]').forEach((link) => {
-		if (link.classList.contains('sg-email-tab')) return;
-		const email = link.getAttribute('href').slice(7).split('?')[0].toLowerCase();
-		if (email !== emails[frame.title]) return;
+	document.querySelectorAll('main .sg-button[href^="mailto:"], main [data-sg-intake-open]').forEach((link) => {
+		const explicitTrigger = link.hasAttribute('data-sg-intake-open');
+		if (!explicitTrigger) {
+			if (link.classList.contains('sg-email-tab')) return;
+			const email = link.getAttribute('href').slice(7).split('?')[0].toLowerCase();
+			if (email !== emails[frame.title]) return;
+		}
 		link.setAttribute('aria-haspopup', 'dialog');
 		link.setAttribute('aria-controls', dialog.id);
 		link.addEventListener('click', (event) => {

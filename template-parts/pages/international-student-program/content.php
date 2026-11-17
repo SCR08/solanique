@@ -3,6 +3,7 @@
 defined( 'ABSPATH' ) || exit;
 $program = sg_get_student_program_copy();
 $phone   = solanique_get_company_phone();
+$student_form = sg_get_student_presentation_form();
 $render_list = static function ( array $items ): void {
 	echo '<ul class="sg-student-list">';
 	foreach ( $items as $item ) {
@@ -35,7 +36,14 @@ $render_list = static function ( array $items ): void {
 	<?php foreach ( array( 'destination', 'academic' ) as $key ) : $section = $program[ $key ]; ?>
 	<section class="sg-student-band sg-student-band--<?php echo esc_attr( $key ); ?>" aria-labelledby="sg-student-<?php echo esc_attr( $key ); ?>">
 		<div class="sg-container sg-student-editorial">
-			<header class="sg-flow"><h2 id="sg-student-<?php echo esc_attr( $key ); ?>" data-sg-reveal="fade-up"><?php echo esc_html( $section['title'] ); ?></h2><p class="sg-student-subtitle"><?php echo esc_html( $section['subtitle'] ); ?></p></header>
+			<header class="sg-flow"><h2 id="sg-student-<?php echo esc_attr( $key ); ?>" data-sg-reveal="fade-up"><?php echo esc_html( $section['title'] ); ?></h2><p class="sg-student-subtitle"><?php echo esc_html( $section['subtitle'] ); ?></p>
+				<?php if ( 'destination' === $key ) : ?>
+					<figure class="sg-student-destination-photo">
+						<?php echo sg_asset_img( 'images/student-program/student-life-together.jpg', 'Estudiantes comparten apuntes alrededor de una mesa.', array( 'loading' => 'lazy', 'sizes' => '(max-width: 767px) 90vw, (max-width: 1440px) 40vw, 600px' ) ); ?>
+						<figcaption>Vida estudiantil · fotografía ilustrativa de RDNE Stock project / Pexels. No representa participantes, alojamientos ni instalaciones del programa.</figcaption>
+					</figure>
+				<?php endif; ?>
+			</header>
 			<div class="sg-flow"><p><?php echo esc_html( $section['text'] ); ?></p><?php $render_list( $section['items'] ); ?></div>
 		</div>
 	</section>
@@ -78,7 +86,7 @@ $render_list = static function ( array $items ): void {
 			<p class="sg-student-statement"><?php echo esc_html( $program['closing']['phrase'] ); ?></p>
 			<p><?php echo esc_html( $program['closing']['invitation'] ); ?></p>
 			<address class="sg-student-contact">
-				<a class="sg-button sg-email-tab" href="mailto:concierge@solaniquegroup.com">Solicitar una presentación</a>
+				<a class="sg-button<?php echo $student_form ? '' : ' sg-email-tab'; ?>" href="mailto:concierge@solaniquegroup.com" <?php if ( $student_form ) : ?>data-sg-intake-open<?php endif; ?>>Solicitar una presentación</a>
 				<a href="mailto:concierge@solaniquegroup.com">concierge@solaniquegroup.com</a>
 				<a href="<?php echo esc_url( $phone['url'] ); ?>"><?php echo esc_html( $phone['display'] ); ?></a>
 			</address>

@@ -1,5 +1,180 @@
 # Solanique
 
+## November 17, 2026 - Consolidated Theme Release
+
+The user authorized committing and publishing all recent theme changes. This
+supersedes the local-only release holds below for the company phone, Simcoe image
+and spacing, student intake source/JavaScript and regenerated asset manifest.
+GHL workflows, notifications, campaigns, Meta/WhatsApp access and billing are not
+part of this release. Preserve the already-saved Spanish student Customizer ID.
+
+Preflight/release evidence: WordPress-root
+`output/solanique-release-2026-11-17-student-intake/`. Commit, archive, installation
+and anonymous production verification will be recorded there after completion.
+The November 17 limited PHP hotfix and November 12 full archive are rollback
+references; do not replace live data, reviews, menus or WordPress settings.
+
+## November 17, 2026 - Spanish Student Intake Connected
+
+- User approved connecting V1 now with the proposed questions, with later changes
+  permitted. User manually corrected and saved the GHL field order; the public
+  widget verifies all questions, then Message, unchecked consent and Submit.
+- Published a narrowly scoped patch to `inc/crm.php` and the V1 content partial
+  through WordPress, retaining backups in the WordPress-root directory
+  `output/solanique-student-intake-2026-11-17/`. Other local theme work was not
+  deployed. Both saved files were reloaded and compared with the staged code.
+- WordPress Customize > Student program intake now stores Spanish form ID
+  `hxcGEXtxmFPRogVvXU72` with its enable checkbox ON. V1's closing presentation
+  action opens the existing click-only dialog; plain email remains an alternative.
+  The Concierge routing key preserves compatibility with the published JS; the
+  dialog heading and close/loading labels are Spanish. English student draft and
+  V2 remain unlinked. No workflow, autoresponder or internal alert was enabled.
+- LiteSpeed confirmed URL-list purge. A cookie-free public HTML request contains
+  the student ID and trigger. Public-page browser checks confirm the matching
+  widget, one embed script, deferred iframe loading, Escape closing/focus return,
+  and no outer/inner horizontal overflow at 320/375/390/430/768/1024/1440px.
+  All four departmental form mappings and V2 remain unchanged, one h1 per page.
+- User subsequently explicitly authorized the production height correction.
+  Saved/reload-verified only the student dialog's `height:90svh` and
+  `overflow-anchor:none`, with the preceding production file backed up. URL cache
+  was purged and anonymous HTML verifies the scoped style and correct form ID.
+  Normal first-load checks (without focusing/querying iframe elements) retain
+  scrollTop 0 and a stable dialog height at 320px, 390px and 1440px. Automated iframe
+  element inspection itself can move the scroll position; do not confuse that
+  inspection side effect with a normal visitor opening. No iframe-internal styles,
+  JavaScript bundles, other dialogs or additional local changes were deployed.
+- Build, changed PHP lint, routing assertions and diff whitespace checks pass.
+  Captured browser errors originate in GHL's Cloudflare Turnstile frame; do not
+  report an entirely error-free third-party console. No forms were submitted and
+  no new messages were sent, so delivery/end-to-end capture is not newly verified.
+- No full-theme deployment, commit, push or export. Production still has other
+  previously documented local-only changes pending; this is not a full release.
+
+## November 16, 2026 - Company Phone and Client Review Handoff
+
+This later instruction supersedes the phone separation recorded below: company
+and WhatsApp both use **+1 647 466 6314** (`+16474666314`). The shared theme
+contact helper is updated locally. GHL Business Profile was saved and verified
+after reload; its timezone remains America/Bogota. No production theme deployment,
+SMS provisioning or WhatsApp connection is implied by that contact-text update.
+
+- All 26 local seasonal email HTML drafts and their generator use the new phone.
+  Only the Spanish birthday GHL template has a verified save with the new phone.
+  The English birthday edit was not verified; its editor stopped rendering after
+  reload. The remaining saved GHL copies need a reliable editor/reload check.
+  No tests, campaigns or workflow changes were made.
+- Facebook OAuth showed Sebastian Cruz as the administrator login. No Solanique
+  Page/business portfolio was selected and no new permissions were granted.
+  The integration and Social Planner screens still offer connection setup.
+- WhatsApp shows $10/month, a one-month commitment and message usage charged to
+  the agency wallet. No subscription, terms acceptance or onboarding occurred.
+  Explain native integration versus manual app use before requesting purchase
+  approval. Same-number app/CRM coexistence still needs eligibility verification.
+- Prepared Spanish client PDFs under `output/pdf/`: the four-page contacts guide
+  and three-page final-review checklist dated 2026-11-16. Source materials and
+  an unsent client email are in `output/solanique-client-review-2026-11-16/` at
+  the WordPress root. No meeting availability was confirmed or invitation sent.
+- Verified GHL's empty Contacts-only CSV import flow; uploaded/imported no data.
+  Student form ordering, fields/privacy/routing approval and scoped testing remain
+  pending. The two draft forms stay unlinked and the theme gate stays OFF.
+- `npm run build`, helper PHP lint and an exact phone-tuple assertion passed.
+  No new live-site or Lighthouse verification is claimed. Existing local changes
+  remain preserved; no commit, push, export or deployment was performed.
+
+## November 16, 2026 - CRM Access and WhatsApp Number Confirmed
+
+- The user confirmed **WhatsApp Business: +1 647 466 6314**, E.164
+  `+16474666314`. This is separate from the public company phone
+  **+1 647 947 5580** (`+16479475580`). Do not replace the business phone or
+  departmental email senders with the WhatsApp number. No public WhatsApp link
+  currently exists in the theme; none was silently added.
+- Native Chrome's **Sebastian** profile opened the saved Solanique GHL session
+  successfully. No password/cookie extraction or credential change was used.
+  GHL Business Profile already shows `+1 647-947-5580`; the account timezone still
+  shows America/Bogota. Neither was changed in this read-only account pass.
+- GHL WhatsApp displays **Subscribe to WhatsApp Messaging / Agency Purchase**
+  with a `$10/month` charge. No subscription was purchased, terms accepted or
+  channel activated. A functioning WhatsApp Business mobile app does not establish
+  a GHL/API connection. Any paid activation needs separate review/authorization.
+- Google integration displays **Connect**; Reputation shows **No Reviews Yet**
+  and asks to connect Google Business Profile. Google authorization with the
+  correct profile owner remains required; no permissions were granted and no
+  placeholder reviews widget was installed.
+- The user approved a Spanish student presentation form plus a separate English
+  version kept for future use. Both are saved in GHL as review drafts:
+  `DRAFT REVIEW - Estudiantes - Presentación - ES` (`hxcGEXtxmFPRogVvXU72`) and
+  `DRAFT REVIEW - Students - Presentation - EN` (`Ny674NtxyDuyYqj2fqI4`).
+  They include contact details, city/country, contact preference, age in years,
+  duration, grade, homestay interest, message and unchecked inquiry consent.
+  Dropdown fields use separate ES/EN custom-field IDs. Inherited general service
+  selectors were removed from these copies only; department forms were not edited.
+  Both form notifications/autoresponders are OFF; no student workflow was created.
+  Confirmation text is localized and save-progress is OFF. The drafts remain
+  unlinked; the WordPress student intake approval gate stays empty/OFF.
+  **Not launch-ready:** GHL appends new fields after the inherited submission
+  controls, and native browser dragging did not retain reordering. Move Message,
+  consent and Submit below all questions (consent directly before Submit), save
+  and reverify both forms. Manual assistance was requested. Final wording,
+  required fields, privacy links, routing and testing still need review.
+  `DRAFT REVIEW` is a naming convention, not access control: GHL share URLs exist.
+- All four inquiry acknowledgment workflows still show **Published**, unchanged
+  since November 2, with zero total/active enrollment shown. Capital's loaded
+  builder confirms its form + consent Yes + Email-preference trigger; immediate
+  DND/Email-preference eligibility and an Email condition; the native view did not
+  expose its exact nonempty operator in this pass. The previously documented guard
+  was not changed. A 24-hour cooldown and disabled SMS action remain visible.
+  Other workflows' internal action settings were not reopened
+  in this pass. Publication is not proof of form-triggered delivery.
+- Evidence/status: WordPress-root `output/solanique-crm-check-2026-11-16/`.
+  This pass saved only the approved new student-form configuration and related
+  custom fields, alongside documentation. Saved widget previews were checked at
+  measured 320/390px with no horizontal overflow and unchecked consent. No form
+  was submitted, no message sent and no local theme correction deployed.
+
+## November 15, 2026 - Meeting Follow-Through (Local, Not Released)
+
+- V1's Simcoe destination column now includes the already approved responsive
+  `student-life-together.jpg` with RDNE/Pexels attribution and an explicit
+  illustrative-use notice. No actual host-family/school evidence is implied.
+  Existing approved program paragraphs, V2 and the main-site design are unchanged.
+- A dedicated Spanish student presentation intake can be connected under
+  **Appearance > Customize > Student program intake**. Enter the actual dedicated
+  GHL form ID and enable its approval checkbox only after field/privacy/notification
+  review. Both values are empty/off by default. No placeholder form ID is shipped.
+  The existing V1 closing button remains a working `mailto:` fallback until then;
+  when configured, only that explicitly marked button opens the click-only dialog.
+  V2 and direct-email alternatives are not repurposed. No GHL form/workflow is
+  created by this setting; no WordPress submission endpoint is added.
+- Existing departmental dialogs retain their four IDs. Spanish close/loading
+  labels are now localized. No iframe-internal styling was added.
+- Client handoff at WordPress-root
+  `output/solanique-follow-through-2026-11-15/`: a three-page Spanish contacts guide,
+  a fourteen-page seasonal-message review PDF (all 26 email texts + 26 SMS texts
+  preserved), student-field proposal, bilingual historical-review attribution
+  draft, integration checklist and a short client follow-up draft. Nothing has
+  been emailed to Sandra or uploaded as a public download.
+- Public Google Maps inspection confirms the agreed weekly hours already appear:
+  Mon-Fri 08:00-20:00, Sat 10:00-18:00, Sun closed. The public profile still displays
+  `+1 647-466-6314`; the approved company phone is `+1 647 947 5580`. Available Google
+  management controls exposed another business, not Solanique. The approved phone
+  was prepared in Google's public suggested-edit form, but submission was blocked
+  pending explicit authorization; nothing was submitted or verified live. Its
+  separate SMS endpoint was not altered. GHL is signed out; form creation, Google sync, sender/workflow
+  rechecks and WhatsApp verification are blocked pending sign-in. Do not treat
+  older GHL observations as a fresh verification.
+- Pending client input: exact student-copy corrections; final form-field/privacy
+  approval; two remaining testimonial texts/attributions; disclaimer approval;
+  exact WhatsApp endpoint; Google-owner access; seasonal-copy/audience approval.
+  Dark V1 remains selected; English and V2 retirement are not assumed requirements.
+- QA: build and changed PHP lint pass; 18 offline form-configuration checks pass;
+  V1 measured at 320/375/390/430/768/1440/1920px without horizontal overflow, one h1,
+  no empty/hash-only links, and no form iframe while disabled. Spanish remains
+  active with incoming `lang=en`. No fresh Lighthouse, form submission, message
+  sending, or production validation is claimed. See the dated STATUS for all QA.
+- This work is uncommitted and local. The November 12 release below remains the
+  last verified production release; no deployment, theme export or remote push
+  occurred in this pass.
+
 ## November 12, 2026 - Production Release Verified
 
 The user authorized saving, committing, exporting and uploading the current theme

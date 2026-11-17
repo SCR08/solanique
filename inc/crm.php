@@ -7,8 +7,37 @@
 
 defined( 'ABSPATH' ) || exit;
 
+/** Only a saved, explicitly approved dedicated student form may replace email. */
+function sg_get_student_presentation_form(): array {
+	$id = sg_sanitize_ghl_form_id( get_theme_mod( 'sg_student_presentation_form_id', '' ) );
+	if ( '' === $id || ! get_theme_mod( 'sg_student_presentation_form_approved', false ) ) {
+		return array();
+	}
+	// Keep the routing key compatible with the already-published intake script.
+	return array( $id, 'Concierge' );
+}
+
+/** Accept form IDs, not arbitrary embeds, scripts or external destinations. */
+function sg_sanitize_ghl_form_id( $value ): string {
+	return is_string( $value ) && preg_match( '/^[A-Za-z0-9]{20}$/D', $value ) ? $value : '';
+}
+
+add_action( 'customize_register', function ( WP_Customize_Manager $customizer ): void {
+	$customizer->add_section( 'sg_student_intake', array(
+		'title' => __( 'Student program intake', 'solanique' ),
+		'description' => __( 'Use only a dedicated, approved Spanish GHL student presentation form. Leave disabled until fields, privacy and department notifications are checked. This does not activate workflows.', 'solanique' ),
+	) );
+	$customizer->add_setting( 'sg_student_presentation_form_id', array( 'default' => '', 'sanitize_callback' => 'sg_sanitize_ghl_form_id' ) );
+	$customizer->add_control( 'sg_student_presentation_form_id', array( 'section' => 'sg_student_intake', 'label' => __( 'Approved GHL student form ID', 'solanique' ), 'type' => 'text' ) );
+	$customizer->add_setting( 'sg_student_presentation_form_approved', array( 'default' => false, 'sanitize_callback' => 'rest_sanitize_boolean' ) );
+	$customizer->add_control( 'sg_student_presentation_form_approved', array( 'section' => 'sg_student_intake', 'label' => __( 'Enable the approved student presentation form', 'solanique' ), 'type' => 'checkbox' ) );
+} );
+
 /** Returns the approved intake form for the current page. */
 function sg_get_native_ghl_popup(): array {
+	if ( sg_is_student_program() && ! sg_is_student_program_v2() ) {
+		return sg_get_student_presentation_form();
+	}
 	$forms = array(
 		'capital' => array( 'A09fGOKG0qMdqOm3kNBF', 'Capital' ),
 		'estates' => array( 'ZkIp2RDdL2MT2ZiwUABK', 'Estates' ),
@@ -30,13 +59,15 @@ add_action( 'wp_footer', function (): void {
 		return;
 	}
 	$id = 'inline-' . $form[0];
+	$is_student = sg_is_student_program() && ! sg_is_student_program_v2();
+	$title = $is_student ? 'Programa de estudiantes internacionales' : $form[1];
 	?>
-	<dialog class="sg-intake-dialog" id="sg-intake-dialog" aria-labelledby="sg-intake-title" data-sg-intake>
+	<dialog class="sg-intake-dialog" id="sg-intake-dialog" aria-labelledby="sg-intake-title" data-sg-intake <?php if ( $is_student ) : ?>style="height:90svh;overflow-anchor:none"<?php endif; ?>>
 		<header class="sg-intake-dialog__header">
-			<h2 id="sg-intake-title"><?php echo esc_html( $form[1] ); ?></h2>
-			<button type="button" data-sg-intake-close aria-label="<?php esc_attr_e( 'Close inquiry form', 'solanique' ); ?>">&#215;</button>
+			<h2 id="sg-intake-title"><?php echo esc_html( $title ); ?></h2>
+			<button type="button" data-sg-intake-close aria-label="<?php echo esc_attr( 'es' === sg_current_lang() ? 'Cerrar formulario de consulta' : __( 'Close inquiry form', 'solanique' ) ); ?>">&#215;</button>
 		</header>
-		<p data-sg-intake-status role="status"><?php esc_html_e( 'Loading form...', 'solanique' ); ?></p>
+		<p data-sg-intake-status role="status"><?php echo esc_html( 'es' === sg_current_lang() ? 'Cargando formulario...' : __( 'Loading form...', 'solanique' ) ); ?></p>
 	<iframe
 		data-src="<?php echo esc_url( 'https://api.leadconnectorhq.com/widget/form/' . $form[0] ); ?>"
 		style="width:100%;height:1100px;border:none;border-radius:8px"

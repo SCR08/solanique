@@ -1,5 +1,109 @@
 # Solanique Finalization Checklist
 
+## November 17: Authorized Consolidated Theme Release
+
+- [x] User authorizes committing/publishing all recent theme changes.
+- [ ] Rebuild/lint, commit and push the reviewed changes.
+- [ ] Produce and install a clean current-theme archive; preserve WordPress data
+  and the already-enabled Spanish student form setting.
+- [ ] Purge cache and verify public assets, phone, Simcoe image, student dialog,
+  existing department forms, both languages and responsive layouts.
+
+No CRM messaging activation or account/billing change is included in this release.
+
+## November 17: V1 Student Form Connection
+
+- [x] User approves proposed questions for immediate connection; user fixes order.
+- [x] Verify public Spanish GHL questions precede Message, consent and Submit.
+- [x] Publish only the CRM/V1 button patch; retain before/after backups. Save
+  `hxcGEXtxmFPRogVvXU72` and enabled approval control in native Customizer.
+- [x] Verify click-only opening, lazy iframe, one embed script, Escape/focus return,
+  responsive widths 320/375/390/430/768/1024/1440 and no horizontal overflow.
+- [x] Verify public anonymous HTML after LiteSpeed URL purge, unchanged four
+  department IDs and unchanged V2; build/PHP/routing/diff checks pass.
+- [x] User explicitly authorizes student-only initial-height correction. Save exact
+  approved PHP, recheck persistence, purge route cache and verify anonymous HTML.
+  Normal first loads at 320/390/1440 retain scrollTop 0; frame-element inspection can
+  cause its own scrolling, so final QA avoids that focus/inspection side effect.
+- [ ] Student department alerts/workflows and scoped end-to-end submission tests
+  remain separate work. No new alert, autoresponder or test was enabled/sent.
+
+This limited live integration is not deployment of all outstanding local changes.
+English student form remains separate/unlinked; V2 and hero CTAs unchanged.
+
+## November 16: Later Company-Number Decision and Handoff
+
+Supersedes the phone separation in the historical entries below.
+
+- [x] Company AND WhatsApp number confirmed as `+1 647 466 6314`.
+- [x] Local shared phone helper updated; GHL Business Profile saved and reloaded.
+- [x] All 26 local seasonal email HTML files updated; Spanish birthday GHL save
+  verified. No sends, imports, purchases or new workflow activation.
+- [x] Prepare Spanish four-page contacts guide, three-page review checklist and
+  unsent client email. Verify native Contacts-only CSV import setup without data.
+- [ ] Recheck English birthday saved content after editor rendering failure, then
+  update/verify the remaining 25 saved GHL seasonal phone references.
+- [ ] Obtain specific Meta asset/access approval; no OAuth grant made. Explain
+  WhatsApp native/app/third-party options and obtain any billing authorization.
+- [ ] Finish student form order and client approvals before tests/link activation.
+- [ ] Confirm meeting availability separately. No invitation or client email sent.
+
+Build, helper PHP lint and exact phone values pass. New website phone changes
+remain local; November 12 is still the last verified production theme release.
+The prior Google phone suggestion is no longer needed under the latest number
+decision; no public Google edit was submitted.
+
+## November 16: Saved CRM Session Verified
+
+- [x] Open saved Solanique GHL login using Sebastian's Chrome profile.
+- [x] Record client-confirmed WhatsApp Business `+1 647 466 6314`, separate from
+  company voice/contact phone `+1 647 947 5580`; GHL business phone is already correct.
+- [x] Recheck all four inquiry workflows show Published. Capital trigger/eligibility,
+  24-hour cooldown and disabled SMS verified; no workflow changes or sends.
+- [x] Obtain approval and save separate ES/EN student presentation review drafts:
+  ES `hxcGEXtxmFPRogVvXU72`; EN `Ny674NtxyDuyYqj2fqI4`. Student dropdowns use
+  separate language-specific field IDs. Notifications/autoresponders remain OFF.
+- [x] Check saved rendered forms at actual 320/390px: no horizontal overflow;
+  consent unchecked. No personal data, submissions or messages used in QA.
+- [ ] Correct student form order manually in GHL: all questions, then Message,
+  consent and Submit. Browser dragging does not retain the move. Re-save/recheck.
+- [ ] Approve required fields/privacy/routing, configure the future Concierge
+  alert, authorize scoped tests and only then enable the dedicated website ID.
+  Both drafts stay unlinked and the local approval gate remains empty/OFF.
+  Draft names do not make GHL share endpoints private.
+- [ ] Authorize/complete Google-owner connection for review syncing. GHL shows
+  Connect and No Reviews Yet; no new access granted.
+- [ ] Decide on paid GHL WhatsApp activation. Its UI offers Agency Purchase at
+  $10/month, not a connected number. No purchase, billing or channel change made.
+
+Google phone-suggestion authorization is still pending separately. The old number
+is now confirmed as the WhatsApp endpoint; do not confuse a WhatsApp destination
+with the approved company voice number. The November 15 account-login blocker is
+resolved, but connection/approval gates remain. See the dated CRM status evidence.
+
+## November 15: Meeting Follow-Through - Local Only
+
+- [x] Fill V1 Simcoe's empty editorial column with an existing responsive student
+  photo, retaining attribution and illustrative-use limitations.
+- [x] Prepare gated, dedicated Spanish student-form wiring using the existing
+  click-only dialog; empty/off defaults retain email and generate no iframe.
+- [x] Prepare a Spanish contacts import/export PDF and a bilingual seasonal-message
+  review PDF, plus student questions, attribution draft and client approval checklist.
+- [x] Verify public Google weekly hours already match the meeting agreement.
+- [ ] Sign into GHL; create/review the real dedicated student form and its alert,
+  connect the verified Google profile/widget, and recheck current automation state.
+- [ ] Submit/verify the Google phone correction after explicit approval, or use
+  Solanique's owner account. A public edit is prepared but was blocked before
+  submission. No unrelated profile/SMS endpoint was edited. Confirm WhatsApp separately.
+- [ ] Receive student-copy revisions, remaining two reviews, approved historical
+  attribution and seasonal-copy/audience approval. Prepared materials are not sent.
+- [ ] Obtain scoped testing/release approval after these account/content checks.
+
+No campaigns/SMS/WhatsApp activated, no submissions/tests sent, no production
+deployment, no commit/push/export. Evidence and client documents are outside the
+theme in `output/solanique-follow-through-2026-11-15/`. November 12 remains the last
+verified deployed theme. Historical pending lists below are not new instructions.
+
 ## November 12: Theme Release Verified
 
 - [x] User authorizes save, commit, clean export and upload of current theme.
