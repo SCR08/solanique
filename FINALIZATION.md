@@ -3,12 +3,16 @@
 ## November 17: Authorized Consolidated Theme Release
 
 - [x] User authorizes committing/publishing all recent theme changes.
-- [ ] Rebuild/lint, commit and push the reviewed changes.
-- [ ] Produce and install a clean current-theme archive; preserve WordPress data
+- [x] Rebuild/lint, commit `5cd8757` and push the reviewed changes to origin/main.
+- [x] Produce and install a clean 541-file current-theme archive; preserve WordPress data
   and the already-enabled Spanish student form setting.
-- [ ] Purge cache and verify public assets, phone, Simcoe image, student dialog,
+- [x] Purge cache and verify public assets, phone, Simcoe image, student dialog,
   existing department forms, both languages and responsive layouts.
 
+Eighteen anonymous page cases pass; both live built assets match local hashes.
+Measured responsive QA: seven main routes at 390/1440 and student V1/V2 at
+320/390/768/1440/3440, without horizontal overflow. No new Lighthouse or submission
+delivery test is claimed. Evidence and clean ZIP are in the dated release folder.
 No CRM messaging activation or account/billing change is included in this release.
 
 ## November 17: V1 Student Form Connection

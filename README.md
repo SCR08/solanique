@@ -8,11 +8,31 @@ and spacing, student intake source/JavaScript and regenerated asset manifest.
 GHL workflows, notifications, campaigns, Meta/WhatsApp access and billing are not
 part of this release. Preserve the already-saved Spanish student Customizer ID.
 
-Preflight/release evidence: WordPress-root
-`output/solanique-release-2026-11-17-student-intake/`. Commit, archive, installation
-and anonymous production verification will be recorded there after completion.
-The November 17 limited PHP hotfix and November 12 full archive are rollback
-references; do not replace live data, reviews, menus or WordPress settings.
+Published and verified: runtime commit `5cd8757` was pushed to `origin/main` and
+installed through WordPress's native ZIP uploader, which reported Theme updated
+successfully. The verified archive contains 541 files (112 PHP files linted),
+99,900,665 bytes; SHA-256
+`bf06ab00e6238303b8d8124c92f8d746c5e4c8cd1ad6fc34628842810787d9b8`.
+No review records, pages, menus or native settings were replaced.
+
+LiteSpeed LSCache purge was confirmed. Eighteen anonymous EN/ES page checks pass:
+one h1, no rendered PHP errors/reference assets/video UI, preserved approved
+closing copy/reviews and four department IDs, 6/6/7 explorer panels, Spanish-only
+student content, corrected phone, Simcoe photo and gated V1 student form. Served
+`main-jEqP0_cN.css` and `app-DYXVAyqL.js` match local SHA-256 hashes.
+Runtime responsive checks cover seven main routes at 390/1440 and both student
+routes at 320/390/768/1440/3440; measured dimensions match and no horizontal
+overflow or broken already-loaded images were found. Post-update student popup
+QA at 390px confirms one lazy-loaded Spanish iframe, one embed script, scrollTop
+0 after load, Escape closing and focus restored to the presentation action.
+These are not Lighthouse
+measurements or a fresh end-to-end lead submission/delivery test.
+
+Release evidence: WordPress-root
+`output/solanique-release-2026-11-17-student-intake/`. The November 12 full ZIP and
+November 17 backed-up student hotfix source are rollback references; restore only
+theme files, not live data/settings. Earlier local-only statements below are
+historical and superseded by this verified full-theme release.
 
 ## November 17, 2026 - Spanish Student Intake Connected
 
