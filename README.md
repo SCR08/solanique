@@ -1,5 +1,41 @@
 # Solanique
 
+## November 19, 2026 - Student Form and Review Email Completed
+
+Spanish student form `hxcGEXtxmFPRogVvXU72` was saved in the existing GHL account,
+reopened in the builder and verified through its public widget. The approved
+audit labels/options, age/message privacy helpers and inquiry-only consent are
+present. Optional referral-source and referrer-name questions precede Message;
+Email precedes Phone, then preferred method precedes City/Country. Native contact
+fields were moved, not recreated. The English student draft remains unlinked.
+The native GHL Short Label treatment was changed from `#464D5FFF`, 12px/300 to
+`#D1D5DBFF`, 14px/400 so the privacy helpers are readable against black; no
+WordPress iframe CSS was added and no other form's design was changed.
+
+The public widget passed measured-width checks at 320/375/390/430/768/1440 without
+horizontal overflow; inquiry consent remains unchecked initially. The production
+V1 dialog opens the same Spanish ID and closes with Escape at 320/390/1440, with
+no page overflow. No form submissions or end-to-end lead-delivery tests were run.
+Student alerts/autoresponders/workflows were not enabled or changed. Final
+responsive measurements were repeated in the in-app test browser after Chrome's
+viewport override stopped changing actual widths following its extension restart;
+unapplied overrides were not counted as valid mobile tests.
+
+One authorized email was sent through the existing Outlook session to
+`sandymedsol@gmail.com`, with only the reviewed 19-page seasonal PDF attached.
+The recipient, subject and one 295 KB attachment were checked before Send;
+Outlook completed composition with "Ahora puede cerrar esta ventana." This
+confirms the UI send flow, not receipt in Sandra's inbox. No other mailbox
+messages were reviewed, and no contact CSVs were attached. The local `.eml`
+remains a source draft, not an instruction to resend it.
+
+These entries resolve the GHL-access and review-email holds recorded on November
+18. The 28 seasonal emails/SMS remain drafts for Sandra's approval, not active
+campaigns; contacts remain prepared only, with no import or permission inferred.
+Evidence is in WordPress-root `output/solanique-client-audit-2026-11-18/` and
+`output/solanique-seasonal-review-2026-11-18/`. This pass changes external form
+configuration and documentation, not theme runtime, and needs no second theme ZIP.
+
 ## November 18, 2026 - Client Audit Corrections
 
 Source: the two-page `Auditoria Landing page programa de estudios internacionales.pdf`
@@ -34,9 +70,8 @@ values from otherwise usable email contacts. No country, consent, language,
 birthday, ownership or marketing eligibility was inferred; no import occurred.
 Private CSV files remain outside the webroot/repository/theme archive.
 
-GHL student-form audit changes still require a stable authenticated session:
-requested field labels/options, privacy helpers, two optional referral questions
-and final question order. Do not mark the form complete from these website edits.
+The GHL student-form changes were still pending during the November 18 theme
+release; the November 19 entry above records their later saved/public verification.
 Release/send status is recorded separately in `FINALIZATION.md` and dated output.
 Runtime commit `dae1e64` was pushed and installed through the native uploader;
 18 anonymous checks and 30 responsive cases pass. Ten older theme archives were

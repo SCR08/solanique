@@ -1,5 +1,30 @@
 # Solanique Finalization Checklist
 
+## November 19: GHL Student Form and Seasonal Review Handoff
+
+- [x] Save all supplied student audit questions/options, two optional referral
+  fields, privacy helpers and exact inquiry-consent wording in the existing ES ID.
+- [x] Reorder existing native contact fields without recreating them; keep all
+  questions before consent/Submit. English future student form remains unlinked.
+- [x] Reopen builder/public widget; verify six referral choices, unchecked initial
+  consent and bounded mobile/desktop layouts. Native Short Label color corrected
+  for contrast, with readable 14px/400 helpers and no parent-site iframe styling.
+- [x] Verify public widget at 320/375/390/430/768/1440 and live V1 dialog at
+  320/390/1440. Same form ID, no horizontal page overflow, Escape closes.
+- [x] Send one approved review email to sandymedsol@gmail.com with only the
+  19-page PDF; Outlook finished with "Ahora puede cerrar esta ventana."
+- [ ] Sandra confirms receipt and approves/requests changes to seasonal drafts.
+- [ ] Review cleaned contacts before any separately approved import.
+- [ ] Student lead alert/workflow and approved submission-delivery tests remain
+  separate work; no new notifications, submissions or campaigns were activated.
+
+No inbox-receipt proof, Lighthouse rerun or end-to-end student submission is
+claimed. No contacts imported; no SMS/WhatsApp or recurring campaigns sent.
+The current November 18 theme ZIP remains the single retained runtime export.
+Final six-width widget QA used measured in-app browser dimensions; Chrome's
+post-reconnect unapplied viewport attempts were excluded. See
+`student-form-responsive-final.json` for the requested and actual widths.
+
 ## November 18: Client Audit and Review Materials
 
 - [x] Read and visually inspect both pages of Sandra's landing/form audit.
@@ -11,8 +36,8 @@
   all 28 HTML emails checked at 390, with no horizontal overflow/broken images.
 - [x] Prepare contacts for review only, outside the webroot. No GHL import,
   inferred permission, database enrollment, SMS/WhatsApp or campaign sending.
-- [ ] Send one seasonal-review PDF to sandymedsol@gmail.com; no contact CSVs.
-- [ ] Finish/save student GHL form corrections after authenticated access returns.
+- [x] Send one seasonal-review PDF to sandymedsol@gmail.com on November 19; no contact CSVs.
+- [x] Finish/save student GHL form corrections on November 19; see verification above.
 - [x] Commit `dae1e64`, push to origin/main, export/install reviewed theme and
   publish Guillermo (review 76). Native WordPress update and LSCache purge confirmed.
 - [x] Verify 18 anonymous page/language cases and matching CSS/JS hashes; 30
@@ -27,10 +52,10 @@ database backups, Media Library assets or Git history deleted. The current ZIP
 is a theme backup only, not a database/GHL backup. Private contact review files
 were copied beside the original CSVs with owner-only access; nothing imported.
 
-The seasonal review email is prepared locally with the reviewed 19-page PDF
-attached. Sending is not confirmed. Awaiting narrowly scoped Outlook permission
-after the security gate stopped a broad Chrome snapshot; unrelated mailbox
-content must not be read. No seasonal/SMS/WhatsApp activation occurred.
+The November 18 email/access holds were resolved on November 19 with explicit
+approval and a connected Chrome extension. Only the specified review email and
+its PDF were sent. Unrelated mailbox messages were not reviewed, and no
+seasonal/SMS/WhatsApp activation occurred.
 
 These current tasks supersede earlier missing-copy lists only where explicitly
 stated. Seasonal drafts are client-review material, not active campaigns.
