@@ -68,6 +68,7 @@ function sg_review_meta_fields( WP_Post $post ): void {
 		</select>
 	</p>
 	<p><label><input type="checkbox" name="sg_review_approved" value="1" <?php checked( get_post_meta( $post->ID, '_sg_review_approved', true ), '1' ); ?>> <?php esc_html_e( 'Exact text and reviewer attribution approved for website display', 'solanique' ); ?></label></p>
+	<p><label><input type="checkbox" name="sg_review_other_brokerage" value="1" <?php checked( get_post_meta( $post->ID, '_sg_review_other_brokerage', true ), '1' ); ?>> <?php esc_html_e( 'Experience with Sandra at another brokerage', 'solanique' ); ?></label></p>
 	<?php
 }
 
@@ -89,6 +90,7 @@ function sg_save_review_details( int $post_id ): void {
 	update_post_meta( $post_id, '_sg_review_language', in_array( $language, array( 'en', 'es', 'both' ), true ) ? $language : 'en' );
 	update_post_meta( $post_id, '_sg_review_original_language', in_array( $original_language, array( 'en', 'es' ), true ) ? $original_language : 'en' );
 	update_post_meta( $post_id, '_sg_review_approved', isset( $_POST['sg_review_approved'] ) && '1' === $_POST['sg_review_approved'] && ! $invalid_source ? '1' : '0' );
+	update_post_meta( $post_id, '_sg_review_other_brokerage', isset( $_POST['sg_review_other_brokerage'] ) && '1' === $_POST['sg_review_other_brokerage'] ? '1' : '0' );
 }
 add_action( 'save_post_sg_review', 'sg_save_review_details' );
 
@@ -107,13 +109,13 @@ function sg_sanitize_google_review_source( string $url ): string {
 	return '';
 }
 
-/** Returns at most three published, approved excerpts in the selected language. */
+/** Returns up to six published, approved excerpts in the selected language. */
 function sg_get_home_reviews(): array {
 	$query = new WP_Query(
 		array(
 			'post_type'      => 'sg_review',
 			'post_status'    => 'publish',
-			'posts_per_page' => 3,
+			'posts_per_page' => 6,
 			'no_found_rows'  => true,
 			'orderby'        => array( 'menu_order' => 'ASC', 'date' => 'DESC' ),
 			'meta_query'     => array(
@@ -131,7 +133,7 @@ function sg_get_home_reviews(): array {
 			$original_language = 'es' === get_post_meta( $post->ID, '_sg_review_language', true ) ? 'es' : 'en';
 		}
 		if ( '' !== trim( $post->post_title ) && '' !== $text ) {
-			$reviews[] = array( 'name' => $post->post_title, 'text' => $text, 'source' => $source, 'language' => $original_language );
+			$reviews[] = array( 'name' => $post->post_title, 'text' => $text, 'source' => $source, 'language' => $original_language, 'other_brokerage' => '1' === get_post_meta( $post->ID, '_sg_review_other_brokerage', true ) );
 		}
 	}
 	return $reviews;

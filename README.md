@@ -1,5 +1,45 @@
 # Solanique
 
+## November 18, 2026 - Client Audit Corrections
+
+Source: the two-page `Auditoria Landing page programa de estudios internacionales.pdf`
+provided by Sandra. Shared Spanish student copy now uses the requested month
+capitalization, `Tu familia`, 3/4-month short-course wording, multi-year option and
+the supplied direct-provider Homestay paragraph. These are client-supplied service
+statements, not independently verified screening/safety claims. Both student
+versions use the shared copy and an existing envelope/email helper for Concierge.
+V1 stays dark with its existing Spanish intake dialog; V2 stays light/mailto.
+
+Reviews support up to six approved excerpts instead of hiding every item after
+the first three. The optional "another brokerage" context flag avoids implying
+that Sandra's brokerage-client experience occurred under Solanique; it does not
+invent a brokerage name or assert a previous/current date. Guillermo's exact
+English quote is prepared as WordPress review draft 76, with no fabricated source
+URL, translation or rating. Its database publication is separate from this code.
+
+Separate local client materials are in WordPress-root
+`output/solanique-seasonal-review-2026-11-18/`: 28 email/28 SMS review drafts,
+including new Christmas drafts and original decorative artwork for Christmas,
+Easter, New Year and Canada Day only. The reviewed PDF includes four visual
+examples and all bilingual wording. They are not campaigns, and the new themed
+HTML/art is not saved into GHL or production theme assets. Host decorative images
+and verify campaign unsubscribe/postal-footer requirements before any later send.
+No existing inquiry acknowledgment, consent rule or active automation was changed.
+
+The six contact exports contain 1,287 source rows. User approved preparation
+ONLY: 830 rows are review candidates, 63 exact duplicate rows removed, and 394
+source rows held. Separate manual-review output also includes uncertain phone
+values from otherwise usable email contacts. No country, consent, language,
+birthday, ownership or marketing eligibility was inferred; no import occurred.
+Private CSV files remain outside the webroot/repository/theme archive.
+
+GHL student-form audit changes still require a stable authenticated session:
+requested field labels/options, privacy helpers, two optional referral questions
+and final question order. Do not mark the form complete from these website edits.
+Release/send status is recorded separately in `FINALIZATION.md` and dated output.
+Retain only the newest verified theme ZIP after deployment, per user request;
+GitHub does not preserve WordPress database/settings, GHL or Media Library data.
+
 ## November 17, 2026 - Consolidated Theme Release
 
 The user authorized committing and publishing all recent theme changes. This

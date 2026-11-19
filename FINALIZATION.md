@@ -1,5 +1,25 @@
 # Solanique Finalization Checklist
 
+## November 18: Client Audit and Review Materials
+
+- [x] Read and visually inspect both pages of Sandra's landing/form audit.
+- [x] Apply shared V1/V2 Spanish copy corrections and Concierge envelope links.
+- [x] Prepare Guillermo's exact supplied quote as WordPress draft 76; extend the
+  approved-review query and optional another-brokerage context without new ratings.
+- [x] Prepare 28 email and 28 SMS drafts, including Christmas. Canada Day is the
+  only national-day theme requested. Four themed previews checked at 390/1440;
+  all 28 HTML emails checked at 390, with no horizontal overflow/broken images.
+- [x] Prepare contacts for review only, outside the webroot. No GHL import,
+  inferred permission, database enrollment, SMS/WhatsApp or campaign sending.
+- [ ] Send one seasonal-review PDF to sandymedsol@gmail.com; no contact CSVs.
+- [ ] Finish/save student GHL form corrections after authenticated access returns.
+- [ ] Commit/export/deploy reviewed theme, publish Guillermo and verify production.
+- [ ] After successful deployment, retain one current theme ZIP and remove only
+  explicitly inventoried older theme export archives. Preserve DB/source/client files.
+
+These current tasks supersede earlier missing-copy lists only where explicitly
+stated. Seasonal drafts are client-review material, not active campaigns.
+
 ## November 17: Authorized Consolidated Theme Release
 
 - [x] User authorizes committing/publishing all recent theme changes.

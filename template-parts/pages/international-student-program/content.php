@@ -87,7 +87,7 @@ $render_list = static function ( array $items ): void {
 			<p><?php echo esc_html( $program['closing']['invitation'] ); ?></p>
 			<address class="sg-student-contact">
 				<a class="sg-button<?php echo $student_form ? '' : ' sg-email-tab'; ?>" href="mailto:concierge@solaniquegroup.com" <?php if ( $student_form ) : ?>data-sg-intake-open<?php endif; ?>>Solicitar una presentación</a>
-				<a href="mailto:concierge@solaniquegroup.com">concierge@solaniquegroup.com</a>
+				<?php echo solanique_get_pillar_email_tab( 'concierge', 'Correo' ); ?>
 				<a href="<?php echo esc_url( $phone['url'] ); ?>"><?php echo esc_html( $phone['display'] ); ?></a>
 			</address>
 			<a class="sg-student-return" href="<?php echo esc_url( solanique_get_page_url( 'concierge', '/concierge/' ) ); ?>">Volver a Solanique Concierge</a>

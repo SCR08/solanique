@@ -1002,7 +1002,7 @@ function sg_get_student_program_copy(): array {
 		'purpose' => array(
 			'title' => 'MUCHO MÁS QUE UN PROGRAMA ACADÉMICO',
 			'text' => 'En Solanique Concierge creemos que la educación internacional es una experiencia transformadora que va más allá del aula. Es una oportunidad para que los jóvenes desarrollen su potencial, su independencia y una visión global en un entorno seguro, inspirador y lleno de oportunidades.',
-			'closing' => 'Nos encargamos de todo, para que te enfoques en lo que más importa: tu familia.',
+			'closing' => 'Nos encargamos de todo, para que te enfoques en lo que más importa: Tu familia.',
 		),
 		'destination' => array(
 			'title' => 'CONDADO DE SIMCOE',
@@ -1047,7 +1047,7 @@ function sg_get_student_program_copy(): array {
 		'housing' => array(
 			'title' => 'FAMILIAS ANFITRIONAS',
 			'subtitle' => 'UN HOGAR CANADIENSE LEJOS DE CASA',
-			'text' => 'En Solanique Concierge seleccionamos cuidadosamente a nuestras familias anfitrionas para ofrecerte un hogar seguro, cálido y acogedor en Canadá.',
+			'text' => 'Como proveedores directos del servicio de alojamiento (Homestay), en Solanique Concierge seleccionamos, verificamos y supervisamos rigurosamente a nuestras familias anfitrionas, mediante evaluaciones de antecedentes, inspecciones domiciliarias y seguimiento continuo, garantizando altos estándares de seguridad, calidad y bienestar durante toda la estancia de tu hijo(a).',
 			'items' => array(
 				'Habitación privada y espacio de estudio',
 				'Tres comidas al día y refrigerios',
@@ -1062,11 +1062,12 @@ function sg_get_student_program_copy(): array {
 			'subtitle' => 'FORMANDO LÍDERES GLOBALES',
 			'groups' => array(
 				array( 'title' => 'PROGRAMA DE ESCUELA SECUNDARIA (GRADOS 9 A 12)', 'items' => array(
-					'Año escolar: septiembre a junio',
+					'Año escolar: Septiembre a Junio',
 					'Dos semestres:',
-					'Semestre 1: septiembre a enero',
-					'Semestre 2: febrero a junio',
-					'Estancias de un semestre, un año o múltiples años',
+					'Semestre 1: Septiembre a Enero',
+					'Semestre 2: Febrero a Junio',
+					'Cursos Cortos: 3 y 4 meses que pueden ser tomados en cualquier semestre académico.',
+					'Estancias de múltiples años disponibles.',
 					'Obtención de créditos de Ontario o Diploma de Escuela Secundaria de Ontario (OSSD)',
 					'Apoyo académico y orientación vocacional y universitaria',
 				) ),

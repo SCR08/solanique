@@ -23,6 +23,9 @@ $reviews = sg_get_home_reviews();
 							<blockquote lang="<?php echo esc_attr( $review['language'] ); ?>"><?php echo wpautop( esc_html( $review['text'] ) ); ?></blockquote>
 							<figcaption>
 								<span class="sg-home-reviews__name"><?php echo esc_html( $review['name'] ); ?></span>
+								<?php if ( $review['other_brokerage'] ) : ?>
+									<span><?php echo esc_html( 'es' === sg_current_lang() ? 'Experiencia con Sandra en otra correduría.' : 'Experience with Sandra at another brokerage.' ); ?></span>
+								<?php endif; ?>
 								<?php if ( '' !== $review['source'] ) : ?>
 								<a href="<?php echo esc_url( $review['source'] ); ?>" target="_blank" rel="noopener noreferrer">
 									<?php esc_html_e( 'Read on Google', 'solanique' ); ?>
