@@ -13,9 +13,24 @@
   inferred permission, database enrollment, SMS/WhatsApp or campaign sending.
 - [ ] Send one seasonal-review PDF to sandymedsol@gmail.com; no contact CSVs.
 - [ ] Finish/save student GHL form corrections after authenticated access returns.
-- [ ] Commit/export/deploy reviewed theme, publish Guillermo and verify production.
-- [ ] After successful deployment, retain one current theme ZIP and remove only
+- [x] Commit `dae1e64`, push to origin/main, export/install reviewed theme and
+  publish Guillermo (review 76). Native WordPress update and LSCache purge confirmed.
+- [x] Verify 18 anonymous page/language cases and matching CSS/JS hashes; 30
+  responsive cases pass without horizontal overflow/broken loaded images.
+- [x] After successful deployment, retain one current theme ZIP and remove only
   explicitly inventoried older theme export archives. Preserve DB/source/client files.
+
+Current ZIP: `output/solanique-client-audit-2026-11-18/solanique-production-2026-11-18-client-audit.zip`
+at WordPress root; 541 files, 112 PHP lints, build passes. Ten older theme ZIPs
+removed after verification, freeing 972,655,671 bytes. No source/client files,
+database backups, Media Library assets or Git history deleted. The current ZIP
+is a theme backup only, not a database/GHL backup. Private contact review files
+were copied beside the original CSVs with owner-only access; nothing imported.
+
+The seasonal review email is prepared locally with the reviewed 19-page PDF
+attached. Sending is not confirmed. Awaiting narrowly scoped Outlook permission
+after the security gate stopped a broad Chrome snapshot; unrelated mailbox
+content must not be read. No seasonal/SMS/WhatsApp activation occurred.
 
 These current tasks supersede earlier missing-copy lists only where explicitly
 stated. Seasonal drafts are client-review material, not active campaigns.

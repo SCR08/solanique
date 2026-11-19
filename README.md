@@ -15,7 +15,8 @@ the first three. The optional "another brokerage" context flag avoids implying
 that Sandra's brokerage-client experience occurred under Solanique; it does not
 invent a brokerage name or assert a previous/current date. Guillermo's exact
 English quote is prepared as WordPress review draft 76, with no fabricated source
-URL, translation or rating. Its database publication is separate from this code.
+URL, translation or rating. Review 76 is now published in WordPress; all four
+quotes and the additional context were verified publicly in both languages.
 
 Separate local client materials are in WordPress-root
 `output/solanique-seasonal-review-2026-11-18/`: 28 email/28 SMS review drafts,
@@ -37,6 +38,10 @@ GHL student-form audit changes still require a stable authenticated session:
 requested field labels/options, privacy helpers, two optional referral questions
 and final question order. Do not mark the form complete from these website edits.
 Release/send status is recorded separately in `FINALIZATION.md` and dated output.
+Runtime commit `dae1e64` was pushed and installed through the native uploader;
+18 anonymous checks and 30 responsive cases pass. Ten older theme archives were
+removed only after verification; the November 18 current export is the sole
+retained theme ZIP in the workspace export folders (972,655,671 bytes freed).
 Retain only the newest verified theme ZIP after deployment, per user request;
 GitHub does not preserve WordPress database/settings, GHL or Media Library data.
 
